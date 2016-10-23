@@ -1,0 +1,142 @@
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0px;
+    background-color: aliceblue;
+    /* background-image: ./img/beijing1.gif; */
+    background-color: #ccc;
+    color: #000000;
+
+}
+
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-variant: normal;
+    font-style: normal;
+    color: -webkit-text;
+    text-align: start;
+}
+
+td {
+    font-size: 12px;
+    line-height: 150%;
+    text-decoration: none;
+    color: #333333;
+}
+
+.contain {
+    margin: auto;
+    
+    background-color: gainsboro;
+    color: #000000;
+    width: 710px;
+    /*  display: flex; */
+    box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 5);
+    /* flex-direction: row;
+        不放大不知道，一个类为row_c的div为块元素，占了整整一行. 原来300一满，就换行，看起来像是列
+        伸缩项目放置在伸缩容器的方向（行或者列）
+        flex-wrap: wrap;
+        换行，第一行在上方,默认不换行挤在一起
+        justify-content: center;
+        定义了项目在主轴上的对齐方式
+        align-items: center; */
+         border-radius: 20px;/* 设置边框圆角 */
+         padding: 10px;/* 防止图片被覆盖 */
+         background-color: #fff;/* 此容器背景色设置为白色，body背景色设置为灰色或者其他色更漂亮 */
+}
+
+.qheader {
+    width: 100%;
+    height: 82px;
+    background-color: yellow;
+    overflow: hidden;
+    /* 设置了float属性的元素，要对其父元素或者说父容器添加overflow:hidden属性为默认值，以解决浮动对父元素的影响*/
+}
+
+.qh_left {
+    width: 210px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+}
+
+.qh_right {
+    width: 500px;
+    height: 80px;
+    display: inline-block;
+    float: left;
+}
+
+.qbody {
+    width: 100%;
+    height: 2160px;
+    /* background-color: blue; */
+}
+
+a:link { color: #333333;text-decoration: none }
+a:visited { color: #333333;text-decoration: none }
+a:hover { color: #CC0000;text-decoration: none }
+.link:link {
+	color: #0000cc;
+	font-size: 12px;
+	text-decoration:underline
+} 
+.link:visited {
+	color: #0000cc;
+	font-size: 12px;
+	text-decoration: underline
+} 
+.link:hover {
+	color: #ff0000;
+	font-size: 12px;
+	text-decoration: underline
+} 
+.more:link { color: #66cc99; font-size: 12px; text-decoration: 
+none } 
+.more:visited { color: #66cc99; font-size: 12px; text-decoration: 
+none }
+.more:hover { color: #66cc00; font-size: 12px; text-decoration: 
+none }
+.guide:link { color: #333366; font-size: 12px; font-weight: bold; text-decoration: none }
+.guide:visited { color: #333366; font-size: 12px; font-weight: bold; text-decoration: none }
+.guide:hover { color: #ff9900; font-size: 12px; font-weight: bold; text-decoration: underline } 
+
+.red {color: #ff0000}
+.blue {color: #0000ff}
+
+.gray {color: #888888}
+.gray:link { color: #888888; text-decoration: none } 
+.gray:visited { color: #888888; text-decoration: none }
+.qfooter {
+    width: 100%;
+    height: 30px;
+    background-color: green;
+}
+
+.titleinfo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p13 {
+    font-size: 13px;
+    line-height: 150%;
+    color: #000000;
+}
+.f14 {
+	font-size: 14px;
+	line-height: 170%;
+}
+
+.f16 {
+	font-size: 16px;
+}
+

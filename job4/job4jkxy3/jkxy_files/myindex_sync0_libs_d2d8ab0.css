@@ -1,0 +1,675 @@
+    /*设置第一个section及其内第一层div的定位为相对定位，宽度为继承父容器*/
+    
+    .jk-banner .banner-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+    }
+    /*第一节：设置第二层的语义化标签：section class="jk-banner"*/
+    
+    .jk-banner {
+        height: 330px;
+        width: 750px;
+        background: #f5f5f5;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+    }
+    /*第一节：位置在主体部分一层的左边轮播前端显示小方块*/
+    
+    .jk-banner .banner-container .banner-pagination {
+        position: absolute;
+        left: 0;
+        bottom: 36px;
+        text-align: center;
+        width: 100%;
+        z-index: 800;
+        height: 0;
+        cursor: pointer;
+    }
+    /*第二节：位置在主体部分一层的右边上方的登录窗口*/
+    
+    .jk-login {
+        float: left;
+        width: 240px;
+        height: 160px;
+        border: 1px solid #e9e9e9;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 26px 29px 24px;
+    }
+    
+    .jk-login .userInfo {
+        height: 57px;
+    }
+    /*把显示登录图像的方框作为圆角*/
+    
+    .jk-login img {
+        float: left;
+        width: 57px;
+        height: 57px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    /*登录框的欢迎词设置样式，就是第一行hello的样式*/
+    
+    .jk-login .userName {
+        float: left;
+        font-size: 12px;
+        color: #555;
+        line-height: 16px;
+        height: 16px;
+        width: 108px;
+        margin-top: 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    /*登录框的欢迎词设置样式，就是第二行欢迎成为极客学院会员的样式*/
+    
+    .jk-login .userStatus {
+        float: left;
+        font-size: 12px;
+        color: #555;
+        line-height: 16px;
+        height: 16px;
+        width: 108px;
+        margin-top: 10px;
+    }
+    /*设置用a标签模拟的登录按钮的外边距*/
+    
+    .jk-login .loginOn {
+        margin-right: 10px;
+    }
+    /*设置用a标签模拟的登录按钮的大小及边框样式，块元素或者行内块元素颜色等等*/
+    
+    .jk-login .loginOn,
+    .jk-login .registerNow,
+    .jk-login .myZoom {
+        font-size: 14px;
+        float: left;
+        display: inline-block;
+        width: 85px;
+        height: 32px;
+        border: 1px solid #35b558;
+        border-radius: 2px;
+        color: #35b558;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 20px;
+        transition: background .8s;
+        -moz-transition: background .8s;
+        -webkit-transition: background .8s;
+        -o-transition: background .8s;
+    }
+    /*第三个section 登录框下面的*/
+    
+    .jk-huodong {
+        float: left;
+        width: 240px;
+        height: 160px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    /*第二层的极客学院就业班*/
+    
+    .jk-jiuye {
+        float: left;
+        height: 130px;
+        width: 100%;
+        margin-top: 20px;
+        background: #fff;
+        position: relative;
+        /*  background: aqua;*/
+    }
+    /*第二层就业办，用属性选择器选择的第一个子元素，用图片作为背景；以下四个估计是用js生成的*/
+    
+    .jk-jiuye .jiuyeBan:first-child {
+        border-left: 1px solid #f0f0f0;
+        /*background: url(http://s1.jikexueyuan.com/index/images/jphp_d405f8a.png) no-repeat center 20px;*/
+        background: url("../jkxy_files/jphp_d405f8a.png") no-repeat center 20px;
+        background-size: 130px 65px;
+    }
+    /*第二个web就业班*/
+    
+    .jk-jiuye .jiuyeBan:nth-child(2) {
+        background: url("../jkxy_files/jweb_95cd305.png") no-repeat center 20px;
+        background-size: 130px 65px;
+    }
+    /*第三个*/
+    
+    .jk-jiuye .jiuyeBan:nth-child(3) {
+        background: url("../jkxy_files/jandroid_aa0f1c1.png") no-repeat center 20px;
+        background-size: 130px 65px;
+    }
+    /*第四个*/
+    
+    .jk-jiuye .jiuyeBan:nth-child(4) {
+        background: url("../jkxy_files/jios_e6eb57b.png") no-repeat center 20px;
+        background-size: 130px 65px;
+    }
+    /*上面这个四个就业班样式设置*/
+    
+    .jk-jiuye .jiuyeBan {
+        float: left;
+        width: 250px;
+        height: 130px;
+        border: 1px solid #f0f0f0;
+        border-left: 0;
+        color: #555;
+        text-align: center;
+        padding-top: 90px;
+        font-size: 12px;
+        transition: color .5s;
+        -moz-transition: color .5s;
+        -webkit-transition: color .5s;
+        -o-transition: color .5s;
+    }
+    /*显示php就业班左上角标志*/
+    
+    .jk-jiuye .jiuyeBan:first-child i {
+        display: inline-block;
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        top: 0;
+        left: 0;
+        background: url("../jkxy_files/tag_8332cd6.png") no-repeat center;
+        background-size: 52px;
+    }
+    /*第三层的sku容器大小外部环境设置*/
+    
+    .jk-sku {
+        width: 1000px;
+        height: 270px;
+        margin: 0 auto;
+        margin-top: 20px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        /*debug*/
+        position: relative;
+        float: left;
+        /*margin-left: 40px;*/
+    }
+    /*第三层的sku内容用列表来设置，此处设置ul大小*/
+    
+    .jk-sku ul {
+        height: 100%;
+        width: 100%;
+    }
+    /*jk-sku ul li样式*/
+    
+    .jk-sku ul li {
+        float: left;
+        width: 235px;
+        height: 100%;
+        margin-right: 20px;
+        border: 1px solid #e9e9e9;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+        -o-transition: box-shadow .5s;
+        /*debug,外面嵌套的div的margin-top作用在页头上面。只有动li的margin-top了*/
+        margin-right: 7px;
+        margin-left: 8px;
+        margin-top: 20px;
+        /*为了把下面的 职业学院这四个字拉开*/
+        margin-bottom: 40px;
+    }
+    /*sku中把a标签设置为块级元素，内嵌套图片及div，div中再嵌套span*/
+    
+    .jk-sku ul li a {
+        display: block;
+        height: 100%;
+    }
+    /*skuli a 中 img 大小*/
+    
+    .jk-sku ul li img {
+        width: 100%;
+        height: 155px;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 大小*/
+    
+    .jk-sku ul li .skuContainer {
+        padding: 14px;
+        height: 113px;
+        position: relative;
+        background: #fff;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 中文字第一行文字*/
+    
+    .jk-sku ul li .skuContainer .skuTitle {
+        width: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 18px;
+        height: 36px;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 中文字第二行文字，课程信息*/
+    
+    .jk-sku ul li .skuContainer .skuInfo {
+        margin-top: 6px;
+        color: #999;
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 中文字第三行文字，最左边正价信息*/
+    
+    .jk-sku ul li .skuContainer .skuPrice {
+        float: left;
+        font-size: 18px;
+        color: #ff5c00;
+        vertical-align: bottom;
+        margin-right: 5px;
+        margin-top: 8px;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 中文字第三行文字，中间的原价信息*/
+    
+    .jk-sku ul li .skuContainer .skuThrought {
+        float: left;
+        font-size: 12px;
+        color: #999;
+        margin-top: 14px;
+        text-decoration: line-through;
+        vertical-align: bottom;
+    }
+    /*skuli a 中 下面嵌套的文字外面包裹的div 中文字第三行文字，右边多少人学习信息*/
+    
+    .jk-sku ul li .skuContainer .skuNum {
+        display: inline-block;
+        height: 14px;
+        position: absolute;
+        bottom: 14px;
+        right: 14px;
+        color: #999;
+        font-size: 12px;
+    }
+    /*第四层极客学院各类职业路径外层容器大小的设置*/
+    
+    .jk-college {
+        width: 1000px;
+        margin: 0 auto;
+        height: 310px;
+        margin-bottom: 40px;
+        /*debug*/
+        float: left;
+        /* margin-left: 40px;*/
+    }
+    /*第四层极客学院中H2标题的设置*/
+    
+    .jk-college h2 {
+        font-size: 18px;
+        color: #555;
+        line-height: 18px;
+        height: 18px;
+        /*margin-bottom: 22px;*/
+    }
+    /*第四层极客学院，最左边最大一个课程容器的设置*/
+    
+    .jk-college ul .web {
+        width: 500px;
+        height: 270px;
+        margin-left: 0;
+    }
+    /*第四层极客学院，所有li标志的设置*/
+    
+    .jk-college ul li {
+        float: left;
+        /*background: #ccc;*/
+        width: 240px;
+        height: 130px;
+        margin-left: 10px;
+        position: relative;
+        /*距离	h2标签*/
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+    /*第四层极客学院，所有li内a标签的设置*/
+    
+    .jk-college ul li a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    /*第四层极客学院，所有li内a标签外面的图片大小设置*/
+    
+    .jk-college ul li img {
+        display: inline-block;
+        width: 240px;
+        height: 130px;
+    }
+    /*第四层极客学院，第一个web页面的所有li内a标签外面的图片大小设置*/
+    
+    .jk-college ul .web img {
+        display: inline-block;
+        width: 500px;
+        height: 270px;
+    }
+    /*设置i标签样式*/
+    
+    .jk-college ul li i {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0;
+        transition: opacity .8s;
+        -moz-transition: opacity .8s;
+        -webkit-transition: opacity .8s;
+        -o-transition: opacity .8s;
+    }
+    /*第四层极客学院，课程名称设置*/
+    
+    .jk-college ul li span {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        padding-top: 108px;
+    }
+
+     /*职业学院栏目上的logo图标*/
+     /*html5图标*/
+     .jk-college ul .web span {
+    padding-top: 180px;
+    font-size: 20px;
+    background: url("../jkxy_files/cweb_2d70d0b.png") no-repeat center 70px;
+    background-size: 55px 84px;
+}
+.jk-college ul .python span {
+    background: url("../jkxy_files/cpython_5ed9df4.png") no-repeat center 31px;
+    background-size: 36px 36px;
+    /*第一个值是水平位置，第二个值是垂直。左上角是0％0％。右下角是100％100％。如果仅指定了一个值，其他值将是50％。 。默认值为：0％0％*/
+    background-position-y: 56px;
+}
+.jk-college ul .ios span {
+    background: url("../jkxy_files/cios_dc0ca8e.png") no-repeat center 36px;
+    background-size: 32px 36px;
+    background-position-y: 56px;
+}
+
+    /*go图标*/
+.jk-college ul .go span {
+    background: url("../jkxy_files/cgo_e66208d.png") no-repeat center 33px;
+    background-size: 36px 29px;
+    background-position-y: 56px;
+}
+
+
+.jk-college ul .more span {
+    background: url("../jkxy_files/cmore_1bdb357.png") no-repeat center 36px;
+    background-size: 36px 36px;
+    background-position-y: 56px;
+}
+
+
+    /*第五层会员课程*/
+    
+    .jk-vip {
+        width: 1000px;
+        margin: 0 auto;
+        height: 420px;
+        margin-bottom: 40px;
+        box-sizing: border-box;
+        /*debug*/
+        float: left;
+        /* margin-left: 40px;*/
+    }
+    
+    .jk-vip h2 {
+        font-size: 18px;
+        color: #555;
+        height: 18px;
+        line-height: 18px;
+        margin-bottom: 22px;
+    }
+    
+    .jk-vip ul {
+        width: 100%;
+        height: 310px;
+    }
+    
+    .jk-vip ul li {
+        float: left;
+        width: 158px;
+        width: 155px;
+        height: 150px;
+        border: 1px solid #e9e9e9;
+        background: #fff;
+        margin-right: 10px;
+        margin-right: 6px;
+        margin-left: 5px;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+        -o-transition: box-shadow .5s;
+    }
+    
+    .jk-vip ul li a {
+        display: block;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .jk-vip ul li a img {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        margin-top: 25px;
+    }
+    
+    .jk-vip ul li a p {
+        font-size: 12px;
+        color: #555;
+        height: 22px;
+        line-height: 22px;
+    }
+    
+    .jk-vip ul li a span {
+        display: block;
+        font-size: 12px;
+        color: #35b558;
+        height: 22px;
+        line-height: 22px;
+    }
+    /*最下面的全部会员课程按钮*/
+    
+    .jk-vip .vipAll {
+        display: inline-block;
+        margin-top: 38px;
+        height: 32px;
+        line-height: 30px;
+        border: 1px solid #35b558;
+        border-radius: 2px;
+        width: 120px;
+        font-size: 14px;
+        color: #35b558;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        margin-left: -60px;
+        transition: background .8s;
+        -moz-transition: background .8s;
+        -webkit-transition: background .8s;
+        -o-transition: background .8s;
+    }
+    /*第六层学员故事 */
+    
+    .jk-story {
+        width: 1000px;
+        margin: 0 auto;
+        height: 300px;
+        margin-bottom: 80px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .jk-story h2 {
+        font-size: 18px;
+        color: #555;
+        line-height: 18px;
+        height: 18px;
+        margin-bottom: 22px;
+    }
+    /*第六层学员故事中，第二层包裹故事的div容器，下面还有包裹动画层、3个故事一组 */
+    
+    .jk-story .story-container {
+        width: 100%;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .jk-story h2 {
+        font-size: 18px;
+        color: #555;
+        line-height: 18px;
+        height: 18px;
+        margin-bottom: 22px;
+    }
+    /*包裹动画层*/
+    
+    .jk-story .story-container {
+        width: 100%;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+    }
+    /*故事轮播*/
+    
+    .jk-story .story-container .story-pagination {
+        position: absolute;
+        left: 0;
+        bottom: 16px;
+        text-align: center;
+        width: 100%;
+        z-index: 800;
+        height: 0;
+        cursor: pointer;
+    }
+    /*前面几个图标小方块*/
+    
+    .jk-story .story-container .story-pagination .swiper-pagination-switch {
+        display: inline-block;
+        margin-right: 8px;
+        text-align: center;
+        width: 8px;
+        height: 8px;
+        background: #bbb;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    
+    .jk-story .story-container .story-pagination .swiper-pagination-switch:last-child {
+        margin-right: 0;
+    }
+    /*主要这个设置容器*/
+    
+    .jk-story ul li {
+        float: left;
+        width: 320px;
+        width: 310px;
+        height: 200px;
+        position: relative;
+        margin-right: 20px;
+        transition: box-shadow .5s;
+        -moz-transition: box-shadow .5s;
+        -webkit-transition: box-shadow .5s;
+        -o-transition: box-shadow .5s;
+    }
+    
+    .jk-story ul li a {
+        display: block;
+        height: 100%;
+    }
+    /*每个人的自我介绍*/
+    .jk-story ul .story-content p:before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 10px;
+        background: url(http://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center;
+        background-size: 14px 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .jk-story ul .story-content p {
+        height: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 20px;
+        padding: 20px 25px;
+        text-align: left;
+    }
+.jk-story ul .story-content p:after {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 10px;
+        background: url(http://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center;
+        background-size: 14px 10px;
+        position: absolute;
+        bottom: 10px;
+       bottom: 92px;
+        right: 10px;
+        transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+    }
+/*头像及姓名、入职单位*/
+    .jk-story ul .story-info {
+    height: 80px;
+    padding-left: 95px;
+    padding-top: 28px;
+    position: relative;
+}
+    /*头像*/
+    
+    .jk-story ul .story-info img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #e9e9e9;
+    }
+    /*姓名*/
+    
+    
+    
+    .jk-story ul .story-info p {
+        font-size: 12px;
+        color: #555;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+    
+    /*入职单位*/
+    
+    .jk-story ul .story-info span {
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        color: #999;
+        font-size: 12px;
+        text-align: left;
+    }

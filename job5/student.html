@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩分类</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 100%;
+        height: 500px;
+        /* border: 1px solid black;*/
+        text-align: center;
+    }
+    
+    .assort {
+        width: 100%;
+        height: 300px;
+        /* border: 1px solid black;*/
+        text-align: center;
+        margin: auto;
+    }
+    
+    #score {
+        width: 100px;
+        height: 34px;
+    }
+    
+    #dbg {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        /*bootstrap.css中btn-default*/
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        /*.btn-primary */
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        /*.btn-info */
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
+    }
+    /*巨幕展示学生成绩*/
+    
+    .stu {
+        padding: 30px 15px;
+        margin-bottom: 30px;
+        color: inherit;
+        background-color: #eee;
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .stu h1 {
+        color: inherit;
+        font-size: 60px;
+        color: cadetblue;
+    }
+    
+    .stu p {
+        margin-bottom: 15px;
+        font-size: 21px;
+        font-weight: 200;
+    }
+    
+    input[type="number"] {
+        line-height: 34px;
+        /*display: block;*/
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    
+    input[type="number"]:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+    
+    .tt {
+        font-size: 34px;
+        float: left;
+        /* left: 355px;*/
+        margin-left: 40%;
+        top: 4px;
+    }
+    
+    .tt2 {
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stu">
+            <h1 style="margin-top:60px;">学生成绩自动分类</h1>
+            <label>
+                <h3 style="margin:20px;"><span id="layer">&nbsp;</span></h3></label>
+        </div>
+        <div class="assort">
+            <div class="tt">
+                <label for="score">分数：</label>
+            </div>
+            <div class="tt2">
+                <input type="text" id="score" placeholder="请输入数字" required></input>
+                <!-- <input type="button" id="inquire" value="分类"></input> -->
+                <input type="button" id="dbg" value="分类" onclick="asort()"></input>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function asort() {
+        var score = document.getElementById("score").value;
+        
+        var b = checkscore(score);
+        console.log("b=" + b);
+        if (b === 'ture') {
+            console.log("b number:" + b);
+            console.log("score number:" + score);
+           
+            // parseInt()
+            var stu_score = Math.floor(eval(score / 10) - 0.01);
+            console.log("stu_score number:" + stu_score);
+            switch (stu_score) {
+                // console.log("score number:" + score);
+                  case 10:
+                    document.getElementById("layer").innerHTML = "学生等级为一等生";
+                    break;
+                case 9:
+                    document.getElementById("layer").innerHTML = "学生等级为一等生";
+                    break;
+                case 8:
+                    document.getElementById("layer").innerHTML = "学生等级为二等生";
+                    break;
+                case 7:
+                    document.getElementById("layer").innerHTML = "学生等级为三等生";
+                    break;
+                case 6:
+                    document.getElementById("layer").innerHTML = "学生等级为四等生";
+                    break;
+                case 5:
+                    document.getElementById("layer").innerHTML = "学生等级为五等生";
+                    break;
+                case 4:
+                    document.getElementById("layer").innerHTML = "学生等级为六等生";
+                    break;
+                case 3:
+                    document.getElementById("layer").innerHTML = "学生等级为七等生";
+                    break;
+                case 2:
+                    document.getElementById("layer").innerHTML = "学生等级为八等生";
+                    break;
+                case 1:
+                    document.getElementById("layer").innerHTML = "学生等级为九等生";
+                    break;
+
+                default:
+                    document.getElementById("layer").innerHTML = "学生等级为十等生";
+            };
+        } else {
+            console.log("b2=" + b);
+            score.value = "";
+            document.getElementById("score").value = "";
+            document.getElementById("layer").innerHTML = "";
+        };
+        return b;
+    };
+
+    function checkscore(x) {
+        var a = x - 0;
+        console.log("x=" + x);
+        // alert("checkscore:" + "a");
+
+        console.log((a >= 0 && a <= 100) ? "一等生" : "请输入0至100的数字");
+
+        console.log("second" + a);
+        return ((a >= 0 && a <= 100) ? 'ture' : 'false');
+    };
+    </script>
+</body>
+
+</html>

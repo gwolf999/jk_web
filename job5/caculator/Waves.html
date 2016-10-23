@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://developer.qietu.com/docs/waves.js/#examples -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link rel="icon" href="http://fian.my.id/static/favicon.png">
+        <meta name="msapplication-tap-highlight" content="no"> 
+
+        <title>Waves</title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+     
+       
+        <link rel="stylesheet" type="text/css" href="./Waves_files/prims.css">
+        <link rel="stylesheet" type="text/css" href="./Waves_files/snarl.min.css">
+        <link rel="stylesheet" type="text/css" href="./Waves_files/waves.min.css">
+
+        <link rel="stylesheet" type="text/css" href="./Waves_files/style.css">
+
+       
+        
+        <script type="text/javascript" async="" src="./Waves_files/wcrm"></script><script type="text/javascript" src="./Waves_files/prims.js"></script>
+        <script type="text/javascript" src="./Waves_files/snarl.min.js"></script>
+        <script type="text/javascript" src="./Waves_files/waves.min.js"></script>
+        <script type="text/javascript" src="./Waves_files/jquery.js"></script>
+
+    <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+    <body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./Waves_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+      
+
+<!--/*百度广告*/-->
+<script type="text/javascript">
+    /*切图开发中心*/
+    var cpro_id = "u2761339";
+</script>
+<script type="text/javascript" src="./Waves_files/c.js"></script><div id="BAIDU_SSP__wrapper_u2761339_0"><iframe id="iframeu2761339_0" src="./Waves_files/wcrm.html" width="960" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div>
+        
+        <a href="http://developer.qietu.com/docs/waves.js/#examples" class="waves-effect waves-button waves-float">See the examples</a>
+        
+<div id="landing" class="section hide">
+    <h1>Waves</h1>
+    <p>Click effect inspired by Google's Material Design</p>
+    <p>v0.7.4</p>
+    <div class="button">
+        
+        <br>
+        <span>Hint: click button or background</span>
+    </div>
+</div>;
+
+        <div id="example" class="section page hide">
+
+    <h1>Examples</h1>
+
+   
+
+    
+
+    <div id="box-other" class="box shadow">
+        <h2>DIVs &amp; Images</h2>
+        <a class="top-button" title="Show Source" data-code="other">
+            <i class="fa fa-code"></i>
+        </a>
+
+        <div class="boxes flat-box waves-effect waves-block">Flat Box</div>
+        <div class="boxes float-box waves-effect waves-block waves-float">Float Box</div>
+        <div class="clear"></div>
+
+        <p class="text-center">
+            <i class=" waves-effect"><img class="waves-image" src="./Waves_files/1091511802_2fb2451ecc_n.jpg"></i>
+        </p>
+
+        <script type="text/javascript">
+            Waves.attach('.flat-box', ['waves-block']);
+            Waves.attach('.float-box', ['waves-block', 'waves-float']);
+            Waves.attach('.waves-image');
+        </script>
+
+        <p class="text-center">
+            Image Source: <a href="https://www.flickr.com/photos/aigle_dore/5238554034/" target="_blank">© Moyan Brenn. Flickr</a>
+        </p>
+    </div>
+
+    <div id="box-action" class="box shadow">
+        <h2>Action/Event</h2>
+        <a class="top-button" title="Show Source" data-code="action">
+            <i class="fa fa-code"></i>
+        </a>
+
+        <p>Works fully with jQuery and JavaScript click event handlers, like <a href="http://hoxxep.github.io/Snarl" target="_blank">Snarl</a></p>
+
+        <style>
+            #snarl-demo {
+                background:#04d654;
+                color: #fff;
+            }
+        </style>
+
+        <p class="text-center">
+            <button id="snarl-demo" class=" waves-effect waves-button waves-float">Click Me!</button>
+        </p>
+
+        <script type="text/javascript">
+            Waves.attach('#snarl-demo', ['waves-button', 'waves-float']);
+
+            Snarl.setDefaultOptions({
+                timeout: 5000
+            });
+
+            $('#snarl-demo').click(function() {
+                Snarl.addNotification({
+                    title: 'Snarl Notification',
+                    text: 'You clicked the Waves button!'
+                });
+            });
+        </script>
+    </div>
+</div>;
+        
+        
+
+        
+        
+        <script type="text/javascript">
+            
+           
+
+
+            $(document).on('ready', function() {
+
+                // Init Waves
+                Waves.init();
+              
+
+
+                
+            });
+
+        </script>
+    
+
+<div id="snarl-wrapper"></div></body></html>

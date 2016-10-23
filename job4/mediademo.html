@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mediademo CSS响应式</title>
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* @media only screen and(min-width: 1000px) {*/
+    /*上面的语法错误了*/
+    
+    .container {
+        /*写任何布局，必须放入一个容器内，在外面统一操作内的元素*/
+        width: 1000px;
+        height: 800px;
+        margin: 5px;
+        background: lightgray;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-left: 2%;
+    }
+    
+    .left {
+        float: left;
+        /*不能写死固定值*/
+        width: 20%;
+        height: 500px;
+        background-color: aqua;
+    }
+    
+    .middle {
+        float: left;
+        width: 55%;
+        height: 800px;
+        /*上右下左*/
+        margin: 0 5px 0 5px;
+        background-color: coral;
+    }
+    
+    .right {
+        float: left;
+        /*不能写死固定值*/
+        width: 20%;
+        height: 500px;
+        background-color: yellowgreen;
+    }
+    /*font-size: 2rem==font-size: 20px*/
+    /*.html{font-size: 62.5%;}*/
+    
+   
+    @media screen and (min-width: 960px){    
+        .container {
+            width: 1000px;
+            /*设置背景色为了测试*/
+            background-color: blue;
+            overflow: hidden;
+            margin: auto;
+            /*设置当变化为最宽的时候，切换动画;或者用动画生成工具生成动画代码*/
+            -webkit-transition: width 1s ease;
+        }
+    }
+    /*@media only screen and (min-width: 400px) and(max-width: 1000px) {*/
+    
+    @media screen and (min-width: 480px) and(max-width: 960px){  /*大括号必须贴着小括号，否则不会起作用*/
+        .right {
+            width: 0px;
+        }
+        .left {
+            width: 30%;
+        }
+        .middle {
+            width: 65%;
+        }
+    }
+    /*@media only screen and(max-width: 400px) {*/
+    
+    @media screen and (max-width: 480px){
+        .left,
+        .right,
+        .middle {
+            width: 98%;
+            height: 200px;
+        }
+        .middle {
+            /*reset原来配置*/
+            margin: 0;
+            margin: 5px 0 5px 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            我是左侧
+        </div>
+        <div class="middle">我是中间</div>
+        <div class="right">我是右侧</div>
+    </div>
+</body>
+
+</html>

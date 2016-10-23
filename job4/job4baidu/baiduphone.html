@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>仿手机端百度</title>
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+    <style type="text/css">
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        -webkit-text-size-adjust: none;
+        background: #f1f1f1;
+        overflow-x: hidden;
+    }
+    
+    /*引入字体文件*/
+
+    @font-face {font-family: "iconfont";
+  src: url('./baidu_files/iconfont.eot?t=1473865570'); /* IE9*/
+  src: url('./baidu_files/iconfont.eot?t=1473865570#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./baidu_files/iconfont.woff?t=1473865570') format('woff'), /* chrome, firefox */
+  url('./baidu_files/iconfont.ttf?t=1473865570') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./baidu_files/iconfont.svg?t=1473865570#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:42px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-tuangou:before { content: "\e600"; }
+.icon-yifu:before { content: "\e601"; }
+.icon-mifan:before { content: "\e602"; }
+.icon-ditu:before { content: "\e603"; }
+.icon-ktv:before { content: "\e604"; }
+.icon-denglu:before { content: "\e605"; }
+.icon-shipin:before { content: "\e606"; }
+.icon-waimai:before { content: "\e607"; }
+.icon-nuo:before { content: "\e608"; }
+.icon-iconpingtainuomi01:before { content: "\e609"; }
+.icon-gengduo:before { content: "\e60a"; }
+.icon-gengduo1:before { content: "\e60b"; }
+.icon-1xiaoshuoicon:before { content: "\e60c"; }
+.icon-icon02:before { content: "\e60d"; }
+.icon-dache:before { content: "\e60e"; }
+.icon-huafei:before { content: "\e60f"; }
+.icon-zsgiconmoredownkaobei3:before { content: "\e610"; }
+
+
+
+    .container,
+    #page {
+        width: 414px;
+        width: 100%;
+        height: 945px;
+        background: #f1f1f1;
+    }
+    
+    #header {
+        height: 268px;
+        padding-bottom: 10px;
+        background: #f1f1f1;
+    }
+    /*页头的用户登录栏条*/
+    
+    .userinfo-wrap {
+        position: relative;
+        height: 54px;
+        /*  background: lightgray;*/
+    }
+    /*页头登录栏左边天气预报的外层容器 */
+    
+    .weather-outline {
+        width: 111px;
+        width: 26.8%;
+        height: 40px;
+        /* background: gold;*/
+        float: left;
+        margin-top: 7px;
+        padding-left: 6px;
+        padding-right: 6px;
+        position: relative;
+    }
+    /*左上角天气图标*/
+    
+    .icon-weather-default {
+        float: left;
+        margin-right: 8px;
+    }
+    /*左上角天气图标右边的城市名及温度*/
+    
+    .weather-status {
+        float: left;
+    }
+    
+    .weather-status p {
+        height: 13px;
+        line-height: 13px;
+        font-size: 11px;
+        color: #999;
+        margin-top: 1px;
+    }
+    /*城市名称旁边的小箭头*/
+    
+    .icon-arrow {
+        width: 3%;
+        height: 40px;
+        float: right;
+        padding-top: 0px;
+        padding-right: 15px;
+    }
+    
+    .icon-down {
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid #c1c1c1;
+        border-left: 1px solid #c1c1c1;
+        display: inline-block;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        transform-origin: 4px 4px;
+    }
+    /*页头登录栏右边天气预报登录及穿衣的外层容器*/
+    
+    .login-ware {
+        width: 19%;
+        height: 40px;
+        /* background: gold;*/
+        float: right;
+        margin-top: 7px;
+        padding-left: 6px;
+        padding-right: 6px;
+        position: relative;
+    }
+    
+    .login {
+        padding-top: 2px;
+        float: left;
+        margin-right: 5px;
+    }
+    
+    .ware {
+        padding-top: 2px;
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    /*logo区域*/
+    
+    #logo {
+        height: 87px;
+        /*上为17px 左右为0 下为15px*/
+        padding: 17px 0 15px;
+        /* background: lightblue;*/
+    }
+    
+    .noTapColor {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    /*搜索框区域*/
+    
+    .con-wrap {
+        width: 100%;
+        width: 94.46%;
+        height: 44px;
+        background: lightyellow;
+        margin: 0px 10px;
+    }
+    /*搜索框的form表单格式*/
+    
+    #index-form {
+        margin-top: 1px;
+        height: 42px;
+        background: #fff;
+        border: 1px solid #949494;
+        border-bottom-color: #bcbcbc;
+    }
+    /*表单中input输入框样式*/
+    
+    .input_wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    #index-form .se-input {
+        width: 79%;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        margin: 0;
+        padding: 7px 42px 7px 6px;
+        height: 42px;
+        line-height: 28px;
+        resize: none;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .adjust-input {
+        position: relative;
+        margin: 0 -74px 0 0;
+        line-height: 29px;
+        word-break: break-all;
+        word-wrap: break-word;
+        float: left;
+    }
+    /*表单中查询按钮,外层容器大小*/
+    
+    .btn_wrap {
+        width: 21%;
+        height: 100%;
+        float: right;
+        /*background: lightgreen;*/
+    }
+    /*查询按钮的样式*/
+    
+    #index-bn {
+        position: absolute;
+        top: 0px;
+        right: -1px;
+        width: 82px;
+        width: 20%;
+        height: 43px;
+        background: #38f;
+        color: #fff;
+        white-space: nowrap;
+        line-height: 42px;
+        letter-spacing: -1px;
+        font-size: 16px;
+        border-top: 1px solid #38f;
+        border-bottom: 1px solid #38f;
+        box-sizing: inherit;
+    }
+    /*导航栏目区域*/
+    
+    .navs {
+        margin: 17px 0 14px;
+        overflow: hidden;
+        height: 42px;
+        /*background: tomato;*/
+        position: relative;
+    }
+    /*新闻导航按钮*/
+    /*  .navs-news {
+        width: 66.23px;
+        height: 42px;
+        background: lightgreen;
+    }*/
+    
+    div[class^="navs-"] {
+        width: 66.23px;
+        height: 42px;
+        /* background: lightgreen;*/
+        float: left;
+        padding-top: 7px;
+    }
+    
+    a {
+        /*取消所有a标签的下划线*/
+        text-decoration: none;
+    }
+    
+    p[class*="p_"] {
+        font-size: 12px;
+        color: #666;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    /*大页面部分关注及推荐菜单*/
+    
+    .menu-container {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 41px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-top: 6px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        z-index: 2;
+        position: relative;
+    }
+    
+    .menu-container .menu-item {
+        display: inline-block;
+        font-size: 16px;
+        color: #333;
+        width: 16%;
+    }
+    
+    .menu-container span {
+        color: #333;
+    }
+    /*页面主体*/
+    
+    .blank-frame {
+        width: 100%;
+        /*width: 414px;*/
+        height: 210px;
+        position: relative;
+        padding-bottom: 10px;
+        background: #f0f0f0;
+    }
+    
+    .normal-title,
+    .edit-title {
+        /* position: absolute;*/
+        width: 100%;
+        left: 0;
+    }
+    
+    .normal-title {
+        -webkit-transition: opacity .2s ease-out .1s, -webkit-transform .2s ease-out .1s;
+        padding-top: 1px;
+    }
+    
+    .plus-title h2 {
+        line-height: 40px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-weight: normal;
+        color: #999;
+        margin-left: 21px;
+        margin-left: 0px;
+        padding-left: 21px;
+        /* margin-left: -310px;*/
+        background: #fff;
+        display: block;
+    }
+    
+    .three-more {
+        /*position:absolute;*/
+        width: 24px;
+        height: 24px;
+        /*float: right;
+	z-index: 2000;*/
+        /*先上下再左右；因为上一级的H2已经独占一行了，所以要-33px移动上去。*/
+        margin: -33px 380px;
+        /*background: gold;*/
+    }
+    /*我的导航栏目下面导航表格，用a标签实现的*/
+    
+    #nav .plus-content > a.hao123 {
+        letter-spacing: -1px;
+    }
+    
+    .plus-content a {
+        color: #262626;
+    }
+    
+    #nav-list a:nth-child(n+1) {
+        border-bottom: 1px solid #f5f5f5;
+    }
+    
+    .plus-content {
+        width: 100%;
+        height: 168px;
+        overflow: hidden;
+        margin-top: 0;
+        font-size: 14px;
+    }
+    
+    #nav-list a {
+        float: left;
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 6px;
+        width: 33.33%;
+        height: 42px;
+        line-height: 42px;
+        border-right: 1px solid #f5f5f5;
+    }
+    
+    #nav-list a span {
+        display: inline-block;
+        position: relative;
+        padding: 0 6px 0 5px;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    #nav-list a span,
+    #nav.edit a span,
+    #nav-view .rec p,
+    #nav-view .s-webname,
+    #nav-view .s-weburl,
+    .plus-content span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .test2 {
+        width: 100%;
+        height: 168px;
+        background: gold;
+    }
+    
+    .plus-content {
+        width: 100%;
+        height: 168px;
+        overflow: hidden;
+        margin-top: 0;
+        font-size: 14px;
+        background: #fff;
+        margin-top: 41px;
+    }
+    /*我的导航栏目下面的生活服务大块区域*/
+    
+    .plus {
+        margin-top: 8px;
+        background: #f1f1f1;
+        overflow: hidden;
+        width: 100%;
+        height: 309px;
+    }
+    
+    .plus-title {
+        position: relative;
+        height: 41px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        /*  background: green;*/
+    }
+    
+    #lbs .plus-content {
+        padding: 0 21px;
+        /* background: yellow;*/
+    }
+    
+    .plus-content {
+        overflow: hidden;
+        margin-top: 0;
+        font-size: 14px;
+    }
+    /*生活定位栏目*/
+    
+    #lbs .gps-zone {
+        position: relative;
+        margin: 8px 0 14px;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+        color: #262626;
+        /* background: aqua;*/
+    }
+    
+    #lbs .gps-zone button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #d2d6dd;
+        border-radius: 2px;
+        text-indent: 20px;
+        font-size: 14px;
+        background: white;
+    }
+    
+    button {
+        outline: none;
+    }
+    
+    #lbs .gps-info {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 32px;
+        overflow: hidden;
+    }
+    
+    #lbs .gps-zone p {
+        display: -moz-box;
+        display: -webkit-box;
+        -moz-box-orient: vertical;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -moz-line-clamp: 2;
+        -webkit-line-clamp: 2;
+        padding-right: 70px;
+        line-height: 16px;
+    }
+    /*生活服务栏目中主体部分图标中用来外层设置的ul>li,*/
+    
+    #lbs-list {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        text-align: left;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    #lbs-list li {
+        width: 24%;
+        text-align: center;
+    }
+    
+    #lbs-list li,
+    #lbs-list a {
+        display: inline-block;
+    }
+    
+    #lbs-list a {
+        padding: 0 10px;
+    }
+    
+    #lbs-list li,
+    #lbs-list a {
+        display: inline-block;
+    }
+    
+    .plus-content a {
+        color: #262626;
+    }
+    /*图标外层包裹的div*/
+    
+    div[class*="icon-"] {
+        width: 42px;
+        height: 42px;
+        /* border-radius: 21px;*/
+        margin: 0 auto;
+        /*background: white;*/
+    }
+}
+#lbs-list p {
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 3px 0 8px;
+}
+
+/*展开栏目导航栏目部分*/
+.plus-control {
+    border-top: 1px solid #f5f5f5;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+.more-control {
+    height: 39px;
+    line-height: 39px;
+    background: white
+}
+
+/*管理我的关注*/
+#admin {
+    line-height: 45px;
+    height: 45px;
+    color: #333;
+    font-size: 15px;
+    text-indent: -8px;
+    background: #fff;
+    background-clip: content-box;
+    margin-top: 10px;
+}
+#arrow1 {
+    margin-top: 0px;
+    margin-left: 88px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+}
+#arrow2 {
+    margin-top: -39px;
+    margin-top: 0px;
+    margin-left: 88px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+       margin-left: 241px;
+    margin-top: -41px;
+
+    width: 12px;
+    height: 12px;
+    position: absolute;
+}
+/*腿部baidu公司声明*/
+#foot div a {
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 95px;
+    line-height: 34px;
+    color: #666;
+    font-size: 13px;
+}
+
+#index-copyright, .recordcode {
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 6px 0 0;
+    color: #999;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="page">
+        <!-- 大的页头部分，摆放页眉、logo、搜索框、导航栏四大块 -->
+        <div id="header">
+            <!-- 页面 -->
+            <div class="userinfo-wrap">
+                <!-- 页头登录栏左边天气预报的外层容器 -->
+                <div class="weather-outline">
+                    <div class="icon-weather-default">
+                        <a href="#"><img src="./baidu_files/Weather_cloud_sun.png" style="width: 28px;height: 28px;"></img>
+                        </a>
+                    </div>
+                    <!--  <div class="weather-num"></div> -->
+                    <div class="weather-status">
+                        <p>宜春</p>
+                        <p>27°/20°</p>
+                    </div>
+                    <!-- 城市名称旁边的小箭头 -->
+                    <div class="icon-arrow" id="arrow1"><i class="icon-down"></i></div>
+                </div>
+                <!-- 页头登录栏右边边登录头像及穿衣服的外层容器 -->
+                <div class="login-ware">
+                    <div class="login">
+                        <a href="#"><img src="./baidu_files/lghead.png" style="width: 25px;height: 25px;"></img>
+                        </a>
+                    </div>
+                    <div class="ware">
+                        <a href="#"><img src="./baidu_files/lgware.png" style="width: 25px;height: 25px;"></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- logo区域 -->
+            <div id="logo" class="noTapColor">
+                <img src="./baidu_files/plus_logo.png" width="175" height="55" alt="百度一下,你就知道">
+            </div>
+            <!-- 搜索框 -->
+            <div class="con-wrap">
+                <form class="se-form" id="index-form" action="/s" method="get" autocomplete="off">
+                    <!-- 输入的文本区域框 -->
+                    <div class="input_wrap">
+                        <input type="text" autocomplete="off" autocorrect="off" maxlength="64" id="index-kw" name="word" class="se-input adjust-input">
+                        <!-- 查询按钮 -->
+                        <div class="btn_wrap">
+                            <button id="index-bn" class="se-bn" type="submit">百度一下</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 导航栏 -->
+            <div class="navs">
+                <!--  <a href="#"><i class="navs-news"></i>新闻</a> -->
+                <a href="#">
+                    <div class="navs-news">
+                        <img src="./baidu_files/news.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">新闻</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-book">
+                        <img src="./baidu_files/book.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">小说</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-video">
+                        <img src="./baidu_files/video.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">视频</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-book">
+                        <img src="./baidu_files/book.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">小说</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-ruo">
+                        <img src="./baidu_files/ruo.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">糯米</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-map">
+                        <img src="./baidu_files/map.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">地图</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-more">
+                        <img src="./baidu_files/more.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">更多</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 大页面部分关注及推荐菜单与页头同一个级别 -->
+        <div class="menu-container" id="menu-container">
+            <a href="#">
+                <span class="menu-item current" id="menu-item-0" data-id="0">关注</span></a>
+            <a href="#">
+                <span class="menu-item" id="menu-item-1">推荐</span></a>
+            <div class="slider firstcurrent0"></div>
+        </div>
+        <!-- 页面主体部分 与页头同一个级别  -->
+        <div class="blank-frame">
+            <!-- 我的导航栏目 -->
+            <div class="plus-title">
+                <div class="normal-title">
+                    <!--   <i class="icon-nav"></i> -->
+                    <h2>我的导航</h2>
+                    <!-- 我的导航栏目右边的三个点 -->
+                    <div class="three-more">
+                        <a href="#"><img src="./baidu_files/more_vert.ico"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的导航栏目下面导航表格 -->
+            <div class="plus-content " id="nav-list" href="#" style="display: block">
+                <a href="#" class="hao123"><span>hao123</span><div data-icon="edit-close"></div></a>
+                <a href="#"><span>美女</span></a>
+                <a href="#"><span>图片</span></a>
+                <a href="#"><span>爱奇艺</span></a>
+                <a href="#"><span>电视剧</span></a>
+                <a href="#"><span>电影</span></a>
+                <a href="#"><span>笑话</span></a>
+                <a href="#"><span>音乐</span></a>
+                <a href="#"><span>小说</span></a>
+                <a href="#"><span>新军事</span></a>
+                <a href="#"><span>彩票开奖</span></a>
+                <a href="#"><span>+</span></a>
+                <!--  <a class="to-view edit-add icon-add "></a> -->
+                <!--  <a class="index-arrow icon-arrow " href="javascript:; " style="display: none ">
+                        <div>
+                            <p><span class="icon-add-empty edit-add " data-action="editadd "></span>添加网址</p>
+                            <p>常用网址，等你来添加</p> -->
+            </div>
+            <!-- 我的导航栏目下面的生活服务大块区域 -->
+            <div class="plus" id="lbs">
+                <!-- 生活服务标题栏目 -->
+                <div class="plus-title">
+                    <div class="normal-title">
+                        <h2>生活服务</h2>
+                        <div class="three-more">
+                            <a href="#"><img src="./baidu_files/more_vert.ico"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 生活服务栏目中主体部分图标 -->
+                <div class="plus-content">
+                    <div class="gps-zone">
+                        <div class="gps-info">
+                            <p>点击定位，查看附近位置信息</p>
+                        </div>
+                        <button>定位</button>
+                        <span>
+                     <i class="icon-position"></i>
+                     <i class="icon-position-loading"></i>
+                    </span>
+                    </div>
+                    <!--  生活服务图标列表 -->
+                    <ul id="lbs-list" class="t">
+                        <li>
+                            <a href="#">
+                                <div class="icon-film">
+                                    <i class="icon iconfont">&#xe606;</i>
+                                </div>
+                                <p>电影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-groupon">
+                                    <i class="icon iconfont">&#xe609;</i>
+                                </div>
+                                <p>团购</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-takeout">
+                                    <i class="icon iconfont">&#xe607;</i>
+                                </div>
+                                <p>外卖</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-taxi">
+                                  <!--   <img src="./baidu_files/taxi_48px.ico" style="width: 42px;height: 42px;"> -->
+                                   
+                                    <i class="icon iconfont">&#xe60e;</i>
+                                </div>
+                                <p>打车</p>
+                            </a>
+                        </li>
+                       <!--  <li>
+                       <a href="#">
+                               <div class="icon-huafei"><i class="icon iconfont">&#xe60e;</i></div>
+                               <p>充值</p>
+                           </a>                            
+                       </li> -->
+                        <li>
+                            <a href="#">
+                                <div class="icon-delicacy">
+                                     <i class="icon iconfont">&#xe602;</i>
+                                </div>
+                                <p>美食</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-KTV">
+                                   <i class="icon iconfont">&#xe604;</i>
+                                </div>
+                                <p>KTV</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-hotel">
+                                    <i class="icon iconfont">&#xe60a;</i>
+                                </div>
+                                <p>更多</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 展开栏目导航栏目部分 -->
+                <div class="plus-control more-control">
+                    <span class="prompt">展开全部</span>
+                    <!-- 城市名称旁边的小箭头 -->
+                    <div class="icon-arrow" id="arrow2"><a href="#"><i class="icon-down"></i></a></div>
+                </div>
+                <!-- 底部的管理我的关注 -->
+                <div id="admin" class="tab-mine-foot" data-inited="1">管理我的关注</div>
+           </div>
+
+           <!-- 最底部的百度公司说明 -->
+        <div id="bottom">
+           
+            <div id="foot">
+                <div>
+                <a href="#"><i class="icon-feedback"></i>用户反馈</a>
+                </div>
+                <a id="index-copyright" href="#">使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号</a><a class="recordcode" href="#"><i></i>京公网安备11000002000001号</a>
+             </div>
+          
+        </div>
+
+        </div>
+       
+    </div>
+</body>
+
+</html>

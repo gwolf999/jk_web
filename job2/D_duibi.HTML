@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>两种盒子对比</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .xiezi {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        overflow: auto;
+        /* 可以按x、y轴方向滚动 */
+    }
+    
+    .xiehe {
+        margin: 100px;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        border: 5px solid red;
+        box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 6);
+    }
+    
+    .xiezi1 {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        overflow: scroll;
+    }
+    
+    .xiehe1 {
+        margin: 50px;
+        margin-left: 100px;
+        padding: 10px;
+        width: 130px;
+        height: 130px;
+        background: yellow;
+        border: 5px solid red;
+        box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 6);
+        box-sizing: border-box;/*设置为怪异盒子。为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度.content-box则是元素外相加，默认 */
+    }
+    </style>
+</head>
+
+<body>
+    <div class="xiehe">
+        <div class="xiezi">标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子标准盒子</div>
+        <!--  <div class="heizi1">怪异盒子</div> -->
+    </div>
+    <hr>
+    <div class="xiehe1">
+        <div class="xiezi1">怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子怪异盒子</div>
+        <!--  <div class="heizi1">怪异盒子</div> -->
+    </div>
+</body>
+
+</html>

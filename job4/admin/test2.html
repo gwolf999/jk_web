@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景定位练习</title>
+    
+</head>
+<body>
+<style rel="stylesheet" type="text/css">
+.box1, .box2, .box3, .box4,.box5, .box6, .box7, .box8,.box9,.box {
+float: left;
+width:100px;
+height: 100px;
+background: #666 url(18.png) no-repeat;
+margin-left: 10px;
+}
+
+#box{
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+   /* background: aqua;*/
+    border:1px solid black;
+}
+
+.box1{background-position: -300px 0;}
+.box2{background-position: -200px 0;}
+.box3{background-position: -100px 0;}
+.box4{background-position:top left;}
+.box5{background-position: 0 -100px;}
+.box6{background-position: 0 -200px;}
+.box7{background-position:bottom left;}
+.box8{background-position:-300px -200px;}
+.box9{background-position:bottom right;}
+.box9{background-position:-300px -300px;}
+
+
+    </style>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box" id="box"></div>
+
+</body>
+</html>

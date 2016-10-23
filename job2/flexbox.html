@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Box</title>
+	<style type="text/css">
+	.con{
+		margin: auto;
+		display:-webkit-flex;
+		width: 800px;
+		background-color: green;
+		flex-direction: row;
+        /* 不放大不知道，一个类为row_c的div为块元素，占了整整一行. 原来300一满，就换行，看起来像是列*/
+        /*伸缩项目放置在伸缩容器的方向（行或者列）*/
+        flex-wrap: wrap;
+        /* 换行，第一行在上方,默认不换行挤在一起 */
+        justify-content: center;
+        /* 定义了项目在主轴上的对齐方式 */
+        align-items: center;
+
+
+	}
+	.num{
+		margin: auto;
+    line-height: 200px;/* 设置行元素，为容器高度，最简单办法居中 */
+
+    text-align: center;/* 水平居中 */
+	}
+	#first{
+		order: 1;
+		height: 200px;
+		-webkit-flex:1;
+		background-color: yellow;
+		text-align: center;
+	}
+	#second{
+		order: 3;
+		height: 200px;
+		-webkit-flex:1;
+		background-color: blue;
+		text-align: center;
+	}
+	#three{
+		order:0;
+		height: 200px;
+		-webkit-flex:1;
+		background-color: orange;
+		text-align: center;
+	}
+
+	.con1{
+		margin: auto;
+		display:-webkit-flex;
+		width: 500px;
+		background-color: green;
+		flex-direction: column;
+        /* 不放大不知道，一个类为row_c的div为块元素，占了整整一行. 原来300一满，就换行，看起来像是列*/
+        /*伸缩项目放置在伸缩容器的方向（行或者列）*/
+        flex-wrap: wrap;
+        /* 换行，第一行在上方,默认不换行挤在一起 */
+        justify-content: center;
+        /* 定义了项目在主轴上的对齐方式 */
+        align-items: center;
+
+
+	}
+	.num1{
+		width: 100%;
+		margin: auto;
+       line-height: 200px; /* 行元素，设置为容器高度，最简单办法居中 */
+         text-align: center;/* 水平居中 */
+	}
+	
+	#first1{
+		order: 5;
+		height: 200px;
+		-webkit-flex:1;
+		background-color: yellow;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div class="con">
+    <div class="num" id="first">第一个</div>
+    <div class="num" id="second">第二个</div>
+    <div class="num" id="three">第三个</div>
+	</div>
+	<hr>
+	<div class="con1">
+    <div class="num1" id="first1">第一个</div>
+    <div class="num1" id="second">第二个</div>
+    <div class="num1" id="three">第三个</div>
+	</div>
+</body>
+</html>

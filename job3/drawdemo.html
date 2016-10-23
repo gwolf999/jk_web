@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>基础图形绘画测试</title>
+    <style type="text/css">
+    /*背景色配置background:tomato;background:lightgreen;background:deepskyblue;background:gold;background:hotpink;*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contain {
+        /*width: 1200px;*/
+        width: 100%;
+        /*height: 1720px;*/
+        height: 100%;
+        margin: auto;
+        background: aqua;
+        /*不定义这个，下面的9个子元素就会排列成9行，现在定义为9列*/
+        display: flex;
+        /*定义父元素也就是伸缩容器*/
+        flex-direction: row;
+        /*默认向右*/
+        flex-wrap: wrap;
+        /*默认不换行*/
+        justify-content: space-between;
+        /*主轴对齐:用来设置伸缩容器当前行伸缩项目在主轴方向的对齐方式*/
+        align-items: stretch;
+        /*侧轴对齐（一般指单行）:用来设置伸缩容器当前行在侧轴方向的对齐方式,stretch默认为充满整个容器*/
+        align-content: stretch;
+        /*指定2行以上在侧轴的对齐方式 flex-start | center | flex-end | space-between | space-around | stretch[默认]*/
+    }
+    
+    .box {
+        /*字体颜色*/
+        font-size: 16px;
+        font-family: serif;
+        /*文字阴影*/
+        text-shadow: 5px -2px -1px blue;
+        /*width: 380px;
+        width: 190px;*/
+        margin: 10px;
+        background: deepskyblue;
+        background: white;
+        /*Flexbox最强大的特性是能够通过“flex-flow”属性设置伸缩项目的流动方向，或者可以通过“flex”属性设置一个可用的空间。它的取值可以有三个部分（flex-grow、flex-shrink、flex-basis）*/
+        /*flex-basis设定宽度就决定了每一行可以排列几个子项目,用px 或者 % 都可以*/
+        flex-basis: 378px;
+        flex-basis: 31%;
+        /*  flex-basis: 31%;*/
+        height: 200px;
+        /*文字对齐方向*/
+        text-align: left;
+        /*  line-height: 200px;*/
+        /*边框阴影*/
+        box-shadow: 5px -5px 0px 0px;
+        /* 嵌套控制下面图形演示的div*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid #000;
+        order: 20;
+    }
+    
+    #b1 {
+        /*order属性是用来设置伸缩项的显示顺序，默认状态下，在源文档的次序配置项目。order属性控制项目在容器里的顺序。order取值越大，越排在后面。并且order可以取负值。*/
+        order: 11;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .b1 {
+        width: 100px;
+        height: 100px;
+        background: #8BC34A;
+        border-radius: 50px;
+        border-radius: 50%;
+        /*50%为极限值，过了没有变化*/
+        margin: auto;
+    }
+    
+    #b2 {
+        order: 12;
+    }
+    
+    .b2 {
+        width: 160px;
+        height: 100px;
+        background: #8BC34A;
+        /*border-radius 这个属性还有另外一个鲜为人知的真相，它不仅可以接受长度值，还可以接受百分比值。这个百分比值会基于元素的尺寸进行解析.这意味着相同的百分比可能会计算出不同的水平和垂直半径*/
+        border-radius: 50%;
+        margin: auto;
+    }
+    
+    .b3 {
+        /*思路：border-radius 的语法比我们想像中灵活得多。你可能会惊讶地发现 border-radius 原来是一个简写属性。第一种方法就是使用它所对应的各个展开式属性： *  border-top-left-radius *  border-top-right-radius *  border-bottom-right-radius *  border-bottom-left-radius 我们甚至可以为所有四个角提供完全不同的水平和垂直半径，方法是在斜杠前指定 1~4 个值，在斜杠后指定另外 1~4 个值。举例来说，当 border-radius 的值为10px / 5px 20px 时，其效果相当于 10px 10px 10px 10px / 5px 20px 5px 20px 。 为 border-radius 属性分别指定4、3、2、1 个由空格分隔的值时，这些值是以这样的规律分配到四个角上的（请注意，对椭圆半径来说，斜杠前和斜杠后最多可以各有四个参数，这两组值是以同样的方法分配到各个角的）
+*/
+        width: 200px;
+        height: 150px;
+        border-radius: 50% / 100% 100% 0 0;
+        background: #8BC34A;
+        margin: auto;
+    }
+    
+    .b4 {
+        width: 200px;
+        height: 150px;
+        border-radius: 100% 0 0 100%/50%;
+        background: #8BC34A;
+        margin: auto;
+    }
+    
+    .b5 {
+        width: 200px;
+        height: 150px;
+        border-radius: 100% 0 0 0;
+        background: #8BC34A;
+        margin: auto;
+    }
+    
+    .b6 {
+        /*思路：绘制opera浏览器的logo,分析起来不难，就只有两个图层，一个是最底部的椭圆，一个是最上面那层的椭圆。先确定一下最底层的椭圆宽高，量了一下，水平宽度为258px，垂直高度为275px，因为其是一个对称的椭圆，没有倾斜度，故4个角均为水平半径为258px，垂直半径为275px的4个相等椭圆，用同样的办法确定最里面的椭圆的半径，因此，四个角均为水平半径120px，垂直半径为229px的椭圆，代码如下：*/
+        width: 129px;
+        height: 137.5px;
+        background: #F22629;
+        border-radius: 129px 129px 129px 129px /137.5px 137.5px 137.5px 137.5px;
+        position: relative;
+        /*父元素为何用relative*/
+        margin: auto;
+    }
+    
+    .b6a {
+        width: 56px;
+        height: 115.5px;
+        background: #FFFFFF;
+        border-radius: 56px 56px 56px 56px/115.5px 115.5px 115.5px 115.5px;
+        position: absolute;
+        /*采用绝对定位*/
+        left: 50%;
+        right: 50%;
+        top: 50%;
+        bottom: 50%;
+        margin-left: -28px;
+        margin-top: -57.5px;
+    }
+    
+    .b7 {
+        /*直接转，不用伪元素*/
+        width: 200px;
+        height: 100px;
+        position: relative;
+        left: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-weight: bolder;
+        /* background: tomato;*/
+        transform: skew(45deg);
+        background: #8BC34A;
+    }
+    
+    .b8 {
+        width: 120px;
+        height: 120px;
+        position: relative;
+        left: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    
+    .b8::after {
+        content: "rotate(45deg)";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* z-index: -1;*/
+        /*用after 不用z-index*/
+        /* 按网页z-index:-1在这里调试错误不显示，但在jobweb里面的test2中显示正常。这估计与我的弹性盒子有关系*/
+        transform: rotate(45deg);
+        background: #8BC34A;
+        margin: auto;
+    }
+    
+    .b9 {
+        width: 100px;
+        height: 100px;
+        transform: rotate(45deg);
+        overflow: hidden;
+        margin: 50px;
+        margin: auto;
+        background: yellowgreen;
+    }
+    
+    .b9 img {
+        max-width: 100%;
+        max-height: 100%;
+        /*旋转-45度，并缩放*/
+        transform: rotate(-45deg) scale(0.6);
+        z-index: -1;
+        position: relative;
+        margin: auto;
+    }
+    
+    .b12 {
+        width: 140px;
+        height: 140px;
+        background: #8BC34A;
+        border-radius: 50%;
+        /*根据Gradient指定的语法来生成对应的图片*/
+        background-image: linear-gradient(to right, transparent 50%, #655 0);
+        margin: auto;
+    }
+    
+    .b12::before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        border-radius: 0 100% 100% 0 / 50%;
+        background-color: inherit;
+        transform-origin: left;
+        transform: rotate(.1turn);
+        /*10%*/
+        transform: rotate(.2turn);
+        /*20%*/
+        transform: rotate(.3turn);
+        /*30%*/
+    }
+    
+    a {
+        font: 12px;
+        text-align: left;
+    }
+    /*六个动画的css*/
+    /*am01是闪烁按钮*/
+    
+    #am01 {
+        width: 100%;
+        /* padding:3%;*/
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: auto;
+        /* background: skyblue;*/
+    }
+    
+    #am01 .loader {
+        /*原来是在整个box下面分成3份所以设置为30%，现在我整个box就不大所以要100%*/
+        width: 100%;
+        float: left;
+        height: 200px;
+        margin-right: 3%;
+        border: 1px #ccc solid;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*  background: yellowgreen;*/
+    }
+    
+    .loading-1 {
+        /*真正闪烁的底层*/
+        width: 35px;
+        height: 35px;
+        position: relative;
+        background: tomato;
+    }
+    
+    .loading-1 i {
+        /*<i> 定义与文本中其余部分不同的部分，并把这部分文本呈现为斜体文本。*/
+        /*把i定义为块级元素，长宽都为上一级的35px*/
+        display: block;
+        width: 100%;
+        height: 100%;
+        /*把一个35px的正方形变成圆形*/
+        border-radius: 50%;
+        /*transparent意思是透明*/
+        /*思路：1、一个35px的圆 2、在圆中从上到下设置70%的部分为透明 颜色的渐变 3.开始选择*/
+        background: linear-gradient(transparent 0%, transparent 70%, #333 30%, #333 100%);
+        /*animation-duration（0.6）动画指定需要多少秒或毫秒完成；linear  动画从头到尾的速度是相同的 animation-delay（3s）设置动画在启动前的延迟间隔,只执行一次infinite    指定动画应该播放无限次（永远）*/
+        -webkit-animation: loading-1 0.6s linear 3s infinite;
+    }
+    
+    @keyframes loading-1 {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+/*am02波浪起伏*/
+@-webkit-keyframes loading-2{
+        0%{
+            transform: scaleY(1);
+        }
+        50%{
+            transform: scaleY(0.4);
+        }
+        100%{
+            transform: scaleY(1);
+        }
+    }
+    .loading-2 i{
+        display: inline-block;
+        width: 4px;
+        height: 35px;
+        border-radius: 2px;
+        margin:0 2px;
+        background-color: #333;
+    }
+    .loading-2 i:nth-child(1){
+        -webkit-animation:loading-2 1s ease-in 0.1s infinite;
+    }
+    .loading-2 i:nth-child(2){
+        -webkit-animation:loading-2 1s ease-in 0.2s infinite;
+    }
+    .loading-2 i:nth-child(3){
+        -webkit-animation:loading-2 1s ease-in 0.3s infinite;
+    }
+    .loading-2 i:nth-child(4){
+        -webkit-animation:loading-2 1s ease-in 0.4s infinite;
+    }
+    .loading-2 i:nth-child(5){
+        -webkit-animation:loading-2 1s ease-in 0.5s infinite;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="box" id="b1">
+            <p><a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551150&idx=1&sn=4314049cca8542adccee2fe00afca470&scene=1&srcid=0820MIGM9X5CHQWYmMpkiTmu#rd" target="_blank">用 CSS3 绘制你需要的几何图形</a>案例1-12</p>
+            <p>1.圆形</p>
+            <div class="b1"></div>
+        </div>
+        <div class="box" id="b2">
+            <p>2.自适应椭圆</p>
+            <div class="b2"></div>
+        </div>
+        <div class="box" id="b3">
+            <p>3.自适应的半椭圆:沿横轴劈开的半椭圆</p>
+            <div class="b3"></div>
+        </div>
+        <div class="box" id="b4">
+            <p>4.自适应的半椭圆:沿纵轴劈开的半椭圆</p>
+            <div class="b4"></div>
+        </div>
+        <div class="box" id="b5">
+            <p>5.四分之一椭圆</p>
+            <div class="b5"></div>
+        </div>
+        <div class="box" id="b6">
+            <p>6.用椭圆绘制opera浏览器的logo</p>
+            <div class="b6">
+                <div class="b6a"></div>
+            </div>
+        </div>
+        <div class="box" id="b7">
+            <p>7.平行四边形！与源文件z-index不同</p><a href="http://blog.dimpurr.com/css-before-after/" target="_blank">你所不知的 CSS ::before 和 ::after 伪元素用法</a></p>
+            <div class="b7">transform:skew()</div>
+        </div>
+        <div class="box" id="b8">
+            <p>8.菱形！与源文件z-index不同</p>
+            <div class="b8">transform:rotate()</div>
+        </div>
+        <div class="box" id="b9">
+            <p>9.菱形图片</p>
+            <div class="b9">
+                <img src="./img/cdr1.jpg" alt="吃豆人">
+            </div>
+        </div>
+        <div class="box" id="b10">10</div>
+        <div class="box" id="b11">11</div>
+        <div class="box" id="b12">
+            <p>12.简单的饼图<a href="http://www.alloyteam.com/2016/03/css-gradient/" target="_blank">CSS Gradient使用详解</a></p>
+            <div class="b12">
+            </div>
+        </div>
+        <div class="box" id="b13">13</div>
+        <div class="box" id="b14">
+            <p>14.<a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551104&idx=2&sn=b862a26f8db2674af5efc2e4aa4d9425&scene=1&srcid=0820GDGisT3aVlm0b36cCq8A#rd" target="_blank">酷酷的 CSS3 三角形运用</a></p>
+            <div class="b14"></div>
+        </div>
+        <div class="box" id="b15">15</div>
+        <div class="box" id="b16">16</div>
+        <div class="box" id="b17">17</div>
+        <div class="box" id="b18">
+            <p>18.<a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651551088&idx=2&sn=ffcf5e0e5403df8fa42d4dce0f0e64a0&scene=1&srcid=0820mfpHilv82MU5guowsKAt#rd" target="_blank">CSS3初体验之奇技淫巧</a></p>
+            <div class="b18"></div>
+        </div>
+        <div class="box" id="b19">19</div>
+        <div class="box" id="b20">20</div>
+        <div class="box" id="b21">21</div>
+        <!-- 六个动画案例 -->
+        <div class="box" id="am01">
+            <p>am01.
+                <a href="http://www.jikexueyuan.com/course/1890.html" target="_blank">CSS3 实现 loading 动画和 3D 翻转动画特效</a></p>
+            <div class="loader">
+                <div class="loading-1">
+                    <i></i>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="am01"><p>am02.波浪起伏</p>
+        <div class="loader"> 
+            <div class="loading-2">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+
+
+
+        </div>
+        <div class="box" id="am">am03</div>
+        <div class="box" id="am">am04</div>
+        <div class="box" id="am">am05</div>
+        <div class="box" id="am">am06</div>
+    </div>
+</body>
+
+</html>

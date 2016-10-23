@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>仿华为计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/calcu.css">
+   
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!--  <input class="cal_input" id="cal_input" type="number"> -->
+            <span class="cal_span" id="cal_span"></span>
+            <!--  8989898989 -->
+        </header>
+        <div class="mainer">
+            <div class="div_div" onclick="inputnumber('/')">
+                <h1>/</h1></div>
+            <div class="div_mul" onclick="inputnumber('X')">
+                <h1>X</h1></div>
+            <div class="div_del" id="div_del" onclick="inputnumber('C')">
+                <h1>C</h1></div>
+            <!--  <div class="div_del2"><h1>9</h1></div> -->
+            <div class="num7" onclick="inputnumber(7)">
+                <h1>7</h1></div>
+            <div class="num8" onclick="inputnumber(8)">
+                <h1>8</h1></div>
+            <div class="num9" onclick="inputnumber(9)">
+                <h1>9</h1></div>
+            <div class="div_sub" onclick="inputnumber('-')">
+                <h1>-</h1></div>
+            <div class="num4" onclick="inputnumber(4)">
+                <h1>4</h1></div>
+            <div class="num5" onclick="inputnumber(5)">
+                <h1>5</h1></div>
+            <div class="num6" onclick="inputnumber(6)">
+                <h1>6</h1></div>
+            <div class="div_add" id="div_add" onclick="inputnumber('+')">
+                <h1>+</h1></div>
+            <!-- <div class="num6"><h1>9</h1></div> -->
+        </div>
+        <div class="footer" style="position: relative;">
+            <div class="num1" onclick="inputnumber(1)">
+                <h1>1</h1></div>
+            <div class="num2" onclick="inputnumber(2)">
+                <h1>2</h1></div>
+            <div class="num3" onclick="inputnumber(3)">
+                <h1>3</h1></div>
+            <div class="div_equ" id="div_equ" onclick="inputnumber('=')">
+                <h1>=</h1></div>
+            <div class="num0" id="num0" onclick="inputnumber(0)">
+                <h1>0</h1></div>
+            <div class="numdot" id="numdot" onclick="inputnumber('.')">
+                <h1>.</h1></div>
+            <!-- <div class="tmp">
+                
+                
+                </div> -->
+        </div>
+    </div>
+   <script type="text/javascript" src="js/calcu.js"></script>
+
+</body>
+
+</html>

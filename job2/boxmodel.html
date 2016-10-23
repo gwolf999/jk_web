@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>gwolf的盒子调测模型</title>
+    <style type="text/css">
+    body {
+        /* 此属性为系统默认属性 */
+        display: block;
+       /*  如果要取消必须设置为0px；不写就是默认还是存在的 */
+        margin: 8px;
+        height: 100%;/* 因为页面并没有缺省的高度值，所以，当你让一个元素的高度设定为百分比高度时，无法根据获取父元素的高度，也就无法计算自己的高度 */
+    }
+    /* 定义最外层类的属性，本测试模型共嵌套5层,默认标准盒子非怪异盒子及弹性盒子 */
+    
+    .contain {
+        background: aqua;
+        width: 960px;
+        margin: auto;
+        /* 让本类左右居中 */
+        text-align: center;
+        /* 本div内所有文字高都是30px且居住了 */
+        line-height: 30px;
+       /*  定位3要素，父容器position，子容器为line-block，再float起来 */
+        position: relative; /* 这里相对与绝对区分不出来？footer类会自动顶上来，http://jiuye.jikexueyuan.com/topic/964参考 */
+    }
+    
+    .header {
+        background: antiquewhite;
+        width: 90%;
+        height: 200px;
+    }
+     /*  div不定义高度的情况下，下面div会默认贴着文字而来。只要定义了高度才会在高度之外。 */
+    .aside {
+        width: 30%;
+        height: 400px;
+        border: 2px;
+        background: darkturquoise;
+         /*  定位3要素，父容器position，子容器为line-block，再float起来 */
+        display: line-block;
+        float: left;
+         float: right;
+        
+    }
+    
+    .main {
+        width: 69%;/* 因为有bloder的宽度在，所以超过了100%，挤不上去 */
+        background: khaki;
+        height: 600px;
+        border: 5px red dotted;
+         /*  定位3要素，父容器position，子容器为line-block，再float起来 */
+         display: line-block;
+       float: right;
+        float: left;
+       
+    }
+    /* 开始因为main类中一个div没有闭合，把本类放入main类去了，所以总是出问题 */
+    .footer {
+        width: 95%;
+        background: #CDDC39;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        我是contain
+        <div class="header">
+            我是头部
+            <div class="header_l">我是左头部</div>
+            <div class="header_l">我是右头部</div>
+        </div>
+        <div class="aside">我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边--我是身体部分的旁边
+ <div class="more" id="more0">
+                <img src="./img/luomi.png" width="64" height="64" class="imgShow" />
+                <br><a href="#">糯米</a>
+                <br>
+                <img src="./img/music.png" width="64" height="64" class="imgShow" />
+                <br><a href="#">音乐</a>
+                <br>
+                <img src="./img/wenku.png" width="64" height="64" class="imgShow" />
+                <br><a href="#">文库</a>
+                <br>
+                <img src="./img/zhidao.png" width="64" height="64" class="imgShow" />
+                <br><a href="#">知道</a>
+                <br>
+                <span><a href="#" class="end2">全部产品>></a></span>
+            </div>
+        </div>
+        <div class="main">
+            我是身体部分
+            <div class="main_l">我是身体左侧</div>
+            <div class="main_r">我是身体右侧
+                <div class="main_r1">我是身体右侧上</div>
+                <div class="main_r2">我是身体右侧中</div>
+                    <div class="main_r2_1">我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***我是身体右侧中的左边***</div>
+                    <div class="main_r2_2">我是身体右侧中的下边</div>
+                    <div class="main_r3">我是身体右侧下</div>
+                </div>
+                 <div class="main_r3">我是身体右侧下</div>
+            </div>
+        <div class="footer">我是腿部</div>   
+        </div>
+</body>
+
+</html>

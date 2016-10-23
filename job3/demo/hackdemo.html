@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HACK DEMO</title>
+    <style type="text/css">
+    /*  webkit css hack  */
+    
+    .webkit-hack {
+        color: green;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .webkit-hack {
+            color: red;
+        }
+    }
+    /* firefox css hack */
+    
+    .firefox-hack {
+        color: green;
+    }
+    
+    @-moz-document url-prefix() {
+        .firefox-hack {
+            color: red;
+        }
+    }
+    /* IE8/9/10/11 css hack */
+    
+    .IE-hack {
+        color: green;
+    }
+    
+    @media screen\0 {
+        .IE-hack {
+            color: red;
+        }
+    }
+    /* IE6/7/8 css hack */
+    
+    .IE678-hack {
+        color: green;
+    }
+    
+    @media \0screen\,
+    screen\9 {
+        .IE678-hack {
+            color: red;
+        }
+    }
+    /* */
+    
+    .IE910-hack {
+        color: green;
+        color: red\9\0;
+        *color: green;
+        /* 修复一下，让IE6/7还是显示绿色 */
+    }
+    /* IE67 css hack */
+    
+    .IE67-hack {
+        color: green;
+        *color: red;
+    }
+    /* IE8 hack */
+    
+    .IE8-hack {
+        color: green;
+    }
+    
+    @media \0screen\,
+    screen\9 {
+        .IE8-hack {
+            color: red;
+            *color: green;
+        }
+    }
+    /* */
+    
+    .IE7-hack {
+        color: green;
+        *color: red;
+        _color: green;
+    }
+    /* IE6 css hack */
+    
+    .IE6-hack {
+        color: green;
+        _color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <p class="webkit-hack">我在webkit内核浏览器下显示为红色，在其他非webkit内核浏览器下显示为绿色</p>
+    <p class="firefox-hack">我在firefox浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE-hack">我在IE8/9/10/11浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE678-hack">我在IE6/7/8浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE910-hack">我在IE9/10浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE67-hack">我在IE6/7浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE8-hack">我在IE8浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE7-hack">我在IE7浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+    <p class="IE6-hack">我在IE6浏览器下显示为红色，在其他浏览器下显示为绿色</p>
+</body>
+
+</html>

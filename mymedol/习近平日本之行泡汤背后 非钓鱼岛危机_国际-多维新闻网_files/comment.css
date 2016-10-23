@@ -1,0 +1,105 @@
+﻿@charset "utf-8";
+
+.dw_comment{margin:0;overflow:hidden;}
+.dw_comment .line{ width:auto; margin-top:20px;}
+/*------------标题------------*/
+.bt_h2 span,.bt_h2 a,.bt2_h2 span,.bt2_h2 a,.bt_change a{background:url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat #fff;}
+a.tit_wypl{ background-position:10px -0px;}
+a.tit_wypl:hover,a.wypl_on{ background-position:-130px -0px;}
+a.tit_hot{ background-position:20px -38px; width:126px;}
+a.tit_hot:hover,a.hot_on{ background-position:-120px -38px;}
+a.tit_facebook{background-position:15px -78px;width:126px;}
+a.tit_facebook:hover,a.facebook_on{background-position:-125px -78px;}
+a.wypl_on,a.hot_on,a.facebook_on{ border-bottom:1px solid #fff; }
+/*------------盖楼代码------------*/
+.commentBox {padding:8px;background: #f8f8f8; word-wrap: break-word; margin-bottom:6px;position: relative;z-index: 1;}
+.commentBox .commentInfo {line-height: 18px;height: 20px;position: relative;font-size: 12px;}
+.commentBox p{}
+.replies .userFace1 {position: absolute;z-index: 3;left: 0px;top: 2px;width: 50px; height:50px; overflow:hidden;}
+.commentBox .double{ background-color:#eee}
+.commentBox .author {color: #1e50a2;padding-top: 2px;}
+.commentBox .floorCount {color: #fff;background-color: #54a4db;position: absolute;right: 10px;padding: 0 3px;font-family: Arial;top: 5px;font-size: 12px;}
+.replies .list{}
+.replies .body {font-size: 14px;white-space: normal; margin-top:10px;}
+.replies .content {line-height: 20px;color: #2b2b2b;font-size: 14px;}
+.replies .hideTips {padding: 0 0 7px 7px;font-size: 12px;color: #ff4100;cursor: pointer;}
+.replies .reply {text-align: left;padding: 16px 0 18px 0;margin: 0 0px 0 0px;color: #000;border-bottom: 1px solid #ddd;}
+.replies .inner {padding: 0 0px 0 60px;}
+.replies .userFace {float: left; display:inline;margin:0px 10px 1px 5px;width: 50px;overflow: hidden;}
+.replies .body {font-size: 14px;white-space: normal; margin-top:10px;}
+.replies .postTime {color:#666;}
+.replies .author .facebox {position: absolute;z-index: 3;left: -66px;top: 2px;}
+.replies .author {position: relative;z-index: 3;}
+.replies .author_name,.replies .from-logon,.replies .from-logon-shouji,.replies .ip{ margin-right:10px; color:#666;}
+.replies .author_name a{ color:#1e50a2;}
+.replies .author_name a:hover{ color:#ff4100;}
+.replies .from-logon-shouji{ position:relative; padding-right:18px;}
+.replies .mobile-img{background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat -4px -224px; display:inline-block; position:absolute; top:-3px; right:0; width:15px; height:22px;}
+.replies .tieOperations { margin:0 10px 5px 0; float:left; width:100%;margin-top:-5px; line-height:16px;font-size: 12px;}
+.replies .operations {color: #1e50a2;float: right;height: 16px;line-height: 16px;margin-top: 10px;}
+.replies .operations li {float: left;padding-left: 1.2em;}
+.replies .operations a{color: #1e50a2;}
+.replies .operations a:hover{color: #ff4100;}
+/*------------评论代码------------*/
+.comment-wrap{ position:relative; width:100%;}
+.dw-avatar{ width:50px; height:50px; position:absolute; top:0; left:0; margin-right:10px; display:block; overflow:hidden;}
+.dw-textarea-wrapper{ padding-left:60px; margin:0 auto;}
+.dw-textarea-wrapper textarea{border: 1px solid #ddd;width:95%; background-color:#f5f5f5; height:120px;font:14px/22px Microsoft YaHei,Arial,"宋体"; padding:5px 10px;}
+.dw-post-toolbar{ border:1px solid #ddd; padding:5px 10px;width:95%;background-color:#fff;  margin-top:-5px;}
+.dw-post-toolbar a.comment-sub{ float:right;width: 75px;height: 28px;line-height: 28px;display: block;margin:0;text-indent: -300px;overflow: hidden;background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat 0 -129px;}
+.dw-post-toolbar a.comment-sub:hover{ background-position:-91px -129px;}
+.dw-post-toolbar a{ font-size:12px;}
+.dw-post-toolbar .post-share{margin:6px 30px 0 0; padding-left:17px;background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat -2px -254px;}
+.dw-post-toolbar .post-gongju{ margin:6px 0 0 3px;}
+.dw-post-toolbar .post-login{ margin-right:20px;background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat -4px -168px; padding-left:20px;}
+
+.comment-txt-wrap .dw-post-toolbar{background-color:#fff;}
+.comment-txt-wrap .dw-post-toolbar .post-gongju{ height:17px; line-height:17px;}
+.dw-post-toolbar .sh-facebook,.dw-post-toolbar .sh-twitter{background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat; width:100px; display:block; float:left; margin-right:5px; }
+.dw-post-toolbar .sh-facebook input,.dw-post-toolbar .sh-twitter input{ height:13px\9; width:13px\9;padding:0; margin:0; margin-right:18px; margin-top:2px; float:left;}
+.dw-post-toolbar .sh-facebook{ background-position:12px -284px;}
+.dw-post-toolbar .sh-twitter{ background-position:12px -308px;}
+.comment-txt-wrap .dw-textarea-wrapper{ padding-left:0;}
+.comment-txt-wrap .dw-textarea-wrapper textarea{background-color:#fff; }
+
+/*------------评论loading------------*/
+.comm_loading,.comm_loadingend,.comm_loadingnone{ margin-right:0;}
+.neir-more{ font-size:12px; color:#FFF; font-family: Arial; text-indent:6px; height:20px; line-height:20px; white-space:nowrap; float:left; margin-top:10px;background: url(http://s0.dwnews.net/images/club/comment1.png) no-repeat right 3px #bbb; padding:0 18px 0 0;}
+a.neir-more:hover{ color:#FFF;background: url(http://s0.dwnews.net/images/club/comment1.png) no-repeat right 3px #aaa;}
+.neir-more-up{ font-size:12px; color:#FFF; font-family: Arial; text-indent:6px;height:20px; line-height:20px; white-space:nowrap; float:left; margin-top:10px;background: url(http://s0.dwnews.net/images/club/comment1.png) no-repeat right -13px #bbb; padding:0 18px 0 0;}
+a.neir-more-up:hover{ color:#FFF;background: url(http://s0.dwnews.net/images/club/comment1.png) no-repeat right -13px #aaa;}
+
+/*---------热门评论样式---------*/
+.hot-comm{ margin-right:25px; margin:20px 20px 20px 0; position:relative;}
+.hot-body{ border-bottom:1px solid #ddd;}
+.hot-body h3{ font-size:18px; font-weight:normal; margin:15px 0;}
+.hot-comm .inner {padding: 0 0px 0 0px;}
+.hot-comm .userFace {float: right; display:inline;margin:0px 10px 1px 5px;width: 20px; height:20px;overflow: hidden;}
+.hot-comm .body {font-size: 14px;white-space: normal; margin-top:15px;}
+.hot-comm .postTime {color:#666;}
+.hot-comm .author {position: relative;z-index: 3;}
+.hot-comm .author_name,.hot-comm .from-logon,.hot-comm .from-logon-shouji,.hot-comm .ip{ margin-right:10px; color:#666;}
+.hot-comm .author_name a{ color:#1e50a2;}
+.hot-comm .author_name a:hover{ color:#ff4100;}
+.hot-comm .from-logon-shouji{ position:relative; padding-right:18px;}
+.hot-comm .mobile-img{background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat -4px -224px; display:inline-block; position:absolute; top:-3px; right:0; width:15px; height:22px;}
+.hot-comm .tieOperations { margin:0 10px 5px 0; float:left; width:100%;margin-top:-5px; line-height:16px;font-size: 12px;}
+.hot-comm .operations {color: #1e50a2;float: right;height: 16px;line-height: 16px;margin: 10px 0;}
+.hot-comm .operations li {float: left;padding-left: 1.2em;}
+.hot-comm .operations a{color: #1e50a2;}
+.hot-comm .operations a:hover{color: #ff4100;}
+.hot-comm .pinglunkang{ background-color:#f2f2f2; padding:10px; margin-bottom:10px;}
+.hot-comm .xiaosangjiao{}
+.hot-comm .content{ color:#252525;font-size: 14px;line-height: 22px;}
+.hot-comm .content:first-letter {font-size: 22px;padding-right: 5px;}
+.hot-comm .pinglunkang{ position:relative;}
+.hot-comm .xiaosangjiao{ position:absolute; height:8px; width:20px; top:-8px; right:6px;background: url(http://s0.dwnews.net/images/club/biaoti_comment.gif) no-repeat 0 -330px;}
+
+/*---------评论facebook---------*/
+.face-comment{ font-size:14px;}
+.face-img{ width:50px; height:50px; display:block; position:absolute; top:4px; left:0;}
+.face-txt{ padding-left:60px; margin-right:25px;}
+.face-txt .face-name{ color:#1e50a2}
+.face-txt .face-time{ float:right; font-size:12px; margin-top:2px;}
+.face-comment .face-body{ position:relative; border-bottom:1px solid #f2f2f2; padding-bottom:15px; margin-bottom:10px; }
+.face-comment p{ line-height:18px; font-size:12px; margin-top:3px;height:36px; overflow:hidden;}

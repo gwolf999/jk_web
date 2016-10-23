@@ -1,0 +1,578 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+.hello-kitty-container {
+    position: relative;
+    margin: 0px auto;
+    width: 1024px;
+    height: 729px;
+}
+
+    .hello-kitty-container .hello-kitty-img {
+        position: absolute;
+        width: 1024px;
+        height: 729px;
+    }
+
+    .hello-kitty-container .hello-kitty-div {
+        position: absolute;
+        width: 1024px;
+        height: 729px;
+    }
+
+.hello-kitty-div div {
+    position: absolute;
+}
+
+.hello-kitty-div .face {
+    left: 107px;
+    top: 77px;
+    width: 747px;
+    height: 566px;
+    border-top: 35px solid black;
+    border-bottom: 31px solid black;
+    border-left: 29px solid black;
+    border-right: 30px solid black;
+    border-top-left-radius: 355px 333px;
+    border-top-right-radius: 355px 333px;
+    border-bottom-left-radius: 370px 285px;
+    border-bottom-right-radius: 330px 255px;
+    background-color: white;
+    z-index: 100;
+}
+
+.hello-kitty-div .left-ear {
+    left: 112px;
+    top: 61px;
+    width: 250px;
+    height: 250px;
+    border-top: 33px solid black;
+    border-bottom: 30px solid black;
+    border-left: 28px solid black;
+    border-right: 30px solid black;
+    border-top-left-radius: 138px 100px;
+    border-bottom-left-radius: 334px 310px;
+    background-color: white;
+    -o-transform: rotate(23deg);
+    -ms-transform: rotate(23deg);
+    -moz-transform: rotate(23deg);
+    -webkit-transform: rotate(23deg);
+    transform: rotate(23deg);
+    z-index: 99;
+}
+
+.hello-kitty-div .left-ear-clean {
+    left: 146px;
+    top: 96px;
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 138px 100px;
+    border-bottom-left-radius: 360px 310px;
+    background-color: white;
+    -o-transform: rotate(23deg);
+    -ms-transform: rotate(23deg);
+    -moz-transform: rotate(23deg);
+    -webkit-transform: rotate(23deg);
+    transform: rotate(23deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-ear-beautify {
+    left: 149px;
+    top: 221px;
+    width: 60px;
+    height: 30px;
+    border-top-left-radius: 20px 15px;
+    border-top-right-radius: 25px 15px;
+    border-bottom-left-radius: 20px 15px;
+    border-bottom-right-radius: 25px 15px;
+    background-color: black;
+    -o-transform: rotate(-52deg);
+    -ms-transform: rotate(-52deg);
+    -moz-transform: rotate(-52deg);
+    -webkit-transform: rotate(-52deg);
+    transform: rotate(-52deg);
+    z-index: 102;
+}
+
+.hello-kitty-div .right-ear {
+    left: 600px;
+    top: 50px;
+    width: 250px;
+    height: 250px;
+    border-top: 33px solid black;
+    border-bottom: 28px solid black;
+    border-left: 30px solid black;
+    border-right: 29px solid black;
+    border-top-left-radius: 220px 170px;
+    border-top-right-radius: 90px 57px;
+    border-bottom-right-radius: 334px 245px;
+    background-color: white;
+    -o-transform: rotate(-21deg);
+    -ms-transform: rotate(-21deg);
+    -moz-transform: rotate(-21deg);
+    -webkit-transform: rotate(-21deg);
+    transform: rotate(-21deg);
+    z-index: 99;
+}
+
+.hello-kitty-div .right-ear-clean {
+    left: 700px;
+    top: 105px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    z-index: 101;
+}
+
+.hello-kitty-div .bowknot-outside-left-top-container {
+    left: 508px;
+    top: -110px;
+    width: 300px;
+    height: 200px;
+    -o-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -webkit-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    overflow: hidden;
+    z-index: 103;
+}
+
+.hello-kitty-div .bowknot-outside-left-bottom-container {
+    left: 424px;
+    top: 70px;
+    width: 300px;
+    height: 200px;
+    -o-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -webkit-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    overflow: hidden;
+    z-index: 103;
+}
+
+.hello-kitty-div .bowknot-outside-right-top-container {
+    left: 828px;
+    top: 35px;
+    width: 300px;
+    height: 200px;
+    -o-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -webkit-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    overflow: hidden;
+    z-index: 103;
+}
+
+.hello-kitty-div .bowknot-outside-right-bottom-container {
+    left: 744px;
+    top: 215px;
+    width: 300px;
+    height: 200px;
+    -o-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -webkit-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    overflow: hidden;
+    z-index: 103;
+}
+/*底层蝴蝶结的左上角红色部分，因为在这个容器内所以不需要z-index*/
+.hello-kitty-div .bowknot-outside-left-top {
+    left: 128px;
+    top: 52px;
+    width: 185px;
+    height: 352px;
+    border-top: 22px solid black;
+    border-bottom: 24px solid black;
+    border-left: 22px solid black;
+    border-right: 23px solid black;
+    border-top-left-radius: 118px 178px;
+    border-top-right-radius: 112px 218px;
+    background-color: #E72235;
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+.hello-kitty-div .bowknot-outside-left-bottom {
+    left: 110px;
+    top: -270px;
+    width: 185px;
+    height: 352px;
+    border-top: 24px solid black;
+    border-bottom: 23px solid black;
+    border-left: 23px solid black;
+    border-right: 23px solid black;
+    border-bottom-left-radius: 110px 233px;
+    border-bottom-right-radius: 110px 190px;
+    background-color: #E72235;
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.hello-kitty-div .bowknot-outside-right-top {
+    left: -51px;
+    top: 102px;
+    width: 205px;
+    height: 188px;
+    border: 23px solid black;
+    border-top-left-radius: 178px 178px;
+    border-top-right-radius: 79px 51px;
+    border-bottom-right-radius: 189px 185px;
+    background-color: #E72235;
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+.hello-kitty-div .bowknot-outside-right-bottom {
+    left: -52px;
+    top: -234px;
+    width: 195px;
+    height: 286px;
+    border-left: 23px solid black;
+    border-right: 26px solid black;
+    border-top: 23px solid black;
+    border-bottom: 23px solid black;
+    border-bottom-left-radius: 83px 124px;
+    border-bottom-right-radius: 160px 304px;
+    background-color: #E72235;
+    -o-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
+.hello-kitty-div .bowknot-inside-left {
+    left: 595px;
+    top: 122px;
+    width: 47px;
+    height: 47px;
+    border: 25px solid black;
+    border-radius: 48px;
+    background-color: #E72235;
+    z-index: 104;
+}
+
+.hello-kitty-div .bowknot-inside-right {
+    right: 182px;
+    bottom: 444px;
+    width: 35px;
+    height: 35px;
+    border: 25px solid black;
+    border-radius: 42px;
+    background-color: #E72235;
+    z-index: 104;
+}
+
+.hello-kitty-div .bowknot-inside-center {
+    left: 635px;
+    top: 130px;
+    width: 116px;
+    height: 116px;
+    border-top: 23px solid black;
+    border-bottom: 23px solid black;
+    border-left: 24px solid black;
+    border-right: 24px solid black;
+    border-radius: 80px;
+    background-color: #E72235;
+    z-index: 105;
+}
+
+.hello-kitty-div .left-eye {
+    left: 280px;
+    top: 429px;
+    width: 58px;
+    height: 76px;
+    border-radius: 40px;
+    background-color: black;
+    z-index: 101;
+}
+
+
+.hello-kitty-div .right-eye {
+    left: 678px;
+    top: 430px;
+    width: 58px;
+    height: 76px;
+    border-radius: 40px;
+    background-color: black;
+    z-index: 101;
+}
+
+.hello-kitty-div .nose {
+    left: 469px;
+    top: 498px;
+    width: 50px;
+    height: 31px;
+    border-top: 19px solid black;
+    border-bottom: 19px solid black;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
+    border-radius: 43px / 34px;
+    background-color: #EEC827;
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-1:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 420px;
+    width: 100px;
+    height: 24px;
+    border-top-left-radius: 80px 30px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-1:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 131px;
+    top: 418px;
+    width: 60px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-2:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 64px;
+    top: 512px;
+    width: 80px;
+    height: 24px;
+    border-top-left-radius: 80px 30px;
+    border-bottom-left-radius: 50px 20px;
+    background-color: black;
+    -o-transform: rotate(-14deg);
+    -ms-transform: rotate(-14deg);
+    -moz-transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-2:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 135px;
+    top: 498px;
+    width: 60px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-3:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 90px;
+    top: 601px;
+    width: 100px;
+    height: 24px;
+    border-top-left-radius: 80px 30px;
+    border-bottom-left-radius: 20px 20px;
+    background-color: black;
+    -o-transform: rotate(-29deg);
+    -ms-transform: rotate(-29deg);
+    -moz-transform: rotate(-29deg);
+    -webkit-transform: rotate(-29deg);
+    transform: rotate(-29deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .left-moustache-3:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 183px;
+    top: 564px;
+    width: 60px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-1:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 829px;
+    top: 404px;
+    width: 80px;
+    height: 24px;
+    border-top-left-radius: 60px 30px;
+    border-bottom-left-radius: 30px 20px;
+    background-color: black;
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-1:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 902px;
+    top: 398px;
+    width: 100px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-2:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 844px;
+    top: 482px;
+    width: 50px;
+    height: 24px;
+    border-top-left-radius: 55px 30px;
+    border-bottom-left-radius: 50px 20px;
+    background-color: black;
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-2:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 898px;
+    top: 489px;
+    width: 80px;
+    height: 24px;
+    border-top-right-radius: 120px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-3:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 809px;
+    top: 557px;
+    width: 50px;
+    height: 24px;
+    border-top-left-radius: 50px 30px;
+    border-bottom-left-radius: 40px 20px;
+    background-color: black;
+    -o-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -moz-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-3:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 853px;
+    top: 582px;
+    width: 100px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    -moz-transform: rotate(22deg);
+    -webkit-transform: rotate(22deg);
+    transform: rotate(22deg);
+    z-index: 101;
+}

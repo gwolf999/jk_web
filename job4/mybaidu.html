@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>仿百度一下，你就知道</title>
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+   <link rel="stylesheet" media="screen and (min-width:500px)" href="./baidu_files/baidupc.css" type="text/css"  />
+   <link rel="stylesheet" media="screen and (max-width:500px)" href="./baidu_files/baiduip.css" type="text/css" />
+   <!-- <link rel="stylesheet" type="text/css" href="./baidu_files/baiduip.css"> -->
+</head>
+
+<body>
+<!-- 手机版百度网页 -->
+    <div class="container" id="page">
+        <!-- 大的页头部分，摆放页眉、logo、搜索框、导航栏四大块 -->
+        <div id="header">
+            <!-- 页面 -->
+            <div class="userinfo-wrap">
+                <!-- 页头登录栏左边天气预报的外层容器 -->
+                <div class="weather-outline">
+                    <div class="icon-weather-default">
+                        <a href="#"><img src="./baidu_files/Weather_cloud_sun.png" style="width: 28px;height: 28px;"></img>
+                        </a>
+                    </div>
+                    <!--  <div class="weather-num"></div> -->
+                    <div class="weather-status">
+                        <p>宜春</p>
+                        <p>27°/20°</p>
+                    </div>
+                    <!-- 城市名称旁边的小箭头 -->
+                    <div class="icon-arrow" id="arrow1"><i class="icon-down"></i></div>
+                </div>
+                <!-- 页头登录栏右边边登录头像及穿衣服的外层容器 -->
+                <div class="login-ware">
+                    <div class="login">
+                        <a href="#"><img src="./baidu_files/lghead.png" style="width: 25px;height: 25px;"></img>
+                        </a>
+                    </div>
+                    <div class="ware">
+                        <a href="#"><img src="./baidu_files/lgware.png" style="width: 25px;height: 25px;"></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- logo区域 -->
+            <div id="logo" class="noTapColor">
+                <img src="./baidu_files/plus_logo.png" width="175" height="55" alt="百度一下,你就知道">
+            </div>
+            <!-- 搜索框 -->
+            <div class="con-wrap">
+                <form class="se-form" id="index-form" action="/s" method="get" autocomplete="off">
+                    <!-- 输入的文本区域框 -->
+                    <div class="input_wrap">
+                        <input type="text" autocomplete="off" autocorrect="off" maxlength="64" id="index-kw" name="word" class="se-input adjust-input">
+                        <!-- 查询按钮 -->
+                        <div class="btn_wrap">
+                            <button id="index-bn" class="se-bn" type="submit">百度一下</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 导航栏 -->
+            <div class="navs">
+                <!--  <a href="#"><i class="navs-news"></i>新闻</a> -->
+                <a href="#">
+                    <div class="navs-news">
+                        <img src="./baidu_files/news.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">新闻</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-book">
+                        <img src="./baidu_files/book.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">小说</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-video">
+                        <img src="./baidu_files/video.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">视频</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-book">
+                        <img src="./baidu_files/book.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">小说</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-ruo">
+                        <img src="./baidu_files/ruo.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">糯米</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-map">
+                        <img src="./baidu_files/map.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">地图</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="navs-more">
+                        <img src="./baidu_files/more.png" style="width: 24px;height: 18px;">
+                        <p class="p_news">更多</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 大页面部分关注及推荐菜单与页头同一个级别 -->
+        <div class="menu-container" id="menu-container">
+            <a href="#">
+                <span class="menu-item current" id="menu-item-0" data-id="0">关注</span></a>
+            <a href="#">
+                <span class="menu-item" id="menu-item-1">推荐</span></a>
+            <div class="slider firstcurrent0"></div>
+        </div>
+        <!-- 页面主体部分 与页头同一个级别  -->
+        <div class="blank-frame">
+            <!-- 我的导航栏目 -->
+            <div class="plus-title">
+                <div class="normal-title">
+                    <!--   <i class="icon-nav"></i> -->
+                    <h2>我的导航</h2>
+                    <!-- 我的导航栏目右边的三个点 -->
+                    <div class="three-more">
+                        <a href="#"><img src="./baidu_files/more_vert.ico"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的导航栏目下面导航表格 -->
+            <div class="plus-content " id="nav-list" href="#" style="display: block">
+                <a href="#" class="hao123"><span>hao123</span><div data-icon="edit-close"></div></a>
+                <a href="#"><span>美女</span></a>
+                <a href="#"><span>图片</span></a>
+                <a href="#"><span>爱奇艺</span></a>
+                <a href="#"><span>电视剧</span></a>
+                <a href="#"><span>电影</span></a>
+                <a href="#"><span>笑话</span></a>
+                <a href="#"><span>音乐</span></a>
+                <a href="#"><span>小说</span></a>
+                <a href="#"><span>新军事</span></a>
+                <a href="#"><span>彩票开奖</span></a>
+                <a href="#"><span>+</span></a>
+                <!--  <a class="to-view edit-add icon-add "></a> -->
+                <!--  <a class="index-arrow icon-arrow " href="javascript:; " style="display: none ">
+                        <div>
+                            <p><span class="icon-add-empty edit-add " data-action="editadd "></span>添加网址</p>
+                            <p>常用网址，等你来添加</p> -->
+            </div>
+            <!-- 我的导航栏目下面的生活服务大块区域 -->
+            <div class="plus" id="lbs">
+                <!-- 生活服务标题栏目 -->
+                <div class="plus-title">
+                    <div class="normal-title">
+                        <h2>生活服务</h2>
+                        <div class="three-more">
+                            <a href="#"><img src="./baidu_files/more_vert.ico"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 生活服务栏目中主体部分图标 -->
+                <div class="plus-content">
+                    <div class="gps-zone">
+                        <div class="gps-info">
+                            <p>点击定位，查看附近位置信息</p>
+                        </div>
+                        <button>定位</button>
+                        <span>
+                     <i class="icon-position"></i>
+                     <i class="icon-position-loading"></i>
+                    </span>
+                    </div>
+                    <!--  生活服务图标列表 -->
+                    <ul id="lbs-list" class="t">
+                        <li>
+                            <a href="#">
+                                <div class="icon-film">
+                                    <img src="./baidu_files/cinema_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>电影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-groupon">
+                                    <img src="./baidu_files/online_purchase_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>团购</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-takeout">
+                                    <img src="./baidu_files/Motorcycle_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>外卖</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-taxi">
+                                    <img src="./baidu_files/taxi_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>打车</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-hotel">
+                                    <img src="./baidu_files/hotel_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>酒店</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-delicacy">
+                                    <img src="./baidu_files/chinese_food_silver_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>美食</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-KTV">
+                                    <img src="./baidu_files/Microphone_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>KTV</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon-huafei">
+                                    <img src="./baidu_files/telephone_48px.ico" style="width: 42px;height: 42px;">
+                                </div>
+                                <p>充值</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 展开栏目导航栏目部分 -->
+                <div class="plus-control more-control">
+                    <span class="prompt">展开全部</span>
+                    <!-- 城市名称旁边的小箭头 -->
+                    <div class="icon-arrow" id="arrow2"><a href="#"><i class="icon-down"></i></a></div>
+                </div>
+                <!-- 底部的管理我的关注 -->
+                <div id="admin" class="tab-mine-foot" data-inited="1">管理我的关注</div>
+           </div>
+
+           <!-- 最底部的百度公司说明 -->
+        <div id="bottom">
+           
+            <div id="foot">
+                <div>
+                <a href="#"><i class="icon-feedback"></i>用户反馈</a>
+                </div>
+                <a id="index-copyright" href="#">使用百度前必读&nbsp;Baidu&nbsp;京ICP证030173号</a><a class="recordcode" href="#"><i></i>京公网安备11000002000001号</a>
+             </div>
+          
+        </div>
+
+        </div>
+       
+    </div>
+    <!-- pc版百度 -->
+     <!-- <div id="wrapper" style="display: block;"> -->
+     <div id="wrapper">
+        <div id="head">
+            <div class="head_wrapper">
+                <div class="s_form">
+                    <div class="s_form_wrapper soutu-env-nomac soutu-env-index">
+                        <div id="lg"><img hidefocus="true" src="./baidu_files/bd_logo1.png" width="270" height="129"></div>
+                        <!-- <a href="https://www.baidu.com/" id="result_logo"><img src="./baidudemo_files/baidu_jgylogo3.gif" alt="到百度首页" title="到百度首页"></a> -->
+                        <form id="form" name="f" action="https://www.baidu.com/s" class="fm">
+                            <!--  <input type="hidden" name="ie" value="utf-8">
+                            <input type="hidden" name="f" value="8">
+                            <input type="hidden" name="rsv_bp" value="0">
+                            <input type="hidden" name="rsv_idx" value="1">
+                            <input type="hidden" name="ch" value="">
+                            <input type="hidden" name="tn" value="baidu">
+                            <input type="hidden" name="bar" value=""> -->
+                            <span class="bg s_ipt_wr iptfocus quickdelete-wrap">
+                              <span class="soutu-btn"></span>
+                            <input id="kw" name="wd" class="s_ipt" value="" maxlength="255" autocomplete="off">
+                            <a href="javascript:;" id="quickdelete" title="清空" class="quickdelete" style="top: 0px; right: 0px; display: none;"></a>
+                            </span>
+                            <span class="bg s_btn_wr"><input type="submit" id="su" value="百度一下" class="bg s_btn"></span><span class="tools"><span id="mHolder">
+                           <!--  <div id="mCon"><span>输入法</span>
+                    </div> -->
+                    <!--  <ul id="mMenu">
+                        <li><a href="javascript:;" name="ime_hw">手写</a></li>
+                        <li><a href="javascript:;" name="ime_py">拼音</a></li>
+                        <li class="ln"></li>
+                        <li><a href="javascript:;" name="ime_cl">关闭</a></li>
+                    </ul> -->
+                    </span>
+                    </span>
+                    <!--  <input type="hidden" name="rn" value="">
+                    <input type="hidden" name="oq" value="">
+                    <input type="hidden" name="rsv_pq" value="b59177ee00016f97">
+                    <input type="hidden" name="rsv_t" value="0e6fWmHXUMrMQDKW5BOB1ht2e4bP5oeYr5He8xwWstvPJY9k0CuYG/r6eKk">
+                    <input type="hidden" name="rqlang" value="cn">
+                    <input type="hidden" name="rsv_enter" value="1"> -->
+                    </form>
+                    <div id="m"></div>
+                </div>
+            </div>
+            <div id="u">
+                <a class="toindex" href="#">百度首页</a>
+                <a href="javascript:;" name="tj_settingicon" class="pf">设置<i class="c-icon c-icon-triangle-down"></i></a>
+                <a href="#" name="tj_login" class="lb">登录</a>
+            </div>
+            <div id="u1">
+                <a href="#" name="tj_trnuomi" class="mnav">糯米</a>
+                <a href="#" name="tj_trnews" class="mnav">新闻</a>
+                <a href="#" name="tj_trhao123" class="mnav">hao123</a>
+                <a href="#" name="tj_trmap" class="mnav">地图</a>
+                <a href="#" name="tj_trvideo" class="mnav">视频</a>
+                <a href="#" name="tj_trtieba" class="mnav">贴吧</a>
+                <a href="#" name="tj_login" class="lb" onclick="return false;">登录</a>
+                <a href="#" name="tj_settingicon" class="pf">设置</a>
+                <a href="#" name="tj_briicon" class="bri" style="display: block;">更多产品</a>
+                <!-- 更多产品的隐藏窗口容器 -->
+                <div class="bdbri bdbriimg" id="id_bd" style="opacity: 1; min-height: 828px; /*display: none;*/">
+                    <div class="bdmainlink">
+                      <!--   <div class="bdbriimgtitle">更多产品</div> -->
+                        <div class="briscrollwrapperContainer">
+                            <div class="briscrollwrapper bdbriscroll-ctrl-content bdbriscroll-onwheel" style="height: 775.009px;">
+                                <div class="bdbriwrapper">
+                                    <a href="#" name="tj_mp3"><span class="bdbriimgitem_3"></span>音乐</a>
+                                    <a href="#" name="tj_img"><span class="bdbriimgitem_4"></span>图片</a>
+                                    <a href="#" name="tj_zhidao"><span class="bdbriimgitem_2"></span>知道</a>
+                                    <a href="#" name="tj_wenku"><span class="bdbriimgitem_5"></span>文库</a>
+                                    <a href="#" name="tj_bang"><span class="bdbriimgitem_6"></span>风云榜</a>
+                                    <div class="bdbrievenmore"><a href="#" name="tj_more">全部产品&gt;&gt;</a></div>
+                                </div>
+                            </div>
+                            <div class="bdbriscroll-ctrl-scroll" style="height: 755.009px; display: none;">
+                                <div class="bdbriscroll-axis" style="height: 755.009px;"></div>
+                                <div class="bdbriscroll-slider OP_LOG_BTN" style="display: none; top: 0px;">
+                                    <div class="bdbriscroll-s-top"></div>
+                                    <div class="bdbriscroll-s-bottom"></div>
+                                    <div class="bdbriscroll-s-block"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!--   <div class="s_tab" id="s_tab">
+            <b>网页</b>
+            <a href="#">新闻</a>
+            <a href="#">贴吧</a>
+            <a href="#">知道</a>
+            <a href="#">音乐</a>
+            <a href="#">图片</a>
+            <a href="#">视频</a>
+            <a href="#">地图</a>
+            <a href="#">文库</a>
+            <a href="#">更多»</a>
+        </div> -->
+        <!-- 百度底部 -->
+       <!-- ftCon-Wrapper begin -->
+        <div class="ftCon-Wrapper">
+            <div id="qrcode">
+                <div class="qrcode-item qrcode-item-1">
+                    <div class="qrcode-img"></div>
+                    <div class="qrcode-text">
+                        <p><b>手机百度</b></p>
+                        <p><span>快人一步</span></p>
+                    </div>
+                </div>
+                <div class="qrcode-item qrcode-item-2">
+                    <div class="qrcode-img"></div>
+                    <div class="qrcode-text">
+                        <p><b>百度糯米</b></p>
+                        <p><span>一元大餐</span></p>
+                    </div>
+                </div>
+            </div>
+            <div id="ftConw">
+                <p id="lh"><a id="seth">把百度设为主页</a><a id="setf" href="//www.baidu.com/cache/sethelp/help.html">把百度设为主页</a><a href="http://home.baidu.com">关于百度</a><a href="http://ir.baidu.com">About&nbsp;&nbsp;Baidu</a><a href="http://e.baidu.com/?refer=888">百度推广</a></p>
+                <p id="cp">©2016&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/">使用百度前必读</a>&nbsp;<a href="http://jianyi.baidu.com/" class="cp-feedback">意见反馈</a>&nbsp;京ICP证030173号&nbsp;<i class="c-icon-icrlogo"></i></p>
+                <p id="jgwab"><i class="c-icon-jgwablogo"></i>京公网安备11000002000001号</p>
+            </div>
+        </div>
+        <!-- ftCon-Wrapper end -->
+    </div>
+</body>
+
+</html>

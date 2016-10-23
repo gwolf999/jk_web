@@ -1,0 +1,15 @@
+ .divip {
+     margin: 10px 20px;
+     width: 400px;
+     height: 200px;
+     /*设置背景色为了测试*/
+     background-color: green;
+     overflow: hidden;
+     margin: auto;
+     display: block;
+     border: 2px solid black;
+ }
+ 
+ .divpc {
+     display: none;
+ }

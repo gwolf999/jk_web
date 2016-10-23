@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kitty demo</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        position: relative;
+        width: 1024px;
+        height: 729px;
+        margin: 0 auto;
+        background: aqua;
+    }
+    
+    .container .hello-kitty-img {
+        position: absolute;
+        width: 1024px;
+        height: 729px;
+        /* background: green;*/
+    }
+    
+    .container .hello-kitty-div {
+        position: absolute;
+        width: 1024px;
+        height: 729px;
+        /*  background: yellow;*/
+    }
+    
+    .hello-kitty-div div {
+        /*设置了下面所有的div相对于父容器的绝对定位，否则下面的top及left不起作用*/
+        position: absolute;
+    }
+    /*显示出脸部基本盘*/
+    
+    .container .face {
+        /*对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素*/
+        /*该属性用来指定盒子参照相对物左边界向右偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+对应的脚本特性为left。<length>：用长度值来定义距离左边的偏移量。可以为负值。<percentage>：用百分比来定义距离左边的偏移量。百分比参照包含块的宽度。可以为负值*/
+        left: 107px;
+        /*该属性用来指定盒子参照相对物顶边界向下偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值
+对应的脚本特性为top。*/
+        top: 77px;
+        width: 747px;
+        height: 566px;
+        /*  background: red;*/
+        /*定义脸四周的线条*/
+        border-top: 35px solid black;
+        border-bottom: 31px solid black;
+        border-left: 29px solid black;
+        border-right: 30px solid black;
+        /*按椭圆来描绘*/
+        /*对象的左上角圆角边框。提供2个参数，2个参数以空格分隔，每个参数允许设置1个参数值，第1个参数表示水平半径，第2个参数表示垂直半径*/
+        border-top-left-radius: 355px 333px;
+        border-top-right-radius: 355px 333px;
+        border-bottom-left-radius: 370px 285px;
+        border-bottom-right-radius: 330px 255px;
+        background-color: white;
+        /*z-index用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文。每个元素层叠顺序由所属的层叠上下文和元素本身的层叠级别决定（每个元素仅属于一个层叠上下文）。
+同一个层叠上下文中，层叠级别大的显示在上面，反之显示在下面。同一个层叠上下文中，层叠级别相同的两个元素，依据它们在HTML文档流中的顺序，写在后面的将会覆盖前面的。*/
+        z-index: 100;
+    }
+    /*显示耳朵的基本盘*/
+    
+    .hello-kitty-div .left-ear {
+        left: 112px;
+        top: 61px;
+        width: 250px;
+        height: 250px;
+        border-top: 33px solid black;
+        border-bottom: 30px solid black;
+        border-left: 28px solid black;
+        border-right: 30px solid black;
+        border-top-left-radius: 138px 100px;
+        border-bottom-left-radius: 334px 310px;
+        background-color: white;
+        -o-transform: rotate(23deg);
+        -ms-transform: rotate(23deg);
+        -moz-transform: rotate(23deg);
+        -webkit-transform: rotate(23deg);
+        /*transform: rotate：指定对象的2D rotation（2D旋转），需先有 <' transform-origin '> 属性的定义*/
+        transform: rotate(23deg);
+        /*这个在决定定位中优先此项比脸蛋层小一级*/
+        z-index: 99;
+    }
+    /*用与底层类似的耳朵(旋转角度都一样)，但底色为白色的，去除耳朵与脸蛋之间的交界线*/
+    
+    .hello-kitty-div .left-ear-clean {
+        left: 146px;
+        top: 96px;
+        width: 250px;
+        height: 250px;
+        border-top-left-radius: 138px 100px;
+        border-bottom-left-radius: 360px 310px;
+        background-color: white;
+        /*background-color: red;*/
+        -o-transform: rotate(23deg);
+        -ms-transform: rotate(23deg);
+        -moz-transform: rotate(23deg);
+        -webkit-transform: rotate(23deg);
+        transform: rotate(23deg);
+        z-index: 101;
+    }
+    /*用一个小椭圆去描绘猫脸凸出来左耳朵边上的一点。*/
+    
+    .hello-kitty-div .left-ear-beautify {
+        left: 149px;
+        top: 221px;
+        width: 60px;
+        height: 30px;
+        border-top-left-radius: 20px 15px;
+        border-top-right-radius: 25px 15px;
+        border-bottom-left-radius: 20px 15px;
+        border-bottom-right-radius: 25px 15px;
+        background-color: black;
+        /*background-color: yellow;  调测用的*/
+        -o-transform: rotate(-52deg);
+        -ms-transform: rotate(-52deg);
+        -moz-transform: rotate(-52deg);
+        -webkit-transform: rotate(-52deg);
+        transform: rotate(-52deg);
+        z-index: 102;
+    }
+    /*右边耳朵*/
+    
+    .hello-kitty-div .right-ear {
+        left: 600px;
+        top: 50px;
+        width: 250px;
+        height: 250px;
+        border-top: 33px solid black;
+        border-bottom: 28px solid black;
+        border-left: 30px solid black;
+        border-right: 29px solid black;
+        border-top-left-radius: 220px 170px;
+        border-top-right-radius: 90px 57px;
+        border-bottom-right-radius: 334px 245px;
+        background-color: white;
+        -o-transform: rotate(-21deg);
+        -ms-transform: rotate(-21deg);
+        -moz-transform: rotate(-21deg);
+        -webkit-transform: rotate(-21deg);
+        transform: rotate(-21deg);
+        z-index: 99;
+    }
+    /*用白色底色，清空右边耳朵的连接线*/
+    
+    .hello-kitty-div .right-ear-clean {
+        left: 700px;
+        top: 105px;
+        width: 120px;
+        height: 120px;
+        background-color: white;
+        z-index: 101;
+    }
+    /*最外层的蝴蝶结本来可以分成两块，但在这里分成了四块*/
+    /*最外层蝴蝶结的左上角方块 */
+    
+    .hello-kitty-div .bowknot-outside-left-top-container {
+        left: 508px;
+        top: -110px;
+        width: 300px;
+        height: 200px;
+        -o-transform-origin: 0px 0px;
+        -ms-transform-origin: 0px 0px;
+        -moz-transform-origin: 0px 0px;
+        -webkit-transform-origin: 0px 0px;
+        transform-origin: 0px 0px;
+        -o-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+        overflow: hidden;
+        z-index: 103;
+    /*    background-color: yellow;*/
+    }
+    /*最外层蝴蝶结的左下角方块，与上面一块挨着 */
+    
+    .hello-kitty-div .bowknot-outside-left-bottom-container {
+        left: 424px;
+        top: 70px;
+        width: 300px;
+        height: 200px;
+        -o-transform-origin: 0px 0px;
+        -ms-transform-origin: 0px 0px;
+        -moz-transform-origin: 0px 0px;
+        -webkit-transform-origin: 0px 0px;
+        transform-origin: 0px 0px;
+        -o-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+        overflow: hidden;
+        z-index: 103;
+       /* background-color: green;*/
+    }
+    /*最外层蝴蝶结的右上角方块 */
+    
+    .hello-kitty-div .bowknot-outside-right-top-container {
+        left: 828px;
+        top: 35px;
+        width: 300px;
+        height: 200px;
+        -o-transform-origin: 0px 0px;
+        -ms-transform-origin: 0px 0px;
+        -moz-transform-origin: 0px 0px;
+        -webkit-transform-origin: 0px 0px;
+        transform-origin: 0px 0px;
+        -o-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+        overflow: hidden;
+        z-index: 103;
+      /*  background-color: yellowgreen;*/
+    }
+    /*最外层蝴蝶结的右下角方块，与上面一块挨着 */
+    
+    .hello-kitty-div .bowknot-outside-right-bottom-container {
+        left: 744px;
+        top: 215px;
+        width: 300px;
+        height: 200px;
+        -o-transform-origin: 0px 0px;
+        -ms-transform-origin: 0px 0px;
+        -moz-transform-origin: 0px 0px;
+        -webkit-transform-origin: 0px 0px;
+        transform-origin: 0px 0px;
+        -o-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        transform: rotate(25deg);
+        overflow: hidden;
+        z-index: 103;
+      /*  background-color: skyblue;*/
+    }
+
+/*底层蝴蝶结的左上角红色部分，因为在这个容器内所以不需要z-index*/
+.hello-kitty-div .bowknot-outside-left-top {
+    left: 128px;
+    top: 52px;
+    width: 185px;
+    height: 352px;
+    border-top: 22px solid black;
+    border-bottom: 24px solid black;
+    border-left: 22px solid black;
+    border-right: 23px solid black;
+    border-top-left-radius: 118px 178px;
+    border-top-right-radius: 112px 218px;
+    background-color: #E72235;
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+.hello-kitty-div .bowknot-outside-left-bottom {
+    left: 110px;
+    top: -270px;
+    width: 185px;
+    height: 352px;
+    border-top: 24px solid black;
+    border-bottom: 23px solid black;
+    border-left: 23px solid black;
+    border-right: 23px solid black;
+    border-bottom-left-radius: 110px 233px;
+    border-bottom-right-radius: 110px 190px;
+    background-color: #E72235;
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.hello-kitty-div .bowknot-outside-right-top {
+    left: -51px;
+    top: 102px;
+    width: 205px;
+    height: 188px;
+    border: 23px solid black;
+    border-top-left-radius: 178px 178px;
+    border-top-right-radius: 79px 51px;
+    border-bottom-right-radius: 189px 185px;
+    background-color: #E72235;
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+.hello-kitty-div .bowknot-outside-right-bottom {
+    left: -52px;
+    top: -234px;
+    width: 195px;
+    height: 286px;
+    border-left: 23px solid black;
+    border-right: 26px solid black;
+    border-top: 23px solid black;
+    border-bottom: 23px solid black;
+    border-bottom-left-radius: 83px 124px;
+    border-bottom-right-radius: 160px 304px;
+    background-color: #E72235;
+    -o-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
+    /*中间层蝴蝶结上左边的小圆圈*/
+    
+    .hello-kitty-div .bowknot-inside-left {
+        left: 595px;
+        top: 122px;
+        width: 47px;
+        height: 47px;
+        border: 25px solid black;
+        border-radius: 48px;
+        background-color: #E72235;
+        z-index: 104;
+        background-color: orange;
+    }
+    /*中间层蝴蝶结上右边的小圆圈，比左边的略小*/
+    
+    .hello-kitty-div .bowknot-inside-right {
+        right: 182px;
+        bottom: 444px;
+        width: 35px;
+        height: 35px;
+        border: 25px solid black;
+        border-radius: 42px;
+        background-color: #E72235;
+        z-index: 104;
+        background-color: orange;
+    }
+    /*最外层的蝴蝶结的圆圈，级别最高遮住中间层的部分圆*/
+    
+    .hello-kitty-div .bowknot-inside-center {
+        left: 635px;
+        top: 130px;
+        width: 116px;
+        height: 116px;
+        border-top: 23px solid black;
+        border-bottom: 23px solid black;
+        border-left: 24px solid black;
+        border-right: 24px solid black;
+        border-radius: 80px;
+        background-color: #E72235;
+        z-index: 105;
+    }
+    /*左眼，用竖起来的椭圆表示*/
+    
+    .hello-kitty-div .left-eye {
+        left: 280px;
+        top: 429px;
+        width: 58px;
+        height: 76px;
+        border-radius: 40px;
+        background-color: black;
+        z-index: 101;
+    }
+    /*右眼，用竖起来的椭圆表示*/
+    
+    .hello-kitty-div .right-eye {
+        left: 678px;
+        top: 430px;
+        width: 58px;
+        height: 76px;
+        border-radius: 40px;
+        background-color: black;
+        z-index: 101;
+    }
+    /*鼻子：用粗的线框表示鼻子，好！*/
+    
+    .hello-kitty-div .nose {
+        left: 469px;
+        top: 498px;
+        width: 50px;
+        height: 31px;
+        border-top: 19px solid black;
+        border-bottom: 19px solid black;
+        border-left: 20px solid black;
+        border-right: 20px solid black;
+        border-radius: 43px / 34px;
+        background-color: #EEC827;
+        z-index: 101;
+    }
+    /*左边第一根胡须，但在脸的外边部分*/
+    
+    .hello-kitty-div .left-moustache-1:before {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 420px;
+        width: 100px;
+        height: 24px;
+        border-top-left-radius: 80px 30px;
+        border-bottom-left-radius: 20px;
+        background-color: black;
+        -o-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+        z-index: 101;
+    }
+    /*左边第一根胡须，但在脸的内边部分*/
+    
+    .hello-kitty-div .left-moustache-1:after {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 131px;
+        top: 418px;
+        width: 60px;
+        height: 24px;
+        border-top-right-radius: 100px 30px;
+        border-bottom-right-radius: 20px;
+        background-color: black;
+        -o-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        -moz-transform: rotate(2deg);
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+        z-index: 101;
+    }
+    
+    .hello-kitty-div .left-moustache-2:before {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 64px;
+        top: 512px;
+        width: 80px;
+        height: 24px;
+        border-top-left-radius: 80px 30px;
+        border-bottom-left-radius: 50px 20px;
+        background-color: black;
+        -o-transform: rotate(-14deg);
+        -ms-transform: rotate(-14deg);
+        -moz-transform: rotate(-14deg);
+        -webkit-transform: rotate(-14deg);
+        transform: rotate(-14deg);
+        z-index: 101;
+    }
+    
+    .hello-kitty-div .left-moustache-2:after {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 135px;
+        top: 498px;
+        width: 60px;
+        height: 24px;
+        border-top-right-radius: 100px 30px;
+        border-bottom-right-radius: 20px;
+        background-color: black;
+        -o-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+        z-index: 101;
+    }
+    
+    .hello-kitty-div .left-moustache-3:before {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 90px;
+        top: 601px;
+        width: 100px;
+        height: 24px;
+        border-top-left-radius: 80px 30px;
+        border-bottom-left-radius: 20px 20px;
+        background-color: black;
+        -o-transform: rotate(-29deg);
+        -ms-transform: rotate(-29deg);
+        -moz-transform: rotate(-29deg);
+        -webkit-transform: rotate(-29deg);
+        transform: rotate(-29deg);
+        z-index: 101;
+    }
+    
+    .hello-kitty-div .left-moustache-3:after {
+        content: '\20';
+        display: block;
+        position: absolute;
+        left: 183px;
+        top: 564px;
+        width: 60px;
+        height: 24px;
+        border-top-right-radius: 100px 30px;
+        border-bottom-right-radius: 20px;
+        background-color: black;
+        -o-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+        -moz-transform: rotate(-25deg);
+        -webkit-transform: rotate(-25deg);
+        transform: rotate(-25deg);
+        z-index: 101;
+    }
+/*右边的三根胡须*/
+.hello-kitty-div .right-moustache-1:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 829px;
+    top: 404px;
+    width: 80px;
+    height: 24px;
+    border-top-left-radius: 60px 30px;
+    border-bottom-left-radius: 30px 20px;
+    background-color: black;
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-1:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 902px;
+    top: 398px;
+    width: 100px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-2:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 844px;
+    top: 482px;
+    width: 50px;
+    height: 24px;
+    border-top-left-radius: 55px 30px;
+    border-bottom-left-radius: 50px 20px;
+    background-color: black;
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-2:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 898px;
+    top: 489px;
+    width: 80px;
+    height: 24px;
+    border-top-right-radius: 120px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(6deg);
+    -ms-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-3:before {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 809px;
+    top: 557px;
+    width: 50px;
+    height: 24px;
+    border-top-left-radius: 50px 30px;
+    border-bottom-left-radius: 40px 20px;
+    background-color: black;
+    -o-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -moz-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+    z-index: 101;
+}
+
+.hello-kitty-div .right-moustache-3:after {
+    content: '\20';
+    display: block;
+    position: absolute;
+    left: 853px;
+    top: 582px;
+    width: 100px;
+    height: 24px;
+    border-top-right-radius: 100px 30px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    -o-transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+    -moz-transform: rotate(22deg);
+    -webkit-transform: rotate(22deg);
+    transform: rotate(22deg);
+    z-index: 101;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hello-kitty-img">
+            <!--<img src="1024px-Hello_Kitty_logo.svg.png" />-->
+        </div>
+        <div class="hello-kitty-div">
+            <!-- 脸蛋 -->
+            <div class="face"></div>
+            <!-- 左耳 -->
+            <div class="left-ear"></div>
+            <div class="left-ear-clean"></div>
+            <div class="left-ear-beautify"></div>
+            <!-- 右耳 -->
+            <div class="right-ear"></div>
+            <div class="right-ear-clean"></div>
+            <!-- 蝴蝶结 -->
+            <div class="bowknot-outside-left-top-container">
+                <div class="bowknot-outside-left-top"></div>
+            </div>
+            <div class="bowknot-outside-left-bottom-container">
+                <div class="bowknot-outside-left-bottom"></div>
+            </div>
+            <div class="bowknot-outside-right-top-container">
+                <div class="bowknot-outside-right-top"></div>
+            </div>
+            <div class="bowknot-outside-right-bottom-container">
+                <div class="bowknot-outside-right-bottom"></div>
+            </div>
+            <div class="bowknot-inside-left"></div>
+            <div class="bowknot-inside-right"></div>
+            <div class="bowknot-inside-center"></div>
+            <!-- 左眼 -->
+            <div class="left-eye"></div>
+            <!-- 右眼 -->
+            <div class="right-eye"></div>
+            <!-- 鼻子 -->
+            <div class="nose"></div>
+            <!-- 左胡须 -->
+            <div class="left-moustache-1"></div>
+            <div class="left-moustache-2"></div>
+            <div class="left-moustache-3"></div>
+            <!-- 右胡须 -->
+            <div class="right-moustache-1"></div>
+            <div class="right-moustache-2"></div>
+            <div class="right-moustache-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

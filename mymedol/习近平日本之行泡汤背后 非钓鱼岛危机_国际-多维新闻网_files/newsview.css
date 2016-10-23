@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+/*---------------------*/
+.main{position:relative;}
+/*---------功能条---------*/
+.dw_bar{ width: 42px; left:0; top:0; position:absolute; z-index:120; background:url(http://s0.dwnews.net/images/www/news_img.png) repeat-y 0 0; height:100%;}
+.bar_wrap{ width:42px; margin-top:30px;}
+.arrows_bg{position: fixed;top: 53%;left: 0; width: 100%;}
+.arrows {margin: 0 auto;position: relative;}
+.arrows .pre_btn,.arrows .next_btn{ background-color:#666; position: absolute;   top:0;background:url(http://s0.dwnews.net/images/www/arrows.png) no-repeat 0 0; text-indent:-1200px; width:38px; height:70px; overflow:hidden; }
+.arrows .pre_btn{left:-38px;}
+.arrows a.pre_btn:hover{background-position:0 -70px;}
+.arrows .next_btn{ background-position:-38px 0;right:-38px;}
+.arrows a.next_btn:hover{ background-position:-38px -70px;}
+
+.bar_link{ display:block;}
+.bar_link a{background:url(http://s0.dwnews.net/images/www/icon2.png) no-repeat;display:block; text-indent:-450px; width:42px; height:46px;}
+.bar_link a:hover{background:url(http://s0.dwnews.net/images/www/icon2.png) no-repeat;}
+a.dw_facebook{ background-position:0 0;}a.dw_facebook:hover,a.dw_facebook_on,a.dw_facebook_on:hover{ background-position:-42px 0;}
+a.dw_tiwtter{ background-position:0 -46px;}a.dw_tiwtter:hover,a.dw_tiwtter_on,a.dw_tiwtter_on:hover{ background-position:-42px -46px;}
+a.dw_commentt{ background-position:0 -92px;}a.dw_commentt:hover,a.dw_commentt_on,a.dw_commentt_on:hover{ background-position:-42px -92px;}
+a.dw_transmit{ background-position:0 -138px;}a.dw_transmit:hover,a.dw_transmit_on,a.dw_transmit_on:hover{ background-position:-42px -138px;}
+a.dw_qr{ background-position:0 -368px;}a.dw_qr:hover,a.dw_qr_on,a.dw_qr_on:hover{ background-position:-42px -368px;}
+a.dw_contribute{ background-position:0 -184px;}a.dw_contribute:hover,a.dw_contribute_on,a.dw_contribute_on:hover{ background-position:-42px -184px;}
+a.dw_collect{ background-position:0 -230px;}a.dw_collect:hover,a.dw_collect_on,a.dw_collect_on:hover{ background-position:-42px -230px;}
+a.dw_newsletter{ background-position:0 -276px;}a.dw_newsletter:hover,a.dw_newsletter_on,a.dw_newsletter_on:hover{ background-position:-42px -276px;}
+a.dw_print{ background-position:0 -322px;position:absolute; bottom:-100px; }a.dw_print:hover,a.dw_print_on,a.dw_print_on:hover{ background-position:-42px -322px;}
+a.dw_commentt{ position:relative;}
+a.dw_commentt .comment-count,a.dw_commentt_on .comment-count{ position: absolute; text-align:center; line-height:17px; width:17px; height:17px; display:block; top:-3px; right:2px;background:url(http://s0.dwnews.net/images/www/icon2.png) no-repeat 0 -463px;text-indent: 0px; overflow:hidden;}
+.comment-count em{ font-size:10px;-webkit-transform : scale(0.85); font-size:11px\9;color:#FFF;font-family: Arial;  display:block;}
+a.dw_commentt:hover .comment-count,a.dw_commentt_on:hover .comment-count,a.dw_commentt_on .comment-count{background:url(http://s0.dwnews.net/images/www/icon2.png) no-repeat -28px -463px;} 
+
+/*---------文章内容---------*/
+.news_block{ height:100%; width:593px;margin:0 0 0 62px; padding-top:15px;}
+.news_block h1{ line-height:28px; font-size:24px; font-weight:normal; color:#333; margin:20px 0;}
+.news_block .tip{ height:14px; line-height:14px; margin-bottom:15px;}
+.tip .f18{ font-size:18px;}
+.tip .f14{ font-size:14px;}
+.tip .f12{ font-size:12px;}
+.tip a{ margin-right:10px; text-decoration:none;}
+.tip a{ color:#666;}
+.tip a:hover{ color:#ff4100;}
+.tip span{ margin-right:8px; color:#666;}.tip .ep_time{ border-left:#dbdbdb solid 1px;padding-left:10px;}
+.tip .view_ziti{ float:right; _display:inline; padding-bottom:2px\9;}
+
+.viewcot{ margin-top:20px; font-size:16px; line-height:28px; color:#111; overflow:hidden;}
+.viewcot p,.viewcot div{ font-size:16px; line-height:28px; color:#111; margin:15px 0;}
+.viewcot p a,.viewcot div a{ color:#0c97d2;}
+.viewcot p a:hover,.viewcot div a:hover{ color:#fff; background-color: #0c97d2;}
+.viewcot .dateline{ padding: 0 8px; color:#FFF; background-color:#ff612b;line-height:28px; display:block; float:left; margin-right:5px; _display:inline;}
+/*---------相关文章---------*/
+.dw_nominate{ margin-top:20px; overflow:hidden;}
+.nominate_h2{ font-size:16px; color:#ff4100;}
+.nominate_list{ float:left; margin:10px 0;_display:inline; width:618px;}
+.nominate_list li{ float:left;width:289px; _display:inline; margin:0 0 10px 0; padding-right:15px;}
+.nominate_list li img{ float:left; _display:inline; margin:5px 10px 0 0;}
+.nominate_list h2{ width:100%; margin-bottom:5px; height:25px; overflow:hidden;}
+.nominate_list p { width:100%; color:#666; line-height:20px; height:100px; overflow:hidden;}
+.nominate_list h2 a{ font-size:16px; font-weight:normal;}
+
+/*---------免责申明---------*/
+.mzsm{ height:30px; line-height:30px; background-color:#f5f5f5; margin-bottom:15px; padding-left:10px;}
+.mzsm a{ color:#ff4100;}
+.mzsm a:hover{ text-decoration:underline;}
+/*---------附加商业板块---------*/
+.attach{ width:300px;}
+
+/*---------喜欢不喜欢---------*/
+.like_unlike{ margin-left:180px;  margin-bottom:20px;  position: relative; width:400px; z-index:0;}
+.like_unlike a{ padding:0 10px;height:32px; float:left; text-decoration:none; font-size:14px; background-color:#fafafa; border:1px solid #ddd; display:block;-moz-border-radius: 3px;-webkit-border-radius:3px;border-radius:3px;}
+.like_unlike a span{background:url(http://s1.dwnews.net/images/www/dingcai.png) no-repeat;padding-left:28px; display:block; display:inline\9; margin:0 auto; height:100%; line-height:30px;overflow:hidden;}
+.like_unlike a span em{ color:#ff4100; font-size:18px; margin-left:5px;position: relative;top:2px;}
+.like_unlike a:hover{ background-color:#f6f6f6; border:1px solid #ddd;}
+.like_unlike a.like span{ background-position:0 -65px;background-position:0 -68px\9;}
+.like_unlike a.unlike span{ background-position:0 -94px; background-position:0 -97px\9; }
+.like_unlike a.like{margin-right:24px;}
+.like_unlike a.unlike:hover span{ color:#000}
+.like_unlike .add{font-size: 22px;color: #ba2636;font-style: normal;position: absolute;}
+
+/*---------商讯---------*/
+.tip .ep_time_sx{padding-left:2px;}
+.dw_bar_sx{ width: 42px; left:0; top:0; position:absolute; z-index:120; background:url(http://s2.dwnews.net/images/www/news_img_sx.png) repeat-y 0 0; height:100%;}
+/*---------人物资料---------*/
+.v-photo{ float:left; margin:5px 20px 0 0; display:block; width:133px; height:148px; overflow:hidden;}
+/*---------2016年1月7日---------*/
+a.dw_g{ background-position:0 -482px;}a.dw_g:hover,a.dw_g_on,a.dw_g_on:hover{ background-position:-42px -482px;}
+.right_facebook{width:300px;background:#f60202; color:#fff; }
+.right_facebook h3{font-weight:normal; height:29px; padding-top:5px; padding-left:10px;font-size:20px; font-family:Arial;}
+.zanfbw{margin-bottom:10px; margin-top:-8px;}
+.zanfbw .shuxian{ float:left; background-color:#333; width:1px; height:16px; line-height:16px; margin-top:2px; margin-left:10px;margin-right:10px;}
+.zanfbw a.z_wechat{background:url(http://s0.dwnews.net/images/www/wechat.png) no-repeat 0 0; width:64px; height:20px; display:block; text-indent:-200px; overflow:hidden; margin-left:6px;}
+.zanfbw a.z_wechat:hover{ background-position:0 -20px;}
+
+a.dw_weibo{ background-position:0 -528px;}a.dw_weibo:hover,a.dw_weibo_on,a.dw_weibo_on:hover{ background-position:-42px -528px;}
+/*-------信息图新增样式----------*/
+.read-count{background:url(http://s4.dwnews.net/images/club/comm_ico1.png) no-repeat -108px -196px; display:block; width:54px; height:20px; line-height:20px;line-height:19px\9; float:right;font-size:12px; text-indent:20px;}
+.long-tiao{ width:100%;}
+.long-tiao li{padding-right: 13px;}

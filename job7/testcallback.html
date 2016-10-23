@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>测试回调函数</title>
+</head>
+
+<body>
+    <button onclick="test_callback()">test</button>
+    <button onclick="mytest('加油2', function(data2) {//回调函数关键是把function(data2)当一个参数传入，形成实际上的闭包；
+    console.log('我其实是用了闭包函数'+data2);
+})">my add test</button>
+</body>
+<script>
+window.mytest = function(str, callback1) { //这里应该是定义了mytest函数
+    console.log(2);
+    printStr(str);
+    console.log(3);
+    var res = test_callback;
+    console.log(4);
+    callback1(res);//callback1回调函数就是执行把函数当参数出入的，重点在这里把res传递给data1，形成实际的闭包
+    //也可以这样里面把函数传递进来目的就是闭包，把内的变量传递出来
+    console.log(5);
+}
+
+function printStr(str) {
+    console.log(str);
+    alert(str);
+}
+
+function test_callback() {
+    return "回调测试";
+}
+mytest("加油", function(data1) { //这里调用执行
+    console.log("我用了闭包函数" + data1);
+})
+</script>
+
+</html>

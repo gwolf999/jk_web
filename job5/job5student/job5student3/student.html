@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩分类</title>
+   <link rel="stylesheet" type="text/css" href="css/stu.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="stu">
+            <h1>学生成绩自动分类</h1>
+            <label>
+                <h3><span id="layer">&nbsp;</span></h3></label>
+        </div>
+        <div class="assort">
+            <div class="tt">
+                <label for="score">请输入0-100之间分数：</label>
+            </div>
+            <div class="tt2">
+                <input type="number" id="score" value="0" min="0" max="100" required></input>
+                <!-- <input type="button" id="inquire" value="分类"></input> -->
+                <!-- <input type="button" id="dbg" value="分类" onclick="asort()"></input> -->
+                <button id="dbg" onclick="asort()">分类</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/stu.js">
+   
+    </script>
+</body>
+
+</html>

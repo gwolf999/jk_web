@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/*---------------------*/
+
+.alert01{position:absolute; top:-152px; left:-1000px; width:5000px; height:152px; background:#111; filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=80,finishOpacity=100); opacity:0.80; z-index:0;}
+.alert01b{position:absolute; top:-122px; left:0; width:450px; height:100px; z-index:1;}
+.alert01b img{float:left; margin:0 10px 0 0;}
+.alert01b h4{font:bold 14px/24px Microsoft YaHei; margin-bottom:6px;}
+.alert01b h4 a{color:#fff;}
+.alert01b h4 a:hover{color:#ff4000; text-decoration:underline;}
+.alert01b p{font:normal 12px/20px Microsoft YaHei; color:#666;}
+.poz49{position:absolute; top:-122px; left:470px;}
+.guanbi{position:absolute; top:-140px; left:956px; width:36px; height:120px; text-align:center; z-index:2;}
+.guanbi img{text-align:center;}
+.guanbi a{color:#fff; font:bold 14px/24px Microsoft YaHei;}
+
+.alert-rep{bottom: 6px;position: fixed;right: 0;z-index: 180; width:420px;}
+.alert-flyout-wrap {bottom: 0;box-shadow: 0 3px 6px 0 rgba(0,0,0,.3);background: #333;overflow: hidden;position: absolute;right: 0;z-index: 175;}
+.alert-body{ margin:12px 36px 15px 15px;}
+.alert-body .alert-photo{ float:left; width:120px; margin-top:6px; overflow:hidden;box-shadow: 0 2px 5px 0 rgba(0,0,0,.3); margin-right:10px;}
+.alert-body a h4{ color:#ff6000; font-size:14px;overflow:hidden; margin-bottom:3px;}
+.alert-body a:hover h4{ color:#ffaa00;}
+.alert-body p{ color:#fff; line-height:20px; margin-top:8px; overflow:hidden;}
+.alert-rep .close{color: #fff;cursor: pointer;position: absolute;right: 0;text-shadow: 0 1px 0 #007acc;top: 7px;z-index: 180;}

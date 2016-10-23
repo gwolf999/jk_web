@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>十字架DIV作业方法一之:DIV盒子</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contain {
+        /*  box-sizing: content-box; */
+        /*设置为标准盒子*/
+        width: 300px;
+        height: 300px;
+        /* background-color: aqua; */
+        /*  padding: 50px; */
+        text-align: center;
+        /* 控制下面div中文字内容 */
+        /* margin-left: auto;
+        margin-right: auto; */
+        /*  display: table-cell;
+       vertical-align: middle; */
+        margin: auto;        /* 此三行为一整体 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        /* （AbsoluteCentering）的工作机理可以阐述如下：
+1、在普通内容流（normal content flow）中，margin:auto的效果等同于margin-top:0;margin-bottom:0。
+W3C中写道If 'margin-top', or'margin-bottom' are 'auto', their used value is 0.
+2、position:absolute使绝对定位块跳出了内容流，内容流中的其余部分渲染时绝对定位部分不进行渲染。
+Developer.mozilla.org:...an element that is positioned absolutely is taken out of the flow and thustakes up no space
+3、为块区域设置top: 0; left: 0; bottom: 0; right: 0;将给浏览器重新分配一个边界框，此时该块block将填充其父元素的所有可用空间，父元素一般为body或者声明为position:relative;的容器。
+Developer.mozilla.org:For absolutely positioned elements, the top, right, bottom, and left propertiesspecify offsets from the edge of the element's containing block (what theelement is positioned relative to).
+4、给内容块设置一个高度height或宽度width，能够防止内容块占据所有的可用空间，促使浏览器根据新的边界框重新计算margin:auto
+Developer.mozilla.org: The margin of the[absolutely positioned] element is then positioned inside these offsets.
+5、由于内容块被绝对定位，脱离了正常的内容流，浏览器会给margin-top,margin-bottom相同的值，使元素块在先前定义的边界内居中。
+W3.org: If none of the three [top, bottom,height] are 'auto': If both 'margin-top' and 'margin-bottom' are 'auto', solvethe equation under the extra constraint that the two margins get equal values.AKA: center the block vertically这么看来， margin:auto似乎生来就是为绝对居中(Absolute Centering)设计的，所以绝对居中(Absolute Centering)应该都兼容符合标准的现代浏览器。 */
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+        box-shadow: 10px 10px 5px #888888;
+        box-shadow: 0 2px 16px #000, 0 0 1px #000, 0 0 1px #000;    /* 四周都有阴影 */
+       
+    }
+    
+    .sp {
+        margin: auto;
+        line-height: 100px;
+    }
+    
+    #logo1 {
+        background-color: red;
+        display: block;
+        position: relative;
+        margin-left: 100px;
+    }
+    
+    #logo2 {
+        background-color: blue;
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+    
+    #logo3 {
+        background-color: yellow;
+        display: inline-block;
+        position: relative;
+        float: left;
+    }
+    
+    #logo4 {
+        background-color: green;
+        display: inline-block;
+        position: relative;
+        float: left;
+    }
+    
+    #logo5 {
+        background-color: white;
+        /* position: relative; */
+        display: block;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <!-- div.logo#logo$*5 -->
+        <div class="logo" id="logo1"><span class="sp">1</span></div>
+        <div class="logo" id="logo2"><span class="sp">2</span></div>
+        <div class="logo" id="logo3"><span class="sp"><img src="./img/firefox.ico" alt="火狐" title="火狐可爱哦" width="24px" height="24px"></span></div>
+        <div class="logo" id="logo4"><span class="sp">4</span></div>
+        <div class="logo" id="logo5">
+            <!-- <img src="./img/google.ico" alt="谷歌" title="谷歌可爱哦" width="100px" height="100px"> -->
+            <span class="sp">谷歌</span>
+        </div>
+    </div>
+</body>
+
+</html>

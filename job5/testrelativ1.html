@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>relative应用技巧</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 800px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+        background: yellow;
+    }
+     .container1 {
+        width: 800px;
+        height: 100px;
+        border: 1px solid black;
+        background: lightyellow;
+    }
+    .wraper {
+        width: 700px;
+        height: 350px;
+        border: 1px solid black;
+        background: lightgray;
+        margin: auto;
+        position: relative;
+    }
+    
+    .abs {
+        width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        background: aqua;
+        margin: auto;
+        text-align: center;
+        line-height: 300px;
+        position: absolute;
+        top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wraper">
+        <!-- tmp这层div元素的就是本着relative最小化设置的，高度为0，宽度默认最父级元素的宽度 -->
+            <div class="tmp">
+            <!-- 本层的absolute，上级（假设没有tmp层），不写positon：relative一样可以绝对定位使用。但是参照的是body层，只有上层设置了positon：relative才会参照。但后果有可能会影响其他元素。如果边距不行可以绝对定位元素可以用margin来实现，如果多还是本着relative最小化原则，加一个tmp层 -->
+                <div class="abs">
+                    <h3>margin-top：-100px(相对于这个div元素本身放大了)；移走后，紧接着这个div的div也会向上移动；如果是top:-100px，则不会，后面的元素会保持不动；还有如果本元素不设置postion：relative 相关top等属性不起作用</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+    	test
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {}
+
+.contain {
+    /*摄像机*/
+    /*perspective-origin 代表了X 和Y 轴，而perspective 代表Z 轴( 和内容物体的Z 轴相减才会变成摄影机的)*/
+    width: 300px;
+    height: 300px;
+    /*2D平面的摄像机位置，但好像不起作用*/
+    /*此处设置是观察点，观察点的旋转效果是围绕观察点到立方体中心的连线来旋转，应该设置为围绕轴心点来旋转。轴心点设置在下面的box中*/
+     perspective-origin: 50% 50%; /*有用，用%来调节*/
+ -moz-perspective-origin: 50% 50%;
+ -webkit-perspective-origin: 50% 50%; 
+    /*perspective：none | <length>  none： 不指定透视  <length>： 指定观察者距离「z=0」平面的距离，为元素及其内容应用透视变换。不允许负值  http://www.css88.com/book/css/properties/transform/perspective.htm*/
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    /*舞台元素*/
+    /*   perspective: 300px; */
+    /*指定透视距离*/
+    border: 1px solid #000;
+    margin: 0 auto;
+    /*水平居中*/
+    text-align: center;
+    /*  margin-top: 100px； */
+    position: relative;
+    margin-top: 100px;
+}
+
+.box {
+    /*3D容器元素*/
+    /*transform-style：flat | preserve-3d;flat：指定子元素位于此元素所在平面内。preserve-3d：指定子元素定位在三维空间内*/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*设置为围绕轴心点来旋转。轴心点设置在下面的box中*/
+   /* transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;*/
+    margin-top: 200px;
+    margin-left: 100px;
+    position: relative;
+    font-size: 80px;
+    /*应该下面这两行是设置初始状态*/
+    -webkit-transform: rotateX(-30deg) rotateY(30deg) rotateX(0deg);
+    transform: rotateX(-30deg) rotateY(30deg) rotateX(0deg);
+    /* transform: rotateX(0deg) rotateY(0deg) rotateX(0deg);*/
+    /* x为垂直但是绕水平旋转，y为水平绕垂直旋转 */
+    /* 设置持续时间以便能观察效果 */
+
+/*animation：<' animation-name '>：检索或设置对象所应用的动画名称
+<' animation-duration '>：检索或设置对象动画的持续时间
+<' animation-timing-function '>：检索或设置对象动画的过渡类型  linear：线性过渡。ease：平滑过渡。ease-in：由慢到快。ease-out：由快到慢。ease-in-out：由慢到快再到慢。
+<' animation-delay '>：检索或设置对象动画延迟的时间
+<' animation-iteration-count '>：检索或设置对象动画的循环次数  infinite： 无限循环
+<' animation-direction '>： 检索或设置对象动画在循环中是否反向运动
+<' animation-fill-mode '>：检索或设置对象动画时间之外的状态
+<' animation-play-state '>：检索或设置对象动画的状态。w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式*/
+
+
+    animation: rotate-frame 30s linear infinite;
+    background: white;
+}
+
+.box > div {
+    /*立方体每个面的基本设置*/
+    /*类box下面6个面的div设置*/
+    position: absolute;
+    /*用绝对定位让6个面层叠在一起*/
+    width: 240px;
+    height: 240px;
+    /*background: rgba(0, 0, 0, .1);*/
+    border: 1px solid #999;
+    /*文字白色*/
+    color: gold;
+    /* 水平居中*/
+    text-align: center;
+    /*垂直居中*/
+    line-height: 240px;
+    /*     transform-origin: 50% 50% 80px;
+//设置3d空间的原点在平面中心再向Z轴移动80px的位置 */
+}
+
+
+/*动画设置,需要加到box容器上才生效*/
+
+@keyframes rotate-frame {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    10% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    20% {
+        transform: rotateX(-180deg) rotateY(180deg);
+    }
+    30% {
+        transform: rotateX(-360deg) rotateY(180deg);
+    }
+    40% {
+        transform: rotateX(-360deg) rotateY(360deg);
+    }
+    50% {
+        transform: rotateX(-180deg) rotateY(360deg);
+    }
+    60% {
+        transform: rotateX(90deg) rotateY(180deg);
+    }
+    70% {
+        transform: rotateX(0) rotateY(180deg);
+    }
+    80% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    90% {
+        transform: rotateX(90deg) rotateY(0);
+    }
+    100% {
+        transform: rotateX(0) rotateY(0);
+    }
+}
+
+
+/*设置鼠标放上去后的动画*/
+
+.box:hover {
+    transform: rotatex(10000deg) rotateY(10000deg) rotateZ(10000deg);
+    /*设置最后状态*/
+}
+
+
+/*设置6个面的3d偏转*/
+
+.front {
+    transform: translateZ(120px);
+    /*rotateX()方法，围绕其在一个给定度数X轴旋转的元素。*/
+    transform: rotateX(120px);
+    /* 为内部九个模块定位*/
+    position: relative;
+}
+
+.back {
+    transform: translateZ(-120px);
+    position: relative;
+}
+
+.left {
+    /*translateY(y)	定义 3D 转化，仅使用用于 Y 轴的值。*/
+    transform: rotateY(-90deg) translatez(120px);
+    position: relative;
+}
+
+.right {
+    /*translateY(y)	定义 3D 转化，仅使用用于 Y 轴的值。*/
+    transform: rotateY(90deg) translatez(120px);
+    position: relative;
+}
+
+.top {
+    /*translateY(x)	定义 3D 转化，仅使用用于 Y 轴的值。*/
+    transform: rotatex(-90deg) translatez(120px);
+    position: relative;
+}
+
+.bottom {
+    /*translateY(x)	定义 3D 转化，仅使用用于 Y 轴的值。*/
+    transform: rotatex(90deg) translatez(120px);
+    position: relative;
+}
+
+
+/* 前面 red
+后面 orange
+上面 yellow
+下面 green
+左面 aqua
+右面 blue */
+
+
+/*设置每个面九个模块的共同特征*/
+
+.jiu {
+    width: 73px;
+    height: 73px;
+    bolder: 1px dotted gold;
+    background: skyblue;
+    float: left;
+    font-size: 16px;
+    margin: 3px;
+    border-radius: 5px;
+    /* background: yellow;*/
+    /* box-shadow: 5px 5px 5px 2px;*/
+    color: gold;
+    text-shadow: 5px -5px 1px #003457;
+    text-align: center;
+    line-height: 73px;
+}
+
+
+/*设置每个面九个模块的颜色*/
+
+#bgc1 {
+    background: red;
+}
+
+#bgc2 {
+    background: orange;
+}
+
+#bgc3 {
+    background: blue;
+}
+
+#bgc4 {
+    background: green;
+}
+
+#bgc5 {
+    background: aqua;
+}
+
+#bgc6 {
+    background: yellow;
+}

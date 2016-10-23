@@ -1,0 +1,168 @@
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+
+/*设置主体部分 div class="w-1000 mar-t20 cf" ，其中距离上边距20px*/
+
+.mar-t20 {
+    margin-top: 20px!important
+    
+}
+
+
+/*主体宽1000px，左右外边距0，清除左右两边浮动*/
+
+.w-1000 {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+}
+
+
+/*zoom属性是IE浏览器的专有属性，Firefox等浏览器不支持。它可以设置或检索对象的缩放比例。除此之外，它还有其他一些小作用，比如触发ie的hasLayout属性，清除浮动、清除margin的重叠等，百分数为100%时相当于此属性的 normal值
+zoom属性虽然在缩放上无用武之地，但是在低版本的IE浏览器中则有不小的用途，最典型的就是清除浮动中的应用。zoom:1可以用来解决IE6的子元素浮动时候父元素不自动扩大的问题。功能相当于overflow:auto，同样也可以用height:1%来代替zoom:1。*/
+
+.cf {
+    zoom: 1;
+}
+
+
+/*定义盒子模型，限制内边距扩张*/
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/*定义引用、body、按钮等样式为内外边距为0，盒子为限制，字体*/
+
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+
+/*设置图像、输入框、标签、选择器水平居中*/
+
+img,
+input,
+label,
+select {
+    vertical-align: middle;
+}
+
+
+/*集合及图像边框*/
+
+fieldset,
+img {
+    border: 0;
+}
+
+
+/*各类元素盒子定义*/
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+/*清除列表样式*/
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+
+.mar-t50 {
+    margin-top: 50px!important;
+}

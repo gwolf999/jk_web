@@ -1,0 +1,42 @@
+﻿@charset "utf-8";
+/*---------整站弹出层样式---------*/
+/*.layer-box-bg{position: absolute; top: 0px; background-color: #000; opacity: 0.7; left: 0px; width: 100%; height: 100%; z-index: 10000;}*/
+.layer-box{ border:10px solid #ddd; background-color:#FFF;position: absolute; left:42px; top:0;width:580px;z-index:10001;-webkit-box-shadow: 2px 2px 2px #999;-moz-box-shadow: 2px 2px 2px #999;box-shadow: 2px 2px 2px #999;}
+a.layer-close{ position:absolute; right:5px; top:10px; display:inline; width:32px; height:32px;background:url(http://s0.dwnews.net/images/www/show_box.png) no-repeat right top; text-indent:-300px; overflow:hidden; z-index:99;}
+a.layer-close:hover{ background-position: right -31px;}
+.layer-title{ font-size:18px; color:#ff4100; margin:15px 0 15px 15px;}
+.layer-box .wdline{margin:15px 10px 15px 10px;}
+.layer-box .dw_comment{ margin-top:-10px; margin-right:15px;height:500px;width:560px;}
+.layer-box .bt_change{ border-top:none;}
+.layer-kuang{border:1px solid #c9c9c9;}
+.layer-body{ padding:0 15px; margin-bottom:15px;}
+.layer-roll{height: 500px;overflow:hidden;position: relative;}
+.l-article {}
+.l-article h3{ font-size:16px; font-weight:normal; margin-bottom:12px;}
+.l-article .l-pohoto{ width:100px; height:75px; float:left; margin-right:10px; margin-top:3px;}
+.l-article p{ height:78px; overflow:hidden; line-height:20px;}
+.l-transmit{ margin-right:15px;}
+.l-transmit input {width:276px;height: 30px;color:#666;font: 12px Microsoft YaHei,Arial,"宋体";border: 1px solid #ddd;line-height: 30px\9;padding:0 10px;}
+
+.l-transmit .wdline{ width:100%; margin:10px 0; padding:0;}
+.l-transmit .l-chaos{ float:left; width:13px; margin:0 5px;border:0; line-height:13px; height:13px; padding:0; margin-top:3px;}
+.l-transmit .l-shuom{ margin:10px 0; color:#666;}
+.l-transmit .l-email{width:261px; background:url(http://s0.dwnews.net/images/www/bar-ico.png) no-repeat 276px 5px; margin:5px 0;padding:0 25px 0 10px;}
+.l-transmit .l-shuom span{ float:left;}
+.l-transmit .l-shuom em{ color:#ff4100; margin:0 4px;}
+.l-transmit .l-txt{ margin:5px 0;}
+.l-transmit .l-neir{border: 1px solid #ddd; color:#666; width:276px;font: 12px Microsoft YaHei,Arial,"宋体"; padding:10px; height:36px;}
+a.l-fasong,a.l-quxiao{ width:94px; height:34px; display:block; float:left;background:url(http://s0.dwnews.net/images/www/bar-ico.png) no-repeat;}
+a.l-fasong{ background-position:0 -27px; margin-right:20px;}
+a.l-fasong:hover{ background-position:-94px -27px;}
+a.l-quxiao{ background-position:0 -67px;}
+a.l-quxiao:hover{ background-position:-94px -67px;}
+.l-transmit .l-gongneng{ width:222px; margin:10px auto 0 auto;}
+
+
+.article-qr{ width:180px; height:180px; margin:0 auto;}
+.qr-shuoming{ font-size:14px; margin-bottom:20px;}
+
+
+/*---------整站弹出层样式---------*/
+

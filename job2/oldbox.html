@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>old盒子</title>
+	<style type="text/css">
+	* {
+    margin: 0;
+    padding: 0;
+} 
+	.con{
+		margin: auto;
+
+        position: absolute;/* 绝对定位，让盒子飞起来，用margin居中 */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+		display:-webkit-box;
+		height:200px;
+		width: 800px;
+		background-color: green;
+		-webkit-box-orient:horizontal;/* 设置伸缩盒对象的子元素从左到右水平排列 */     
+		
+        -webkit-box-direction：normal;/* 设置伸缩盒对象的子元素按正常顺序排列 */
+       /* 通过box-orient:horizontal + box-direction:normal 达到新版本 flex-direction:row 的效果； */
+       -webkit-box-align:center;
+        -webkit-box-pack:center;
+        /* 定义了项目在主轴上的对齐方式 */
+        align-items: center;
+        line-height: 200px;
+
+
+	}
+	
+	#first{
+		order: 1;
+		height: 200px;
+		-webkit-box-flex:1;
+		background-color: yellow;
+		text-align: center;
+	}
+	#second{
+		order: 3;
+		height: 200px;
+		-webkit-box-flex:1;
+		background-color: blue;
+		text-align: center;
+	}
+	#three{
+		order:0;
+		height: 200px;
+		-webkit-box-flex:1;
+		background-color: orange;
+		text-align: center;
+	}
+
+	
+	</style>
+</head>
+<body>
+	<div class="con">
+    <div  id="first">第一个</div>
+    <div  id="second">第二个</div>
+    <div  id="three">第三个</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>标准计算器</title>
+    <link rel="stylesheet" type="text/css" href="css/waves.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <!--[if IE]>
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap-ie6.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/ie.css">
+<script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+<![endif]-->
+   <link rel="stylesheet" type="text/css" href="css/stand_css.css">
+    <script type="text/javascript">
+    window.onload = function() {
+        //代码启动执帮助提示
+        document.getElementById("help").style.display = "block";
+        // 设置5秒后执行前面的语句
+        setTimeout('document.getElementById("help").style.display="none";', 5000);
+        //绑定清除键盘提示
+        // var featu_zap = document.getElementById("featu_zap");
+        // featu_zap.addEventListener('click', function() {
+        //     var x;
+        //     x = document.getElementById("p_help").innerHTML;
+        //     console.log(this); //this这里指向了全清屏按钮，谁调用谁指向
+        //     document.getElementById("help").style.display = "block";
+        //     //     setTimeout('document.getElementById("help").style.display="none";', 3000);
+
+        // });
+       
+         //初始化键盘参数按键
+         document.onkeydown = showKeyDown;
+       //把计算器上个按钮打都绑定上相关事件
+       register_key();
+        // var num01 = document.getElementById("num01");
+        // num01.addEventListener('click', function() {
+        //     testnum('1');
+        // });
+        // document.getElementById("num02").addEventListener('click', function() {
+        //     testnum('2');
+        // });
+        // document.getElementById("num02").addEventListener('mouseover', function() {
+        //     showKeyDown;
+        // });
+
+        // document.getElementById("num03").addEventListener('click', function() {
+        //     testnum('3');
+        // });
+
+        // document.getElementById("num03").addEventListener('mouseover', function() {
+        //     tip = "num03";
+        // });
+
+        // document.getElementById("num03").addEventListener('mouseout', function() {
+        //     tip = "NOHELP";
+        // });
+
+
+        // var num04 = document.getElementById("num04");
+        // addEventHandler(num04, 'click', function() {
+        //     testnum('4');
+        // });
+        // addEventHandler(document.getElementById("num05"), 'click', function() {
+        //     testnum('5');
+        // });
+       
+
+    }  
+    </script>
+  
+</head>
+
+<body>
+    <div class="container">
+        <!--  <div id="test" class="waves-effect waves-button">
+         test         	
+         </div> -->
+        <div class="help" id="help">
+            <p id="p_help">移动鼠标到计算器上相关按键上同时在PC键盘上按H键，就会出现帮助提示；在计数器空白位置按下H键会出现本提示，5秒后自动消失！</p>
+        </div>
+        <div class="logM" id="logM">M</div>
+        <header>
+            <div class="screen">
+                <span class="cal_span" id="cal_span">0</span>
+            </div>
+            <!-- 存储区导航块 -->
+            <div class="memory">
+               
+                <div class="mem01 waves-effect waves-button" id="mem01">存储</div>
+                <div class="mem02 waves-effect waves-button" id="mem02">存取</div>
+                <div class="mem03 waves-effect waves-button" id="mem03">累存</div>
+                <div class="mem04 waves-effect waves-button" id="mem04">积存</div>
+                <div class="mem05 waves-effect waves-button" id="mem05">清存</div>
+            </div>
+        </header>
+        <div class="mainer">
+            <div class="left_body">
+                <!-- 删除退位符 -->
+                <div class="featu_del waves-effect waves-button" id="featu_del"> <i class="icon iconfont">&#xe608;</i></div>
+                <div class="featu_zap waves-effect waves-button" id="featu_zap">全清</div>
+                <div class="featu_zap_scr waves-effect waves-button" id="featu_zap_scr">清屏</div>
+                <div class="num_Negate waves-effect waves-button" id="num_Negate">+/-</div>
+                <div class="num07" id="num07" onkeydown="checkNumber(event);">7</div>
+                <div class="num08" id="num08">8</div>
+                <div class="num09" id="num09">9</div>
+                <div class="num_div" id="num_div">÷</div>
+                <div class="num04" id="num04">4</div>
+                <div class="num05" id="num05">5</div>
+                <div class="num06" id="num06">6</div>
+                <div class="num_mul" id="num_mul">×</div>
+                <div class="num01" id="num01">1</div>
+                <div class="num02" id="num02">2</div>
+                <div class="num03" id="num03">3</div>
+                <div class="num_sub" id="num_sub">−</div>
+                <div class="num00" id="num00">0</div>
+                <div class="num_dot" id="num_dot">
+                    <i class="icon iconfont iconfont_dot">&#xe606;</i></div>
+                <div class="num_add" id="num_add">+</div>
+            </div>
+            <div class="right_body">
+                <div class="num_recip waves-effect waves-button" id="num_recip">1/x</div>
+                <div class="num_per waves-effect waves-button" id="num_per">%</div>
+                <div class="num_sqr waves-effect waves-button" id="num_sqr">√￣</div>
+                <div class="num_equ waves-effect waves-button" id="num_equ">
+                    <span id="span_equ" style="display: none">=</span>
+                    <i class="icon iconfont">&#xe600;</i></div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery 1.7.2 or higher -->
+    <script type="text/javascript" src="./bootstrap/js/jquery-1.6.4.js"></script>
+    <!-- Optional, bootstrap javascript library -->
+    <!--    <script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script> -->
+    <!--[if IE]>
+ 
+  <script type="text/javascript" src="./bootstrap/js/bootstrap-ie.js"></script>
+  <![endif]-->
+    <script type="text/javascript" src="js/waves.min.js"></script>
+    <script type="text/javascript" src="js/stand_cal.js"></script>
+   
+    <script type="text/javascript">
+    //按钮的波纹效果
+    Waves.displayEffect();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>数组分类统计</title>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h5><span id="question">["a","x","m","c","a","d","m","a","m","k","m","p","j","a",'a', 'x', 'm', 'b', 'a', 'd', 'm', 'a', 'm', 'k', 'm', 'p', 'j', 'a']</span></h5>
+        <p> <span id="answer_str"></span></p>
+        <p> <span id="answer_num"></span></p>
+        <p> <span id="answer_site"></span></p>
+        <button onclick="group_select()"> 点击我找出重复次数最多的字母</button>
+    </div>
+    <script type="text/javascript">
+    function group_select(z) {
+        var x, t, i, j, n, k;
+        // 如果不传入值，则用默认的值
+        if (typeof(z) == "undefined") {
+            // ,是正确分隔符 而 ，是错误的（是中文状态）
+           x = ['a', 'x', 'm', 'b', 'a', 'd', 'm', 'a', 'm', 'k', 'm', 'p', 'j', 'a','a', 'x', 'm', 'b', 'a', 'd', 'm', 'a', 'm', 'k', 'm', 'p', 'j', 'a'];
+        // x=document.getElementById("question").innerHTML;
+        console.log('old x='+x);  
+            t = ""; //去重后的x数组
+            // 通过循环把数组变成字符串再用字符串循环得到一个位置及数量
+            for (var i = 0; i < (x.length); i++) {
+                if (t.indexOf(x[i]) == -1) {
+                    // 最后一行不加；
+                    t = t + x[i]
+                }
+            }
+        }
+        // 双重循环得到重复数
+        var k = [[], 0, []]; //K[0]定义为数组是考虑到最大值重复的情况;
+        console.log('array t=' + t);
+        //第一次循环目的，求出重复最大的值n；
+        for (var j = t.length - 1; j >= 0; j--) {
+            n = 0;
+            for (var i = x.length - 1; i >= 0; i--) { //倒过来循环   
+                // t.charAt(j);
+                if (x[i].search(t.charAt(j)) > -1) {
+                    n = n + 1;
+                }
+            }
+
+            if (n >= k[1]) { //如果大于已知数，则分别把键名及键值存入数组K[1]
+                k[1] = n;
+            }
+        }
+
+        // console.log('array k[1]=' + k[1]);
+
+        //第二次循环，得到最大重复字母，多个
+        for (var j = t.length - 1; j >= 0; j--) {
+            n = 0;
+            for (var i = x.length - 1; i >= 0; i--) { //倒过来循环   
+                // t.charAt(j);
+                if (x[i].search(t.charAt(j)) > -1) {
+                    n = n + 1;
+                }
+            }
+            // console.log('arr_t:' + t.charAt(j) + '=' + arr[t[j]]);
+            if (n >= k[1]) { //如果大于已知数，则分别把键名及键值存入数组K   
+                k[0].push(t.charAt(j));
+            }
+        }
+        console.log('array的len k[0]=' + k[0].length);
+        //输出整个数组字符键名的值
+
+        // for (var key1 in arr) {
+        //     console.log(key1); //“键名”
+        //     console.log(arr[key1]); //“键值'
+        //     }
+        n = 0;
+        //要双重循环把最大字符位置循环找到位置后方可K[2,[]]中，但一定要注意k[0]循环的正反方向，因为存放在k[2][],最后一个相当于是一维数组摆放对应前面的重复字母的位置，容易搞乱。
+
+        for (var i = 0; i < x.length; i++) {
+            for (var j = 0; j < k[0].length; j++) {
+                if (x[i] == k[0][j]) {
+                    // 这样运行结果是把所有最大位置打乱了都放入k[2]中，需要在k[2]前面加一个标志，否则打印出来的时候不能排版.
+                    // 还需要依据几位数自动，在前面补0，再排序就不会乱了，显示时候再分割；
+            console.log('x-length-len=' + String(x.length).length); //方法一：得出结果后，for循环补充0,
+                     // 方法二，依据最后一个元素长度自动在中间补充0；
+                     // (String(x.length).length-String(i+1).length)少几位补几个0
+                    // repeat('0',(String(x.length).length-String(i+1).length))
+                    k[2].push(k[0][j] +repeat('0',(String(x.length).length-String(i+1).length))+ (i + 1));
+                    console.log('0leng='+(String(x.length).length-String(i+1).length));
+                    console.log('max site k[0][j]=' + k[0][j]);
+                    console.log('max site k[2]=' + k[2]);
+
+                }
+            }
+        }
+
+        // 显示最大a的具体位置
+        console.log('max site k[2]=' + k[2]);
+        //排序成功,为了保证输出的顺序一样；
+        k[0].sort();
+        k[2].sort();      
+       
+        document.getElementById("answer_str").innerHTML = "数组中出现次数最多的字母为：" + k[0];
+        document.getElementById("answer_num").innerHTML = "字母" + k[0] + "累计重复：" + k[1] + "次";
+        // 依据重复字母次数，组装输出语句t，并最终显示
+        console.log('k[0]='+k[0]);
+        t = '';
+       for (var i = 0; i < (k[0].length); i++) { 
+           for (var j = 0; j < (k[1]); j++) {
+        //第一个参数是子字符串的开始位置，第二个参数是子字符串的结束位置（不含该位置）,空缺就是直到结束位置。
+            t = t + k[0][i] + "字母第" + (j + 1) + "次出现的位置排在数组第" + (k[2][i*k[1]+j].slice(1)-0) + "位" + "</br>";
+           }
+          }
+
+        
+        document.getElementById("answer_site").innerHTML = t;
+        return k;
+    }
+  
+  // 定义一个自我调用的函数，用来重复补充‘0’
+    function repeat(str, num) {
+        if (num === 0) {
+            return "";
+        }
+        if (num === 1) {
+            return str;
+        } else {
+            return str + repeat(str, num - 1);
+        }
+    }
+    </script>
+</body>
+
+</html>

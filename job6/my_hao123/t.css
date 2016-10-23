@@ -1,0 +1,64 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    
+    .container {
+        width: 800px;
+        height: 500px;
+        background: lightgray;
+        color: black;
+    }
+    
+    .div1 {
+        display: block;
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 300px;
+        background: white;
+        float: left;
+        /*如果不float的话，20px只能在contain上起作用*/
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    
+    .tab {
+        float: left;
+        width: 100%;
+        height: 60px;
+        margin: 0 auto;
+        padding: 30px 50px;
+    }
+    
+    .clr {
+        width: 140px;
+        height: 20px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    #color1,
+    .color1 {
+        width: 30px;
+        height: 20px;
+        background: #CCFF00;
+    }
+    
+    #color2,
+    .color2 {
+        width: 30px;
+        height: 20px;
+        background: #33FFCC;
+    }
+    
+    #color3,
+    .color3 {
+        width: 30px;
+        height: 20px;
+        background: #FFFFCC;
+    }

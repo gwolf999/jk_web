@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>百度一下,你就知道</title>
+        <link href="./baidudemo.css" rel="stylesheet" type="text/css"/>   
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="baidudemo.js"></script>
+        <style>  
+            html,body{font-size:12px;margin:0px;height:100%;}  
+            .mesWindow{border:#666 1px solid;background:#fff;}  
+            .mesWindowTop{border-bottom:#eee 1px solid;margin-left:4px;padding:3px;font-weight:bold;text-align:left;font-size:12px;}  
+            .mesWindowContent{margin:4px;font-size:12px;}  
+            .mesWindow .close{height:15px;width:35px;border:none;cursor:pointer;text-decoration:underline;background:#fff}  
+        </style>  
+    </head>
+
+
+    <body>
+
+<!--首航栏-->  
+        <div class="navi">
+            <a href="新闻.html" class="navi1">新闻</a>
+            <a href="hao123.html" class="navi1">hao123</a>
+            <a href="地图.html" class="navi1">地图</a>
+            <a href="视频.html" class="navi1">视频</a>
+            <a href="贴吧.html" class="navi1">贴吧</a>
+<!--弹出登录框-->
+            <span onclick="testMessageBox()"><a href="#" class="navi2" >登陆</a></span>           
+            <a href="设置.html" class="navi2"><span id="test1" onmouseover="settingMouseOver()"  onmouseout="settingMouseOut()">设置</span></a>
+            <a href="更多产品.html" class="navi3"><span class="bg"  onmouseover="productMouseOver()"  onmouseout="productMouseOut()" id="bg0" >更多产品</span></a>
+        </div>                                                                          
+
+<!--隐藏在设置下的设置层-->       
+        <div id="myList1">
+            <ul id="myList" class="myList0" onmouseover="settingPopMouseOver()"  onmouseout="settingPopMouseOut()""> 
+                <li class="full"><a href="搜索设置.html" class="shezhi"><font face="宋体">搜索设置</font></a></li>
+                <li class="full"><a href="高级设置.html" class="shezhi"><font face="宋体">高级搜索</font></a></li>
+                <li class="full"><a href="关闭预测.html" class="shezhi"><font face="宋体">关闭预测</font></a></li>
+                <li class="full"><a href="搜索历史.html" class="shezhi"><font face="宋体">搜索历史</font></a></li>
+                <li class="full"><a href="意见反馈.html" class="shezhi"><font face="宋体">意见反馈</font></a></li>
+            </ul>
+        </div>
+
+<!--隐藏在更多产品下的产品层--> 
+        <div class="more" id="more0" onmouseover="productPopMouseOver()"  onmouseout="productPopMouseOut()">
+            <a href="糯米.html"><img src="糯米.png" class="imgShow"/></a><br><a href="糯米.html" class="end2">糯米</a><br>
+            <a href="知道.html"><img src="知道.png" class="imgShow"/></a><br><a href="知道.html" class="end2">知道</a><br>
+            <a href="音乐.html"><img src="音乐.png" class="imgShow"/></a><br><a href="音乐.html" class="end2">音乐</a><br>
+            <a href="图片.html"><img src="图片.png" class="imgShow"/></a><br><a href="图片.html" class="end2">图片</a><br>
+            <a href="文库.html"><img src="文库.png" class="imgShow"/></a><br><a href="文库.html" class="end2">文库</a><br>
+            <a href="风云榜.html"><img src="风云榜.png" class="imgShow"/></a><br><a href="风云榜.html" class="end2">风云榜</a><br>
+            <a href="百度推广.html"><img src="百度推广.png" class="imgShow"/><br><a href="百度推广.html" class="end2">百度推广</a><br><br>
+            <span ><a href="全部产品.html" class="end2">全部产品>></a></span>
+        </div>
+
+<!--Logo图片-->       
+        <div class="logo">
+            <img src="bd_logo1.png" width="256px">
+        </div>
+
+<!--搜索栏-->      
+        <div class="search0">
+            <form id="search1" method="get">
+                <input type="search" id="s" name="s" width="540px" height="38px">
+                <input type="submit" id="baid" value="百度一下" width="100px" height="38px">
+            </form>
+        </div>
+
+<!--页面底部-->     
+        <div class="end">
+            <a href="百度主页.html" class="end1">把百度设为主页</a>
+            <a href="关于百度.html" class="end1">关于百度</a>
+            <a href="AboutBaidu.html" class="end1">About Baidu</a><br/>
+            <span class="light">&copy;2015 Baidu <a href="百度必读.html" class="end2">使用百度前必读</a>京ICP证031373号</span>
+        </div>
+
+    <body>
+
+</html>

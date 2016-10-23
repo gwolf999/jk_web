@@ -1,0 +1,226 @@
+ #test {
+     width: 1920px;
+     height: 10px;
+     background: lightgray;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     /*borderbox为手机端常用的，centerbox为pc端*/
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+ }
+ 
+ .container {
+     width: 800px;
+     height: 494px;
+     margin: auto;
+     margin-top: 20px;
+     padding: 16px;
+     background: #dcdcdc;
+     background: #eeeeee;
+     border-radius: 8px;
+ }
+ 
+ .help {
+     width: 600px;
+     height: 20px;
+     position: absolute;
+     z-index: 2;
+     color: black;
+     /*background: lightblue*/
+     color: green;
+     opacity: 0.6;
+     display: none;
+ }
+ 
+ .logM {
+     width: 20px;
+     height: 20px;
+     position: absolute;
+     color: green;
+     text-align: center;
+     margin-top: 75px;
+     margin-left: 5px;
+     font-size: xx-large;
+     opacity: 0.6;
+     display: none;
+ }
+ 
+ header {
+     width: 768px;
+     height: 177px;
+     /*给下面的区域让出了12px*/
+     height: 165px;
+     /*  border: 1px solid black;*/
+     /*  background: #fefefe;*/
+ }
+ /*屏幕显示区样式*/
+ 
+ .screen {
+     display: block;
+     width: 100%;
+     padding: 6px 12px;
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #555;
+     background-color: #fcfdea;
+     background-image: none;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+     /*焦点状态*/
+     border-color: #66afe9;
+     outline: 0;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+     /*my add*/
+     text-align: right;
+     height: 109px;
+     font-size: 56px;
+     line-height: 109px;
+ }
+ /*功能区样式*/
+ 
+ .memory {
+     width: 100%;
+     height: 67px;
+     /*给下面的区域让出了12px*/
+     height: 55px;
+     /*  background: white;*/
+     position: relative;
+     padding-top: 18px;
+     padding-bottom: 6px;
+ }
+ /*功能区5个按键样式*/
+ 
+ div[class*="mem0"] {
+     width: 142px;
+     height: 31px;
+     text-align: center;
+     line-height: 31px;
+     float: left;
+     border: 1px solid black;
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+     margin: auto;
+     margin-right: 14px;
+     background: #c6c7cb;
+     color: #3d3d3d;
+     border-radius: 5px;
+     font-size: large;
+     font-weight: 800;
+ }
+ 
+ #featu_del,
+ #featu_zap,
+ #featu_zap_scr {
+     color: #ffffff;
+     background: #e58546;
+ }
+ /*把最右边的按键的右边距取消*/
+ 
+ #mem05 {
+     margin-right: 0px;
+ }
+ /*主体区域*/
+ 
+ .mainer {
+     width: 768px;
+     height: 286px;
+     /*得到了上面让出的12px*/
+     height: 298px;
+     /* background: lightgray;*/
+     /*    border: 1px solid black;*/
+     /*  margin: auto;*/
+     position: relative;
+ }
+ /*主体左边区域*/
+ 
+ .left_body {
+     width: 624px;
+     height: 298px;
+     /*   background: lightgreen;*/
+     float: left;
+ }
+ 
+ div[class*="num"],
+ div[class*="featu_"] {
+     width: 142px;
+     height: 48px;
+     text-align: center;
+     line-height: 48px;
+     float: left;
+     border: 1px solid black;
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+     margin: auto;
+     margin-right: 14px;
+     background: #c6c7cb;
+     color: #3d3d3d;
+     border-radius: 5px;
+     font-size: xx-large;
+     font-weight: 800;
+     margin-top: 12px;
+ }
+ /*设置加减乘除的颜色*/
+ 
+ #num_add,
+ #num_sub,
+ #num_mul,
+ #num_div {
+     color: #555555;
+     background: #92999e;
+     font-size: xx-large;
+     font-weight: 900;
+ }
+ /*设置数字0的宽度*/
+ 
+ #num00 {
+     width: 298px;
+ }
+ 
+ .right_body {
+     width: 142px;
+     height: 298px;
+     /* background: lightyellow;*/
+     float: left;
+ }
+ 
+ #num_equ {
+     height: 108px;
+     line-height: 108px;
+ }
+ /*设置右边区域键盘的颜色*/
+ 
+ #num_Negate,
+ #num_equ,
+ #num_sqr,
+ #num_per,
+ #num_recip {
+     color: #ffffff;
+     background: #494949;
+ }
+ /*优化了波纹效果，避免文字上下浮动厉害*/
+ 
+ .waves-button {
+     padding: 0px;
+ }
+ 
+ .waves-button,
+ .waves-button:hover,
+ .waves-button:visited,
+ .waves-button-input {
+     line-height: 2em;
+ }
+ 
+ #num_add,
+ #num_sub,
+ #num_mul,
+ #num_div {
+     font-size: 42px;
+ }

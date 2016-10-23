@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>仿极客学院</title>
+    <title>极客学院IT在线教育平台-中国最大的IT职业在线教育平台</title>
+    <!-- SEO关键字 -->
+    <meta name="keywords" content="极客学院,IT职业教育,IT在线教育平台,IT在线教育,IT在线学习,it职业培训,android,ios,flash,java,python,html5,swift,cocos2dx">
+    <meta name="description" content="极客学院作为中国最大IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域,如Android,iOS ,Flash,Java,Python,HTML5,Swift,Cocos2dx等视频教程.根据IT在线学习特点,极客学院推出IT学习知识体系图,IT职业学习实战路径图,帮助IT学习者从零基础起步,结合IT实战案例演练,系统学习,助你快速成为IT优秀技术人才！">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 清空浏览器预设的各类标签配置 -->
+  <!--   <link rel="stylesheet" href="./css/normalize.css"> -->
+    <!-- Reset CSS，预定义各类颜色，输入框的基本设置 -->
+    <link rel="stylesheet" href="./css/register.css">
+    <!-- 设置body及各种元素设置，其中盒子设置为box-sizing: border-box -->
+    <link rel="stylesheet" href="./css/mycommon_sync0_libs_4f30de2.css">
+    <link rel="stylesheet" href="./css/mycommon_sync1_libs_4637308.css">
+   <!--  <link rel="stylesheet" href="./css/myheader_d41d8cd.css"> -->
+    <link rel="stylesheet" href="./css/myindex_sync0_libs_d2d8ab0.css">
+    <!-- 装载swiper广告轮播插件 -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/myheader.css">
+    <style type="text/css">
+    ./jkxy_files/
+    </style>
+</head>
+
+<body>
+    <div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;">
+        <iframe id="BAIDU_DUP_fp_iframe" src="./jkxy_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe>
+    </div>
+    <div class="container">
+        <header>
+            <div class="header_row">
+                <a href="#" class="logo"><img src="./jkxy_files/logo.png" height="40" width="109" alt="极客学院LOGO" title="极客学院官网标志"></a>
+                <!--nav begin-->
+                <nav>
+                    <ul class="header-nav">
+                        <!-- 单独给首页这个标题设置颜色 -->
+                        <li><a href="#" style="color: rgb(53, 181, 88);">首页</a></li>
+                        <li>职业学院<i class="arrow-icon"></i>
+                            <div class="submenu school-list" style="position: absolute;left: 0px;">
+                                <h3>前端学院</h3>
+                                <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
+                                <a href="#"><i class="android-icon"></i>web大前端</a>
+                                <h3>后端学院</h3>
+                                <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+                                <a href="#"><i class="go-icon"></i>Go语言工程师</a>
+                                <h3>移动学院</h3>
+                                <a href="#"><i class="ios-icon"></i>iOS工程师</a>
+                            </div>
+                        </li>
+                        <li>会员课程<i class="arrow-icon"></i>
+                            <div class="submenu vip-lesson" style="position: absolute;left:3px;">
+                                <a href="#"><i class="kck-icon"></i>课程库<span>2500+</span></a>
+                                <a href="#"><i class="zyljt-icon"></i>职业路径图<span>9</span></a>
+                                <a href="#"><i class="zstxt-icon"></i>知识体系图<span>24</span></a>
+                                <a href="#"><i class="xlkc-icon"></i>系列课程<span>101</span></a>
+                                <a href="#"><i class="kcbq-icon"></i>课程标签<span>4000+</span></a>
+                                <a href="#"><i class="vip-icon"></i>VIP会员购买<span>30/月  260/年</span></a>
+                            </div>
+                        </li>
+                        <li>极客社区<i class="arrow-icon"></i>
+                            <div class="submenu vip-lesson" style="position: absolute;left: 5px;">
+                                <a href="#"><i class="jswd-icon"></i>技术问答<span>20000+</span></a>
+                                <a href="#"><i class="wiki-icon"></i>Wiki<span>351</span></a>
+                                <a href="#"><i class="sq-icon"></i>社群<span>7000+</span></a>
+                                <a href="#"><i class="zygx-icon"></i>资源下载<span>3000+</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--nav end-->
+                <!--login begin-->
+                <div class="icon_box">
+                    <!-- 搜索图标 -->
+                    <span class="search-icon" id="search-btn"></span>
+                    <!-- 应用程序icon -->
+                    <span class="app-icon loginlist relative" id="appicon">
+                       <div class="submenu">
+                          <i class="top-icon"></i>
+                             <!--  此处显示的是二维码下载图标 -->
+                         <img src="./jkxy_files/heade-rwm.png">
+                       </div>
+                   </span>
+                    <!-- login 菜单 -->
+                    <span class="relative loginlist login-icon" id="loginlist">
+                   <dl class="submenu">
+                   <i class="top-icon"></i>
+                    <dd><a href="#" class="reg-btn">注册</a>|<a href="#" class="login-btn">登录</a></dd>
+                    <dd><a href="#"><i class="xxzx-icon"></i>学习中心</a></dd>
+                    <dd><a href="#"><i class="grzy-icon"></i>个人主页</a></dd>
+                    <dd><a href="#"><i class="xxtz-icon"></i>消息通知</a></dd>
+                    <dd><a href="#"><i class="zhsz-icon"></i>账号设置</a></dd>
+                    </dl>
+                   </span>
+                </div>
+                <!--login end-->
+                <div class="search_box" id="search_box">
+                    <input type="text" id="web_search_header" name="" placeholder="搜索课程、问答或Wiki"></input>
+                    <!-- 搜索框展开后的,三个图标,其实是a超链接 -->
+                    <div class="tagbox">
+                        <a href="#">Android</a>
+                        <a href="#">iOS</a>
+                        <a href="#">HTML5</a>
+                    </div>
+                    <!--searchbox-->
+                </div>
+        </header>
+        <div id="pager style=" backgroud:lightgray; " ">
+            <div class="w-1000 mar-t20 cf">
+                <section class="jk-banner">
+                  <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">
+                
+                <a href="#"><img src="./jkxy_files/0f000k2.jpg"></a>
+            </div>
+            <div class="swiper-slide red-slide">
+                <a href="#"><img src="./jkxy_files/0f000k3.jpg"></a>
+            </div>
+            <div class="swiper-slide orange-slide">
+                <a href="#"><img src="./jkxy_files/0f000k4.jpg"></a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+                    <!--此div模块为首页的轮播窗口 style="cursor: -webkit-grab为定义鼠标的新样式 -->
+                   <!--  <div class="banner-container" style="cursor: -webkit-grab;">
+                       下面两个span为界面左右两个箭头
+                       <span id="banner-arrow-left" class="banner-arrow-left" style="display: none;"></span>
+                       <span id="banner-arrow-right" class="banner-arrow-right" style="display: none;"></span>
+                       <div class="swiper-wrapper" style="width: 750px; height: 330px;">
+                           <a href="#" target="_blank" value="android招生" style="width: 750px; height: 330px;"><img src="./jkxy_files/lbgg.jpg">
+                           </a>
+                           <a href="#" target="_blank" value="android招生" class="swiper-slide swiper-slide-duplicate" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/89fd/579fa1fc5a667.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="限时秒杀" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/05/dda6/57cd333be6309.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);"></a>
+                           <a href="#" target="_blank" value="1" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/07/80fa/57cfe5ead36b9.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="晒周报 赢图书" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/0b1c/579fa1b0c9f40.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="就业入驻邀请" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/01b8/579fa17c35b7f.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="ios就业班" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/706d/579fa23cd1598.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="android招生" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/89fd/579fa1fc5a667.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                           <a href="#" target="_blank" value="限时秒杀" class="swiper-slide swiper-slide-duplicate" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/05/dda6/57cd333be6309.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+                           </a>
+                       </div>
+                       <div class="banner-pagination">
+                       <span class="swiper-pagination-switch"></span>
+                       <span class="swiper-pagination-switch"></span>
+                       <span class="swiper-pagination-switch"></span>
+                       <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+                       <span class="swiper-pagination-switch"></span>
+                       <span class="swiper-pagination-switch"></span>
+                       </div>
+                   </div> -->
+                </section>
+                <!-- 第一层右上角登录框 -->
+                <section class="jk-login">
+                    <div class="userInfo">
+                        <a href="#">
+                            <img src="./jkxy_files/headpic_8ce0f6d.jpg" class="userImg">
+                        </a>
+                        <!-- span与p本来就块级元素，上面的img浮动后，顶上去了，排成一行 -->
+                        <span class="userName">Hello,</span>
+                        <p class="userStatus">欢迎成为极客一员</p>
+                    </div>
+                    <a href="#" class="loginOn diaLoginBtn">登录</a>
+                    <a href="#" class="registerNow">免费注册</a>
+                </section>
+                <!-- 第一层右下角的活动 -->
+                <section class="jk-huodong" id="banner02-1">
+                    <a href="#">
+                        <img src="./jkxy_files/0f0000I31efoOCeMMNwG30.jpg" class="userImg">
+                    </a>
+                </section>
+                <!-- 第二层各类就业班 -->
+                <section class="jk-jiuye">
+                    <a class="jiuyeBan" href="#" target="_blank">
+                        <i></i> PHP工程师就业班 </a>
+                    <a class="jiuyeBan" href="#" target="_blank">
+                        WEB大前端工程师就业班        </a>
+                    <a class="jiuyeBan" href="#" target="_blank">
+                        Android工程师就业班    </a>
+                    <a class="jiuyeBan" href="#" target="_blank">
+                        iOS工程师就业班    </a>
+                </section>
+                <!-- </div>  尝试移动到后面，包裹所有的section -->
+                <!-- 第三层各类学习计划班 -->
+                <section class="jk-sku">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="./jkxy_files/attach-496345f9-3fcc-4be0-8097-bef50bc47541.jpg">
+                                <div class="skuContainer">
+                                    <p class="skuTitle">Web前端实习生成长计划</p>
+                                    <p class="skuInfo">64小时&nbsp;&nbsp;|&nbsp;&nbsp;5门课</p>
+                                    <span class="skuPrice">999.00</span>
+                                    <span class="skuThrought">¥2000.00</span>
+                                    <span class="skuNum">14人学习</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="./jkxy_files/attach-6ae2b991-803f-4b63-bda9-89434d70d665.jpg">
+                                <div class="skuContainer">
+                                    <p class="skuTitle">Vue.js前端框架详解－基础&amp;进阶&amp;实战</p>
+                                    <p class="skuInfo">23小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                    <span class="skuPrice">499.00</span>
+                                    <span class="skuThrought">¥1300.00</span>
+                                    <span class="skuNum">13人学习</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="./jkxy_files/attach-0da69660-4fcc-45d1-9b84-88271851f57f.jpg">
+                                <div class="skuContainer">
+                                    <p class="skuTitle">基于 Python 的静态爬虫实战</p>
+                                    <p class="skuInfo">13小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                    <span class="skuPrice">499.00</span>
+                                    <span class="skuThrought">¥1000.00</span>
+                                    <span class="skuNum">13人学习</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="./jkxy_files/attach-59b4a27d-e431-4f49-aa25-6b94cccd8229.jpg">
+                                <div class="skuContainer">
+                                    <p class="skuTitle">基于Go语言的短链接服务实战</p>
+                                    <p class="skuInfo">10小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                                    <span class="skuPrice">499.00</span>
+                                    <span class="skuThrought">¥1000.00</span>
+                                    <span class="skuNum">43人学习</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- 第四层极客学院各类职业路径 -->
+                <section class="jk-college">
+                    <h2>职业学院</h2>
+                    <ul>
+                        <li class="web">
+                            <a href="#">
+                                <img src="./jkxy_files/bgweb_054d9d5.jpg">
+                                <i></i>
+                                <span>Web 前端工程师</span>
+                            </a>
+                        </li>
+                        <li class="python">
+                            <a href="#">
+                                <img src="./jkxy_files/bgpython_c21a999.jpg">
+                                <i></i>
+                                <span>Python Web 工程师</span>
+                            </a>
+                        </li>
+                        <li class="go">
+                            <a href="#">
+                                <img src="./jkxy_files/bggo_6ac4e5b.jpg">
+                                <i></i>
+                                <span>GO 语言工程师</span>
+                            </a>
+                        </li>
+                        <li class="ios">
+                            <a href="#">
+                                <img src="./jkxy_files/bgios_cadb5b0.jpg">
+                                <i></i>
+                                <span>iOS 工程师</span>
+                            </a>
+                        </li>
+                        <li class="more">
+                            <a href="javascript:;">
+                                <img src="./jkxy_files/bgmore_b32bab9.jpg">
+                                <span>更多职业 敬请期待</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- 第五层会员课程 -->
+                <section class="jk-vip">
+                    <h2>会员课程</h2>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/1_android_d6730f3.png">
+                                <p>Android</p>
+                                <span>90门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/2_iOS_5e77ff4.png">
+                                <p>iOS</p>
+                                <span>51门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/3_swift_79f5d60.png">
+                                <p>Swift语言</p>
+                                <span>11门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/4_html5_9ab5f1c.png">
+                                <p>HTML5开发</p>
+                                <span>116门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/5_javascript_83e4b7f.png">
+                                <p>JavaScript</p>
+                                <span>90门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/6_js_c56bccc.png">
+                                <p>Node.js</p>
+                                <span>90门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/7_c_07f10c0.png">
+                                <p>C语言</p>
+                                <span>17门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/8_java_89b7c2c.png">
+                                <p>Java语言</p>
+                                <span>17门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/9_php_d5fcdb8.png">
+                                <p>PHP语言</p>
+                                <span>23门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/10_javaweb_26f34e5.png">
+                                <p>JavaWeb</p>
+                                <span>64门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/11_Python_d253c3e.png">
+                                <p>Python</p>
+                                <span>38门课程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./jkxy_files/12_cocos2d_037cd04.png">
+                                <p>Cocos2d-x游戏开发</p>
+                                <span>89门课程</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="vipAll" href="#">全部会员课程</a>
+                </section>
+                <!-- 第六层学员故事 -->
+                <section class="jk-story">
+                    <h2>学员故事</h2>
+                    <div class="story-container" style="cursor: -webkit-grab;">
+                        <!--  <div class="swiper-wrapper" style="width: 4000px; height: 260px; transform: translate3d(-2000px, 0px, 0px); transition-duration: 1s;"> -->
+                        <div class="swiper-slide swiper-slide-duplicate" style="width: 1000px; height: 260px;">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>爆炸力学硕士转安卓开发，回顾自己从爆炸力学走向代码世界的历程，感触良多。庆幸自己没有留在研究所，程序员不断学习不断进步的感觉更有意义。稳定绝不代表停滞，历练才是我们的财富。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./jkxy_files/student-4-avatar.jpg">
+                                            <p>张少龙</p>
+                                            <span>入职 北京中航智科技</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>美女程序媛，从运维转岗到前端开发工程师。工作上的变化只是一部分，遇到极客学院更重要的是让我知道了自己的潜力，不被未来的不确定性吓倒，相信有目标，肯努力就可以得到想要的生活。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./jkxy_files/student-5-avatar.jpg">
+                                            <p>杨帆</p>
+                                            <span>入职 深圳IBM</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>Web大前端工程师就业班五期 03 班学员，某 985 大学信息与计算科学 2016 届毕业生，2 个月完成 16 个任务，被同班同学称为「大神」。2016 年拿到毕业证书的同时也拿到了 15K 高薪的 offer。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./jkxy_files/student-6-avatar.jpg">
+                                            <p>路昕宇</p>
+                                            <span>入职 浪弯融科科技公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--  <div class="swiper-slide" style="width: 1000px; height: 260px; background: rgb(204, 204, 204);">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>从房地产营销策划转行前端工程师。努力并不是为了证明自己多厉害，只是对自己生活方式的一种选择，每个人都可以通过自己的努力，去决定自己生活的样子。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-1-avatar.jpg">
+                                            <p>朱华宇</p>
+                                            <span>入职 极客学院</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>从浑浑噩噩的自动化专业学生，到大三暑假进入研究院实习。当时努力克服的那些困难，都成了现在自己的资本和财富。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-2-avatar.jpg">
+                                            <p>黄文俊</p>
+                                            <span>入职 深圳北斗技术应用研究院</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>电力工程设计转前端，很感谢极客学院给了我理想的转行准备。以高密度锻炼的方式，逼迫自己尽快熟悉团队开发模式，顺利进入程序员的世界，接触到的新技术拓宽了我的眼界。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-3-avatar.jpg">
+                                            <p>王浩博</p>
+                                            <span>入职 北京中科软科技股份有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 1000px; height: 260px;">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>爆炸力学硕士转安卓开发，回顾自己从爆炸力学走向代码世界的历程，感触良多。庆幸自己没有留在研究所，程序员不断学习不断进步的感觉更有意义。稳定绝不代表停滞，历练才是我们的财富。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-4-avatar.jpg">
+                                            <p>张少龙</p>
+                                            <span>入职 北京中航智科技</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>美女程序媛，从运维转岗到前端开发工程师。工作上的变化只是一部分，遇到极客学院更重要的是让我知道了自己的潜力，不被未来的不确定性吓倒，相信有目标，肯努力就可以得到想要的生活。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-5-avatar.jpg">
+                                            <p>杨帆</p>
+                                            <span>入职 深圳IBM</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>Web大前端工程师就业班五期 03 班学员，某 985 大学信息与计算科学 2016 届毕业生，2 个月完成 16 个任务，被同班同学称为「大神」。2016 年拿到毕业证书的同时也拿到了 15K 高薪的 offer。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-6-avatar.jpg">
+                                            <p>路昕宇</p>
+                                            <span>入职 浪弯融科科技公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate" style="width: 1000px; height: 260px; background: rgb(204, 204, 204);">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>从房地产营销策划转行前端工程师。努力并不是为了证明自己多厉害，只是对自己生活方式的一种选择，每个人都可以通过自己的努力，去决定自己生活的样子。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-1-avatar.jpg">
+                                            <p>朱华宇</p>
+                                            <span>入职 极客学院</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>从浑浑噩噩的自动化专业学生，到大三暑假进入研究院实习。当时努力克服的那些困难，都成了现在自己的资本和财富。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-2-avatar.jpg">
+                                            <p>黄文俊</p>
+                                            <span>入职 深圳北斗技术应用研究院</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="story-content">
+                                            <p>电力工程设计转前端，很感谢极客学院给了我理想的转行准备。以高密度锻炼的方式，逼迫自己尽快熟悉团队开发模式，顺利进入程序员的世界，接触到的新技术拓宽了我的眼界。</p>
+                                        </div>
+                                        <div class="story-info">
+                                            <img src="./njkxydemo_files/student-3-avatar.jpg">
+                                            <p>王浩博</p>
+                                            <span>入职 北京中科软科技股份有限公司</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <!--   </div> -->
+                        <div class="story-pagination">
+                            <span class="swiper-pagination-switch"></span>
+                            <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="footer" class="mar-t50">
+            <link rel="stylesheet" href="./css/myfooter.css">
+            <div class=" jkinfor-block">
+                <div class="jkinfor cf">
+                    <div class="jk-logo">
+                        <img src="./jkxy_files/jk-logo-footer.png">
+                        <p>极客学院，编程是一种信仰！</p>
+                    </div>
+                    <dl>
+                        <dt>职业学院</dt>
+                        <dd><a target="_blank" href="#">Web前端工程师</a></dd>
+                        <dd><a target="_blank" href="#">Python Web工程师</a></dd>
+                        <dd><a target="_blank" href="#">Go语言工程师</a></dd>
+                        <!--<dd><a target="_blank" href="http://j.jikexueyuan.com/train/android?huodong=jiuye_android_in">Android学院</a></dd>-->
+                        <dd><a target="_blank" href="#">iOS工程师</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>会员课程</dt>
+                        <dd><a target="_blank" href="#">课程库</a></dd>
+                        <dd><a target="_blank" href="#">知识体系图</a></dd>
+                        <dd><a target="_blank" href="#">职业路径图</a></dd>
+                        <dd><a target="_blank" href="#">系列课程</a></dd>
+                        <dd><a target="_blank" href="#">课程标签</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>极客社区</dt>
+                        <dd><a target="_blank" href="#">技术问答</a></dd>
+                        <dd><a target="_blank" href="#">Wiki</a></dd>
+                        <dd><a target="_blank" href="#">资源下载</a></dd>
+                        <dd><a target="_blank" href="#">社群</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>其他</dt>
+                        <dd><a target="_blank" href="#">关于我们</a></dd>
+                        <dd><a target="_blank" href="#">使用指南</a></dd>
+                        <dd><a target="_blank" href="#">加入我们</a></dd>
+                        <dd><a target="_blank" href="#">联系我们</a></dd>
+                        <dd><a target="_blank" href="#">友情链接</a></dd>
+                    </dl>
+                    <div class="jk-down">
+                        <p class="hot-tel">服务热线:400-678-8266</p>
+                        <div class="downCon down-ios">
+                            <img src="./jkxy_files/app.png" class="twoCode" alt="下载二维码"> iPhone
+                        </div>
+                        <div class="downCon down-and">
+                            <img src="./jkxy_files/app.png" class="twoCode" alt="下载二维码"> Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1000 copyright">
+                Copyright © 2013-2016&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802020210
+                <a href="#" class="down-wechat"></a>
+                <a href="#" class="down-sina"></a>
+            </div>
+        </div>
+        <!-- 页面服务按钮 -->
+        <div class="gotop" id="gototop">
+            <span class="top" style="display: none;"></span>
+            <span class="erwma" style="display:none">    <img src="./jkxy_files/erwma.png" style="display: none;">  </span>
+            <a href="#" alt="极客学院应用" target="_blank">
+                <span class="jk-app"><div class="appewm"></div></span>
+            </a>
+            <a href="javascript:;" id="diaochaid" class="diaocha">
+                <iframe id="iframe2478912_0" src="./jkxy_files/saved_resource(2).html" width="34" height="34" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe>
+            </a>
+            <a  class="apply qq-online qq-online1" rel="nofollow"><span class="kefu">在线客服<br>  工作日9:00-21:00在线<i></i></span></a>
+        </div>
+        </div>
+
+<!-- 广告轮播的js插件 -->
+<script src="./js/swiper.min.js"></script>
+    <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 1500,
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // 如果需要分页器
+        pagination: '.swiper-pagination'
+    });
+    </script>
+    <script language="javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        //paginationType : 'progress',
+        //paginationType : 'custom',
+    })
+    </script>
+
+</body>
+
+</html>

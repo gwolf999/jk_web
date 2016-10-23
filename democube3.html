@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>玩转CSS 3D -原理篇</title>
+    <style type="text/css">
+    /*可以像下面这样设定，这时候会完全没有画面是正常的，因为还没有设定空间和物体。*/
+    .camera {
+        width: 200px;
+        height: 200px;
+        perspective-origin: center center;
+        -moz-perspective-origin: center center;
+        -webkit-perspective-origin: center center;
+        perspective: 500px;
+        -moz-perspective: 500px;
+        -webkit-perspective: 500px;
+    }
+    /*摄影机完成后，要设定一个立体空间space，这个空间设定的方式很简单，只要设定一个属性：transform-style，这个属性预设为flat，也就是只要是这个div内的子元素，一律都是以扁平( flat )的方式呈现，所属的变换transform也一律都是用flat的方式变换，换句话说就是没有Z轴的存在，为了让内容元素都是立体元素，所以我们要将transform-style设为3D，如此一来内容元素就全部都可以用3D进行变换，为了方便区隔，下面我将space外围多一个boder做识别*/
+    .space{
+      width:100%;
+      height:100%;
+      border:1px dashed #000;
+      transform-style:3d;
+      -moz-transform-style:3d;
+      -webkit-transform-style:3d;
+  }
+  /*最后就是内容元素box了，添加一个100px x 100px的box进去，接着，用这个box来复习一下前面讲的观念，在没有设定box的traslateZ、rotate的情形下，不论我们如何去修改camera的perspective-origin和perspective，box的大小和位置都不会有变化，为什么呢？因为在没有设定box的translateZ或rotate，让Z的深度有所变化，摄影机透过perspective看出去的位置都是相同的，也造成不论怎么去看这个box都是一样的大小*/
+   .box{
+      width:100px;
+      height:100px;
+      background:#069;
+      /*如果不设置z，xy只能在2d平面上转移。设置了z后，z为正数就是放大，为负就是缩小*/
+      transform:translateX(50px) translateY(50px);
+      -moz-transform:translateX(50px) translateY(50px);
+      -webkit-transform:translateX(50px) translateY(50px);
+      /*不过当我们给box改变Z轴的深度之后(这里我先把translateZ设定为150px )，再去改变camera的perspective-origin和perspective，一切仿佛就有了变化。*/
+
+      transform:translateX(50px) translateY(50px) translateZ(150px);
+      -moz-transform:translateX(50px) translateY(50px) translateZ(150px);
+      -webkit-transform:translateX(50px) translateY(50px) translateZ(150px);
+      /*看得应该就会更 ​​清楚，当摄影机的变成广角，也就是perspective变短，整个旋转后变形也会更加明显，大家可以用开发者工具修改camera的perspective就会明白*/
+      transform:translateX(50px) translateY(50px) rotateY(60deg);
+      -moz-transform:translateX(50px) translateY(50px) rotateY(60deg);
+      -webkit-transform:translateX(50px) translateY(50px) rotateY(60deg);
+
+  }
+    </style>
+</head>
+
+<body>
+    <div class="camera">
+        <div class="space">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+
+</html>

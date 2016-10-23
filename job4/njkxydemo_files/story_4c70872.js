@@ -1,0 +1,1 @@
+define("index:widget/story/story.js",function(t,o,i){var n={};n={init:function(){this.story()},story:function(){var t=new Swiper(".story-container",{pagination:".story-pagination",loop:!0,slidesPerView:1,speed:1e3,autoplay:5e3,grabCursor:!0,height:260,paginationClickable:!0});$(".story-container").hover(function(){t.stopAutoplay()},function(){t.startAutoplay()})}},i.exports=n});

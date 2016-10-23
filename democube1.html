@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+    }
+    
+    body {
+        position: relative;
+        perspective: 1000px;
+        /*设置透视点*/
+    }
+    
+    .big {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        /*开启3D效果*/
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        margin-left: -100px;
+        margin-top: -100px;
+        transform: rotatex(-60deg) rotateY(45deg) rotateZ(0deg);
+           transform: rotatex(45deg) rotateY(0deg) rotateZ(0deg);
+        /*设置变化前初始状态*/
+        transition: all 100s linear;
+        /*设置持续时间以便能观察效果*/
+    }
+    
+    .big1:hover {
+        transform: rotatex(10000deg) rotateY(10000deg) rotateZ(1000deg);
+        /*设置最后状态*/
+    }
+    
+    .big div {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(img/mofang.png);
+    }
+    
+    .big div:nth-child(1) {
+        background-color: red;
+        transform: rotateY(90deg) translateZ(100px);
+        /*让div旋转和位移,构成正方体*/
+    }
+    
+    .big div:nth-child(2) {
+        background-color: yellow;
+        transform: rotateY(90deg) translateZ(-100px);
+    }
+    
+    .big div:nth-child(3) {
+        background-color: aqua;
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    
+    .big div:nth-child(4) {
+        background-color: blue;
+        transform: rotateX(90deg) translateZ(-100px);
+    }
+    
+    .big div:nth-child(5) {
+        background-color: orchid;
+        transform: rotateZ(90deg) translateZ(100px);
+    }
+    
+    .big div:nth-child(6) {
+        background-color: green;
+        transform: rotateZ(90deg) translateZ(-100px);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

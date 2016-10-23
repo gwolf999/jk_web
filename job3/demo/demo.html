@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>负值margin调测</title>
+    <style type="text/css">
+   /*  1.左右列固定，中间列自适应布局
+   
+   body {
+       margin: 0;
+       padding: 0;
+       min-width: 600px;
+   }
+   
+   .main {
+       float: left;
+       width: 100%;
+   }
+   
+   .main_body {
+       margin: 0 210px;设置左右空出210px，为两边的负margin留下的，这个字文档流中排第一
+       background: #888;
+       height: 200px;
+   }
+   
+   .left,
+   .right {
+       float: left;
+       width: 200px;
+       height: 200px;
+       background: #F60;
+   }
+   
+   .left {
+       margin-left: -100%;
+   }
+   
+   .right {
+       margin-left: -200px;
+   } */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main_body">Main</div>
+    </div>
+    <div class="left">Left</div>
+    <div class="right">Right</div>
+</body>
+
+</html>

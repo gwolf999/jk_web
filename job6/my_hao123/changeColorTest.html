@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" mrc="zh-cn">
+    <meta http-equiv="Content-Type" mrc="text/html; charset=gb2312">
+    <title>适时切换背景颜色</title>
+</head>
+
+<body>
+    <div align="center">
+        <table bgcolor=#F8F8F8 border="0" width="500" cellpadding="0" style="border-collapse: collapse" height="180" id="bb1">
+            <tr>
+                <td colspan="2">
+                    <div align="center">
+                        <table border="0" width="90%" cellpadding="0" style="border-collapse: collapse" height="90" id="table2">
+                            <tr>
+                                <td style="line-height: 150%"><span style="font-size: 14px">模板无忧（<a href="/">mb5u.com</a>）提供各类网页模板、视频教程、JavaScript/CSS特效代码以及常用软件下载等，做有质量的学习型源码下载站。</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div align="center">
+       <table border="0" width="500" cellpadding="0" style="border-collapse: collapse" height="20" id="table1">
+            <tr>
+                <td width="219">
+                    <p align="right">
+                        <font color="#808080"><span style="font-size: 9pt">请选择背景：</span></font>
+                </td>
+                <td width="281">
+                    <div align="center">
+                        <table border="1" width="240" cellspacing="0" cellpadding="0" height="20" id="table1" style="border-collapse: collapse" bordercolor="#FFFFFF">
+                            <tr>
+                                <td width="60" onClick="bb1.style.backgroundColor='FDFDF0';set_color('FDFDF0')" bgcolor="#FDFDF0"></td>
+                                <td onClick="bb1.style.backgroundColor='B1D5F3';set_color('B1D5F3')" bgcolor="#B1D5F3" width="60"></td>
+                                <td onClick="bb1.style.backgroundColor='B4E7D9';set_color('B4E7D9')" bgcolor="#B4E7D9" width="60"></td>
+                                <td onClick="bb1.style.backgroundColor='F1E8FF';set_color('F1E8FF')" bgcolor="#F1E8FF" width="60"></td>
+                                <td onClick="bb1.style.backgroundColor='E8FFF3';set_color('E8FFF3')" bgcolor="#E8FFF3" width="60"></td>
+                                <td onClick="bb1.style.backgroundColor='CDCDDE';set_color('CDCDDE')" bgcolor="#CDCDDE" width="60"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script language=javascript>
+    function get_cookie(name_to_get) {
+
+        var cookie_pair
+        var cookie_name
+        var cookie_value
+        var cookie_array = document.cookie.split("; ")
+        for (counter = 0; counter < cookie_array.length; counter++) {
+            cookie_pair = cookie_array[counter].split("=")
+            cookie_name = cookie_pair[0]
+            cookie_value = cookie_pair[1]
+            if (cookie_name == name_to_get) {
+                return unescape(cookie_value)
+            }
+        }
+        return null
+    }
+
+    // Get the bgColor cookie
+    var bg_color = get_cookie("bgColor_cookie")
+
+    function set_color(color_val) {
+        set_cookie("bgColor_cookie", color_val, 365, "/")
+    }
+
+    function set_cookie(cookie_name, cookie_value, cookie_expire, cookie_path, cookie_domain, cookie_secure) {
+        var cookie_string = cookie_name + "=" + cookie_value
+            // /
+        if (cookie_expire) {
+            var expire_date = new Date()
+            var ms_from_now = cookie_expire * 24 * 60 * 60 * 1000
+            expire_date.setTime(expire_date.getTime() + ms_from_now)
+            var expire_string = expire_date.toGMTString()
+            cookie_string += "; expires=" + expire_string
+        }
+
+        if (cookie_path) {
+            cookie_string += "; path=" + cookie_path
+        }
+        if (cookie_domain) {
+            cookie_string += "; domain=" + cookie_domain
+        }
+        if (cookie_secure) {
+            cookie_string += "; true"
+        }
+        // Set the cookie
+        document.cookie = cookie_string
+    }
+    if (bg_color) {
+        bb1.style.backgroundColor = bg_color
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>absolute样式</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #div0 {
+        width: 300px;
+        height: 300px;
+        border: 4px black solid;
+        top: 10px;
+        background: lightgreen;
+        float: right;
+        position: relative;
+        overflow-wrap: break-word;
+        z-index: 3;
+    }
+    
+    #div1 {
+        width: 200px;
+        height: 200px;
+        border: 2px red solid;
+        position: absolute;
+        top: 200px;
+        left: 1px;
+        background: lightgray;
+        z-index: 2;
+    }
+    
+    P {
+        font-size: 40px;
+    }
+    
+    .diva0 {
+        width: 400px;
+        height: 200px;
+        background: #fff;
+    }
+    
+    .diva1 {
+        width: 350px;
+        height: 150px;
+        background: #0ff;
+    }
+    
+    .diva2 {
+        width: 300px;
+        height: 100px;
+        background: #00f;
+    }
+     .divb {
+        width: 400px;
+        height: 200px;
+        background: #ffb;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div0">
+        <P>DIV0DIV0DIV0DIV0DIV0DIV0</P>
+        <div id="div1">
+            <p>test div1</p>
+        </div>
+    </div>
+    <div class="diva0">
+        <span>div0</span>
+        <div class="diva1">
+        <span>div1</span>
+            <div class="diva2">
+               <span>div2</span>
+               </div>
+        </div>
+    </div>
+    <div class="divb">
+        <span>divb</span>
+    </div>
+</body>
+
+</html>

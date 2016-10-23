@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>swip轮播广告测试</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .blue-slide {
+        /*  background: #4390EE;*/
+    }
+    
+    .red-slide {
+        /* background: #CA4040;*/
+    }
+    
+    .orange-slide {
+        /* background: #FF8604;*/
+    }
+    
+    .swiper-slide {
+        width: 500px;
+        line-height: 300px;
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .swiper-container {
+        width: 750px;
+        height: 330px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="swiper-wrapper1" style="width: 6000px; height: 330px; transform: translate3d(-1500px, 0px, 0px); transition-duration: 1s;display: none;">
+        <a href="#" class="swiper-slide swiper-slide-duplicate" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/12/ee3d/57d61af8bc129.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="1" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/07/80fa/57cfe5ead36b9.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="web大前端线下培训班" class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/14/0e5f/57d920764eca9.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="晒周报 赢图书" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/0b1c/579fa1b0c9f40.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="就业入驻邀请" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/01b8/579fa17c35b7f.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="ios就业班" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201608/02/706d/579fa23cd1598.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="联想活动" class="swiper-slide" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/12/ee3d/57d61af8bc129.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+        <a href="#" target="_blank" value="1" class="swiper-slide swiper-slide-duplicate" style="width: 750px; height: 330px; background: url(&quot;http://a1.jikexueyuan.com/home/201609/07/80fa/57cfe5ead36b9.jpg&quot;) 50% 50% no-repeat rgb(245, 245, 245);">
+        </a>
+    </div> -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">
+                <!--   <a href="#" background: url( "0f000k2.jpg") 50% 50% no-repeat rgb(245, 245, 245);>
+                </a> -->
+                <a href="#"><img src="./css/0f000k2.jpg"></a>
+            </div>
+            <div class="swiper-slide red-slide">
+                <a href="#"><img src="./css/0f000k3.jpg"></a>
+            </div>
+            <div class="swiper-slide orange-slide">
+                <a href="#"><img src="./css/0f000k4.jpg"></a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 1500,
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // 如果需要分页器
+        pagination: '.swiper-pagination'
+    });
+    </script>
+    <script language="javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        //paginationType : 'progress',
+        //paginationType : 'custom',
+    })
+    </script>
+</body>
+
+</html>

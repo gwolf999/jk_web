@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的颜色更换测试</title>
+    
+    <style type="text/css">
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    
+    .container {
+        width: 800px;
+        height: 500px;
+        background: lightgray;
+        color: black;
+    }
+    
+    .div1 {
+        display: block;
+        width: 700px;
+        height: 400px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 300px;
+        background: white;
+        float: left;
+        如果不float的话，20px只能在contain上起作用
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    
+    .tab {
+        float: left;
+        width: 100%;
+        height: 60px;
+        margin: 0 auto;
+        padding: 30px 50px;
+    }
+    
+    .clr {
+        width: 140px;
+        height: 20px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    #color1,
+    .color1 {
+        width: 30px;
+        height: 20px;
+        background: #CCFF00;
+    }
+    
+    #color2,
+    .color2 {
+        width: 30px;
+        height: 20px;
+        background: #33FFCC;
+    }
+    
+    #color3,
+    .color3 {
+        width: 30px;
+        height: 20px;
+        background: #FFFFCC;
+    } 
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+            register_key();
+            checkWebStorage();
+           // changeColor('color3');
+
+        }
+        //检查web Storage存储情况
+    function checkWebStorage() {
+        if (typeof(Storage) !== "undefined") {
+           
+           console.log('web storage username='+localStorage.username);
+           //changeColor('color3');
+           changeColor(localStorage.username);
+           
+        } else {
+            alert("对不起，您的浏览器不支持 web 存储");
+        }
+
+    }
+
+
+    //按键绑定事件程序
+    function register_key() {
+        document.getElementById("color1").addEventListener('click', function() {
+            changeColor('color1');
+        });
+        document.getElementById("color2").addEventListener('click', function() {
+            changeColor('color2');
+        });
+        document.getElementById("color3").addEventListener('click', function() {
+            changeColor('color3');
+        });
+    }
+    //修改背景颜色及字体颜色
+    function changeColor(x) {
+        var y = document.getElementById(x).currentStyle.backgroundColor;
+        document.getElementById("div1").style.backgroundColor = y;
+        if (x == 'color1') {
+            document.getElementById("div1").style.color = "blue";
+           
+        } else if (x == 'color2') {
+        	 // 用法http://javascript.ruanyifeng.com/dom/document.html#toc25
+            document.querySelector('.div1').style.color = "#CDEECC";
+            // localStorage.username = 'color2';
+
+        } else {
+            document.getElementById("div1").style.color = "#FFFFFF";
+        }
+        // 存储webstorage的值
+         localStorage.username=x;
+      //  console.log('web storage=' + localStorage.username);
+    }
+    // javascript的style属性只能获取内联样式，对于外部样式和嵌入式样式需要用currentStyle属性。但是，currentStyle在FIrefox和Chrome下不支持，需要使用如下兼容性代码
+   HTMLElement.prototype.__defineGetter__("currentStyle", function () {
+    return this.ownerDocument.defaultView.getComputedStyle(this, null);
+});
+
+
+    //绑定事件的兼容IE函数
+    function addEventHandler(oTarget, sEventType, fnHandler) {
+        if (oTarget.addEventListener) {
+            oTarget.addEventListener(sEventType, fnHandler, false);
+        } else if (oTarget.attachEvent) {
+            oTarget.attachEvent("on" + sEventType, fnHandler);
+        } else {
+            oTarget["on" + sEventType] = fnHandler;
+        }
+    };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1" id="div1">
+            <h2>我的颜色修展示</h2>
+        </div>
+        <div class="tab">
+            <table>
+                <tr>
+                    <td>
+                        <div class="clr">请选择颜色模块</div>
+                    </td>
+                    <td>
+                        <div class="color1" id="color1"></div>
+                    </td>
+                    <td>
+                        <div class="color2" id="color2"></div>
+                    </td>
+                    <td>
+                        <div class="color3" id="color3" style="background:blue;"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

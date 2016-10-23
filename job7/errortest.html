@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>测试错误</title>
+    <script type="text/javascript">
+    // function throwit() {
+    //     throw new Error('');
+    // }
+
+    // function catchit() {
+    //     try {
+    //         throwit();
+    //     } catch (e) {
+    //         console.log(e.stack); // print stack trace
+    //     }
+    // }
+
+    // catchit();
+    // try {
+    //     throw new Error('出错了!');
+    // } catch (e) {
+    //     console.log(e.name + ": " + e.message);
+    //     console.log(e.stack);
+    // }
+
+
+    function fib(num) {
+  if (num > 2) {
+    return fib(num - 2) + fib(num - 1);
+  } else {
+    return 1;
+  }
+}
+
+console.log(fib(6));//确实显示8
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

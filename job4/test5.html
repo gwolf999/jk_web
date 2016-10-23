@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test5</title>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%
+    }
+    
+    html {
+        overflow-y: auto
+    }
+    
+    body {
+        font: 12px arial;
+        text-align: ;
+        background: #fff
+    }
+    
+    body,
+    p,
+    form,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none
+    }
+    
+    body,
+    form,
+    #fm {
+        position: relative
+    }
+    
+    td {
+        text-align: left
+    }
+    
+    img {
+        border: 0
+    }
+    
+    a {
+        color: #00c
+    }
+    
+    a:active {
+        color: #f60
+    }
+    
+    #wrapper .bdbri {
+        width: 85px;
+        min-height: 100px;
+        border-left: 1px solid #e7e7e7;
+        position: absolute;
+        background-color: #f9f9f9;
+        overflow: hidden;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        text-align: center;
+        /* background: aqua;*/
+    }
+
+    #wrapper .bdbriimgtitle {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+}
+
+#wrapper .briscrollwrapperContainer {
+    position: relative;
+}
+
+#wrapper .briscrollwrapper {
+    overflow: hidden;
+}
+
+#wrapper .bdbri.bdbriimg .bdmainlink a:visited, #wrapper .bdbri.bdbriimg .bdothlink a:visited {
+    color: #666;
+}
+#wrapper .bdbri.bdbriimg .bdmainlink a, #wrapper .bdbri.bdbriimg .bdothlink a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+#wrapper .bdbri.bdbriimg span.bdbriimgitem_3 {
+    width: 40px;
+    background-position: -72px 0;
+}
+#wrapper .bdbri.bdbriimg span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_2e35e84b.png) no-repeat;
+    cursor: pointer;
+}
+
+#wrapper .bdbri.bdbriimg span.bdbriimgitem_1 {
+        background-position: 0 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_2 {
+        background-position: -36px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_3 {
+        width: 40px;
+        background-position: -72px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_4 {
+        background-position: -112px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_5 {
+        background-position: -148px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_6 {
+        background-position: -184px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg span.bdbriimgitem_7 {
+        background-position: -220px 0
+    }
+    
+    #wrapper .bdbri.bdbriimg .bdbrievenmore a:link,
+    #wrapper .bdbri.bdbriimg .bdbrievenmore a:visited {
+        color: #666;
+        text-decoration: underline
+    }
+    
+    #wrapper .bdbri.bdbriimg .bdbrievenmore a:hover {
+        color: #666;
+        text-decoration: underline
+    }
+    
+    #wrapper .bdbri.bdbriimg .bdbrievenmore a:active {
+        color: #00c
+    }
+    
+    .bdbriscroll-ctrl-scroll {
+        position: absolute;
+        top: 10px;
+        right: 1px;
+        width: 8px;
+        border-top: 1px solid #e4e4e4;
+        border-left: 1px solid #e4e4e4;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none
+    }
+    
+    .bdbriscroll-ctrl-scroll .bdbriscroll-axis {
+        width: 8px;
+        left: 0;
+        z-index: 0;
+        position: absolute;
+        background: #f2f2f2
+    }
+    
+    .bdbriscroll-ctrl-scroll-touch .bdbriscroll-axis {
+        width: 7px;
+        background: #f2f2f2
+    }
+    
+    .bdbriscroll-ctrl-scroll-hover .bdbriscroll-axis {
+        background: #f2f2f2
+    }
+    
+    .bdbriscroll-ctrl-scroll .bdbriscroll-slider {
+        overflow: hidden;
+        width: 7px;
+        height: 14px;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        display: none;
+        background: #d9d9d9;
+        margin-top: -1px;
+        margin-left: -1px;
+        border-right: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+        cursor: default
+    }
+    
+    .bdbriscroll-ctrl-scroll-touch .bdbriscroll-slider,
+    .bdbriscroll-ctrl-scroll-hover .bdbriscroll-slider {
+        background: #b8b8b8;
+        border-right: 1px solid #afafaf;
+        border-bottom: 1px solid #afafaf
+    }
+     /*默认不显示*/
+     .bdbri{
+     display: none;
+   
+    }
+      a:hover + .bdbri{
+    color:yellow;
+   /* font-size: 30PX;*/
+     display:block;
+    }
+       /*~表示span后面的.bdbri类,这里唯一指定了。*/
+       span:hover~.bdbri{
+    color:yellow;
+   /* font-size: 30PX;*/
+     display:block;
+    }
+    </style>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+<span class="open2">弹出窗口2</span>
+ <a href="#" class="open">弹出窗口</a>
+    <div class="bdbri bdbriimg" id="id_bd" style="opacity: 1; min-height: 828px; /*display: none;*/">
+        <div class="bdmainlink">
+            <div class="bdbriimgtitle">更多产品</div>
+            <div class="briscrollwrapperContainer">
+                <div class="briscrollwrapper bdbriscroll-ctrl-content bdbriscroll-onwheel" style="height: 775.009px;">
+                    <div class="bdbriwrapper">
+                    <a href="#" name="tj_mp3"><span class="bdbriimgitem_3"></span>音乐</a>
+                    <a href="#" name="tj_img"><span class="bdbriimgitem_4"></span>图片</a>
+                    <a href="#" name="tj_zhidao"><span class="bdbriimgitem_2"></span>知道</a>
+                    <a href="#" name="tj_wenku"><span class="bdbriimgitem_5"></span>文库</a>
+                    <a href="#" name="tj_bang"><span class="bdbriimgitem_6"></span>风云榜</a>
+                        <div class="bdbrievenmore"><a href="#" name="tj_more">全部产品&gt;&gt;</a></div>
+                    </div>
+                </div>
+                <div class="bdbriscroll-ctrl-scroll" style="height: 755.009px; display: none;">
+                    <div class="bdbriscroll-axis" style="height: 755.009px;"></div>
+                    <div class="bdbriscroll-slider OP_LOG_BTN" style="display: none; top: 0px;">
+                        <div class="bdbriscroll-s-top"></div>
+                        <div class="bdbriscroll-s-bottom"></div>
+                        <div class="bdbriscroll-s-block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+ 
+   </div>
+
+
+</body>
+
+</html>

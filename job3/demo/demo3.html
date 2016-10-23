@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>负值margin调测：去除列表最后一个li元素的border-bottom</title>
+    <style type="text/css">
+    body,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    #test {
+        margin: 20px;
+        width: 390px;
+        background: #F4F8FC;
+        border-radius: 3px;
+        border: 2px solid #D7E2EC;
+    }
+    
+    #test li {
+        height: 25px;
+        line-height: 25px;
+        padding: 5px;
+        border-bottom: 1px dotted #D5D5D5;
+        margin-bottom: -1px;
+    }
+    </style>
+</head>
+
+<body>
+    <ul id="test">
+        <li>Test1</li>
+        <li>Test2</li>
+        <li>Test3</li>
+        <li>Test4</li>
+        <li>Test5</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    /* 同时也要设置body及html为100% */
+}
+
+body {
+    font: 12px arial;
+    height: 100%;
+    /* 同时也要设置body及html为100% */
+}
+
+#contain {
+    margin: auto;
+    width: 1130px;
+    position: relative;
+    min-height: 580px;
+    /* 设置最小高度，防止靠近， */
+    height: 100%;
+    /* 同时也要设置body及html为100% */
+}
+
+
+
+
+
+header {
+    margin: auto;
+    /*  overflow: hidden; */
+    width: 1130px;
+    height: 26px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    /*   text-decoration: underline; */
+    float: right;
+    text-align: right;
+    line-height: 26px;
+    position: fixed;
+
+
+    padding-right: 80px;
+}
+
+
+/* header nav{
+
+
+    
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+
+    float: right;
+    text-align: right;
+    line-height: 26px;
+
+} */
+
+.header a {
+    margin: 5px;
+}
+
+.baiduimg {
+    width: 270px;
+    margin: auto;
+    padding: auto;
+}
+
+.baiduimg img {
+    width: 270px;
+    height: 129px;
+}
+
+
+/* 主体部分 */
+
+.content {
+    margin: auto;
+    width: 1130px;
+    text-align: center;
+    /*让百度logo下来一些*/
+    padding-top: 30px;
+}
+
+.bdform {
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+    padding: auto;
+    position: relative;
+    /* 此为百度图片搜索图标的父容器，必须先定位 */
+}
+
+.content input {
+    margin: auto;
+    width: 450px;
+    height: 34px;
+}
+
+.bt {
+    margin: auto;
+    width: 100px;
+    height: 36px;
+    padding-bottom: 0px;
+    /* 我也不知道为何两个高低不匹配，但在调测台添加样式调试出来的,加文字后上下又正常了 */
+    border: none;
+    margin-left: -4px;
+    color: #fff;
+    /* 白色 */
+    background: #01389e;
+    cursor: pointer;
+}
+
+
+.bt {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.bt:hover {
+    background: #317ef3;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+
+/* 底部信息 */
+
+footer p {
+    text-align: center;
+}
+
+footer {
+    padding-top: 50px;
+}
+
+#kw {
+    width: 536px;
+    height: 32px;
+    /* 关老师修改 */
+    outline: 0;
+    text-indent: 7px;
+    border: 1px solid #ccc;
+}
+
+
+/* 关老师修改,鼠标滑动效果，being */
+
+#kw:hover {
+    border-color: #999;
+}
+
+#kw:focus {
+    border-color: #38f;
+}
+
+
+/* 关老师修改,鼠标滑动效果，end */
+
+.ftCon-Wrapper {
+    height: 100px;
+    position: absolute;
+    bottom: 23px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+#qrcode .qrcode-item {
+    float: left;
+}
+
+#qrcode .qrcode-item-1 .qrcode-img {
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_a4b2d86f.png) 0 0 no-repeat;
+}
+
+#qrcode .qrcode-item-2 .qrcode-img {
+    background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_a4b2d86f.png) 0 0 no-repeat;
+}
+
+#qrcode .qrcode-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#qrcode .qrcode-text p {
+    text-align: left;
+}
+
+#qrcode .qrcode-text span {
+    letter-spacing: 1px;
+}
+
+Inherited from p #qrcode .qrcode-text p {
+    text-align: left;
+}
+
+#qrcode .qrcode-text {
+    float: left;
+    color: #999;
+    line-height: 23px;
+    margin: 8px 0 0 10px;
+}
+
+#ftConw,
+#ftConw a {
+    color: #999;
+}
+
+#ftConw {
+    display: inline-block;
+    text-align: left;
+    margin-left: 33px;
+    line-height: 22px;
+    position: relative;
+    top: -2px;
+}
+
+body,
+p,
+form,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#cp .c-icon-icrlogo {
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px
+}
+
+.soutu-btn {
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+    /* 鼠标变为小手 */
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    /* 此为图片搜索图作为背景图 */
+    background: #fff url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_679c15cc.png) no-repeat;
+    margin: 0 auto;
+    /* 设置居中 */
+    right: 350px;
+    /* 下面两个是在控制台测试出来的 */
+    top: 33%;
+}
+
+.soutu-btn:hover {
+    background-position: 0 -20px;
+    /* 关老师修改:x坐标不变，-20px;设置或检索对象的背景图像位置background-position : position || position 不受对象的补丁属性( padding )设置影响 */
+}
+
+#form {
+    margin: 22px auto 0;
+    /*  width: 641px;
+   text-align: left; */
+    z-index: 100;
+}
+
+
+
+/*20160821参照关老师修改*/
+
+a.mnav,
+a.mnav:visited {
+    /*float: left;*/
+
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline
+    margin-right:30px;
+}
+
+a.mnav:hover {
+    color: #00c
+}
+
+
+a.bri:hover {
+    color: red;
+}
+
+.more{
+    display:none;
+   /*  display: block; */
+    background-color:#f5f5f5;
+    text-align:center;
+    float:right;
+    margin-top: 50px;
+}
+
+/* a.bri:hover #more0{
+    color: red;
+    display: none;
+    background-color:#f5f5f5;
+    text-align:center;
+    float:right;
+} */
+
+a.bri:hover+#more0 {
+    color: red;
+    display: block;
+    background-color: aqua;
+    text-align: center;
+    padding: auto;
+    float: left;
+    margin-top: 5px;
+    margin-left: 1142px;
+}
+
+.bri:visited+#more0 {
+    color: red;
+    display: block;
+    background-color: aqua;
+    text-align: cenater;
+    padding: auto;
+    float: left;
+    margin-top: 5px;
+    margin-left: 1200px;
+}
+
+.bri:active+#more0 {
+    color: red;
+    display: block;
+    background-color: aqua;
+    text-align: cenater;
+    padding: auto;
+    float: left;
+    margin-top: 5px;
+    margin-left: 1200px;
+}
+
+
+  a.bri,
+ a.bri:visited {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+
+        width: 60px;
+        height: 23px;
+        float: left;
+        color: white;
+        background: #38f;
+        line-height: 24px;
+        font-size: 13px;
+        text-align: center;
+        overflow: hidden;
+        border-bottom: 1px solid #38f;
+        margin-left: 19px;
+        margin-right: 30x
+    }
+    
+     a.bri.brihover {
+        display: none;
+        text-decoration: none;
+        color: #333;
+        background: 0;
+        border-bottom: 1px solid transparent;
+        margin-left: 19px
+    }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏制作</title>
+    <style type="text/css">
+    /*http://toutiao.com/a6333917064423915777/?iid=5578793166&app=news_article*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*borderbox为手机端常用的，centerbox为pc端*/
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    
+    .container {
+        width: 1200px;
+        height: 494px;
+        margin: auto;
+        margin-top: 20px;
+        padding: 16px;
+        /* background: #dcdcdc;
+        background: #eeeeee;*/
+        border-radius: 8px;
+    }
+    
+    .nav {
+        width: 1004px;
+        height: 40px;
+        /*margin是css定义外边距样式，这里的0指示的上下外边距为0，auto则是指示左右相等，也就是居中的意思。但是这里的0是不能省略不写的，那样将变成四个方向居中。同理如果要指示四个方向不同的外边距，就可以依照：上-右-下-左，也就是顺时针的方向顺序进行样式附加。*/
+        margin： 0 auto；
+    }
+    /*无序列表默认是垂直的，如果我们想要它横排显示，就要为它加个浮动<float>，因为又是左对齐*/
+    
+    .nav ul li {
+        float: left;
+        width: 100px;
+        /*给li加一个宽度放在li都挤在一起*/
+        list-style: none;
+    }
+    /*去掉黑点*/
+    /*虽然可继续给<li>施加样式信息以达到效果，但我不建议这样，这会对后期的下拉菜单产生影响。可把样式信息作用在<a>标签上。
+首先，因为<a>标签是一个行元素，我们需要把它转成块元素。*/
+    
+    .nav ul li a {
+        color: #60F;
+        /*字体颜色 紫色*/
+        font-size: 13px;
+        /*字体大小 13像素*/
+        background-color: #EFEFEF;
+        /*背景颜色 灰色*/
+        height: 40px;
+        /*高度40像素*/
+        line-height: 40px;
+        /*字体上下居中*/
+        text-align: center;
+        /*字体左右居中*/
+    }
+    
+    /*默认不显示*/
+    .nav ul li ul {
+        display: none;
+    }
+    
+    .nav ul li:hover ul {
+        z-index: 1;
+        /*优先级显示*/
+        display: block;
+        /*转为块元素*/
+        position: absolute;
+    }
+    
+    /绝对定位/
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><a>快速访问</a>
+                    <!-- 新建的无序列表一定要在<li>标签之中，因为我们是要在它中间展开的。而能做到这一点的就要利用:hover标签，它的作用是当鼠标移动到便签上时，可以为标签附加样式 -->
+                    <ul>
+                        <li><a>更多网页知识</a></li>
+                        <li><a>关注本头条号</a></li>
+                        <li><a>个人微信号：</a></li>
+                        <li><a>open_brain</a></li>
+                    </ul>
+                </li>
+                <li><a>网站地图</a></li>
+                <li><a href="#">最新资讯</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

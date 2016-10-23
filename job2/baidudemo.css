@@ -1,0 +1,164 @@
+body{
+    margin:0 auto;
+}
+
+                                                                    /*设置首航栏鼠标悬停时字体颜色为蓝色*/
+a:hover{
+    color:blue;
+}
+                                                                    /*设置首航栏在页面中的位置字间距*/
+.navi{
+    margin-top:20px;
+    text-align:right;
+    padding:5px;
+    /*background-color:pink;*/
+}
+                                                                    /*设置首航栏字体颜色大小*/
+.navi1{
+    color:black;
+    font-weight:bold;
+    padding:5px;
+    font-size:13px;
+}
+
+.navi2{
+    color:black;
+    padding:5px;
+    font-size:13px;
+}
+
+                                                                    /*将设置的隐藏层隐藏*/
+.myList0{
+    display:none;
+}
+
+                                                                    /*设置隐藏层样式*/
+#myList{
+    margin:0 auto;
+    margin-right:55px;
+    float:right;
+    border:1px solid black;
+    width:58px;
+    height:125px;
+    padding:0px;
+    padding-left:2px;
+    padding-top:5px;
+    line-height:200%;
+}
+
+                                                                    /*无序列表无项目符号*/
+ul{
+    list-style-type:none;
+}
+
+                                                                    /*更多产品的隐藏层默认隐藏*/
+.more{
+    display:none;
+}
+
+                                                                    /*设置隐藏层样式*/
+#more0{
+    background-color:#f5f5f5;
+    text-align:center;
+    float:right;
+}
+
+                                                                    /*悬停设置隐藏层后字体背景的变化*/
+.shezhi{
+    font-size:13px;
+    text-decoration:none;
+    color:black;
+}
+.full:hover{
+    background-color:#3399ff;
+    color:white;
+}
+.shezhi:hover{
+    color:white;
+}
+
+
+                                                                    /*悬停更多产品的隐藏层后字体背景的变化*/
+.bg{
+    background-color:#3399ff;
+    color:white;
+    padding:5px;
+    font-size:13px;
+    margin:2px;
+}
+#bg0{
+    background-color:#3399ff;
+}
+
+
+                                                                    /*logo样式*/
+.logo{
+    top:60px;
+    position:relative;
+    width:306px;
+    height:128px;
+    text-align:center;
+    margin:0 auto;
+
+}
+
+                                                                    /*搜索栏样式*/
+.search0{
+    text-align:center;
+    margin:0 auto;
+    /*border:2px solid red;*/
+    top:60px;
+    position:relative;
+    width:663px;
+    height:60px;
+    top:80px;
+}
+#s{
+    width:540px;
+    height:38px;
+}
+#baid{
+    width:100px;
+    height:38px;
+    background-color:#3399ff;
+    color:white;
+    font-size:14px;
+}
+
+
+                                                                /*尾栏样式*/
+.end{
+    text-align:center;
+    margin:0 auto;
+    width:341px;
+    height:68px;
+    /*border:2px solid red;*/
+    position:relative;
+    top:300px;
+    line-height:150%;
+    color:#808080;
+}
+
+.end1{
+    font-size:8px;
+    padding:5px;
+}
+
+.end2{
+    color:#808080;
+    font-size:8px;
+    text-decoration:none;
+}
+.end2:hover{
+    color:#808080;
+    text-decoration:underline;
+}
+
+.light{
+    font-size:7px;
+    line-height:100%;
+}
+
+.demo:hover .moer{
+    display: none;
+}

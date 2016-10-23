@@ -1,0 +1,7 @@
+function OAS_RICH(position) {
+if (position == 'x05') {
+document.write ('<!-- Conversant Media 300x250 Medium Rectangle CODE for Dwnews -->\n');
+document.write ('<script type="text/javascript">var vclk_options = {sid:92878,media_id:6,media_type:8,version:"1.4"};</script><script class="vclk_pub_code" type="text/javascript" src="http://cdn.fastclick.net/js/adcodes/pubcode.min.js?sid=92878&media_id=6&media_type=8&version=1.4&exc=1"></script><noscript><a href="http://media.fastclick.net/w/click.here?sid=92878&m=6&c=1" target="_blank"><img src="http://media.fastclick.net/w/get.media?sid=92878&m=6&tp=8&d=s&c=1&vcm_acv=1.4" width="300" height="250" border="1"></a></noscript>\n');
+document.write ('<!-- Conversant Media 300x250 Medium Rectangle CODE for Dwnews -->');
+}
+}
